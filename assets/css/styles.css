@@ -1,0 +1,11 @@
+.hero {
+    background: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+}
+
+.slide{
+    width: 100%;
+    display: block;
+}

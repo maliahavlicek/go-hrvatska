@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700|Sanchez&display=swap');
+/* this file holds the CSS to normalize or reset browser defaults on the elements that I have on my site */
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    cursor: pointer;
+    font-size: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: transparent;
+    border-width: 0;
+    color: inherit;
+    cursor: pointer;
+    padding: 0;
+}
+
+figure {
+    margin: 0;
+}
+
+input::-moz-focus-inner {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol,
+dd {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+section,
+div {
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+/*
+     Colors picked using Alberta Travel example
+     https://www.canva.com/design/DADpWxc9m48/4jhWKZNROJCF8imdCH4pZw/edit
+*/
+
+:root {
+    /*Primary Color is Teal Blue */
+    --primary: #254c5c;
+    --primary-dark: #17343e;
+    --primary-light: #61b7cc;
+
+    /* Secondary Color is Orangey Red */
+    --secondary: #ec7d62;
+    --secondary-dark: #ce4321;
+    --secondary-light: #e6aa9b;
+
+    --gray-light: #EBEDEE;
+    --gray-medium: #D8D8D8;
+    --gray-dark: #2F2F2F;
+
+    --white: #fff;
+    --black: #000;
+}
+
+body {
+    color: var(--gray-dark);
+    font-family: 'Quicksand', arial;
+    font-size: 18px;
+    font-weight: normal;
+    margin: 10px;
+    max-width: 1024px;
+}
+
+footer {
+    background: var(--gray-light);
+    color: var(--gray-dark);
+    padding: 5px 10px;
+}
+
+footer .row {
+    margin-bottom: 0;
+}
+
+footer a {
+    color: var(--primary);
+    border-bottom: 0;
+    font-weight: 600;
+}
+
+nav {
+    background: var(--gray-light);
+    color: var(--black);
+}
+
+nav a,
+nav li.sub-nav-trigger {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+nav a:hover {
+    font-weight: 700;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.2em;
+    text-transform: none;
+}
+
+h1 {
+    font-size: 2.8rem;
+    line-height: 1.2em;
+    font-family: "Sanchez", sans-serif;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    margin-top: 12rem;
+    color: var(--white);
+}
+h2:before, h2:after{
+    font-family: "Webdings";
+    content: "=  ";
+    position: relative;
+    bottom: 7px;
+    left: -10px;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5rem;
+}
+h2:after{
+    left: 10px;
+}
+
+h3 {
+    font-size: 2.2rem;
+}
+
+h4 {
+    font-size: 1.8rem;
+}
+
+h5 {
+    font-size: 1.2rem;
+}
+
+h6 {
+    font-size: 1.1rem;
+}
+
+p {
+    padding-top: 1rem;
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+
+ol li,
+ul li {
+    margin: 13px 0;
+}
+
+
+section {
+    background: var(--white);
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+
+
+@media screen and (min-width: 768px) {
+
+    h1 {
+        font-size: 3.6rem;
+    }
+
+    h2 {
+        font-size: 3.2rem;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+    }
+
+    h3 {
+        font-size: 2.8rem;
+    }
+
+    h4 {
+        font-size: 2rem;
+    }
+
+    h5 {
+        font-size: 1.5rem;
+    }
+
+    h6 {
+        font-size: 1.1rem;
+        line-height: 1.375em;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        background: var(--blue-light);
+        margin: 0 auto;
+    }
+
+}
+
+
+/* The CSS below is the responsive bit. It's based on the flex concept I found at https://codepen.io/taniarascia/pen/rOLEGe/ */
+
+.alwaysFlex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.alwaysFlex .column {
+    flex: 1;
+}
+
+.alwaysFlex .column_25 {
+    flex: 2.5;
+}
+
+.alwaysFlex .column_50 {
+    flex: 5;
+}
+
+.alwaysFlex .column_75 {
+    flex: 7.5;
+}
+
+.column {
+    flex-basis: 100%;
+    margin: .1em 0;
+    padding: 0;
+}
+
+.row {
+    margin-bottom: 10px;
+}
+
+/* I'm only having one breakpoint fo the grid. Phones (768 and smaller will treat columns as rows,
+larger devices will auto adjust their widths.
+*/
+
+@media screen and (min-width: 768px) {
+    .row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .column {
+        flex: 1;
+        margin: .1em 0;
+        padding: 0;
+    }
+    .column_25 {
+        flex: 2.5;
+    }
+    .column_50 {
+        flex: 5;
+    }
+    .column_75 {
+        flex: 7.5;
+    }
+    .column_60 {
+        flex: 6;
+    }
+    .column_40 {
+        flex: 4;
+    }
+    .col_first {
+        margin-right: 5px;
+        padding-left: 0;
+    }
+    .col_last {
+        margin-left: 5px;
+        padding-right: 0;
+    }
+}
