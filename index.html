@@ -15,23 +15,87 @@
 
   </head>
   <body>
-    <main class="carousel" role="main">
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div id ="carasouleImg" class="carousel-item active">
-            <div class="container d-none d-md-block">
-              <div class="carousel-caption text-left hero">
-                <h1>Come Visit <a class="btn btn-lg btn-primary" href="#" role="button">Go Hrvatska!</a></h1>
-                <h2>the jewel of the Adriatic awaits...</h2>
+    <main role="main">
+      <div data-view="hero-image" class="page-view carousel">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div id ="carasouleImg" class="carousel-item active">
+              <div class="container d-none d-md-block">
+                <div class="carousel-caption text-left hero">
+                  <h1>Come Visit <a class="btn btn-lg btn-primary" onclick="changeView('adventure')" role="button">Go Hrvatska!</a></h1>
+                  <h2>the jewel of the Adriatic awaits</h2>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="hero d-md-none">
-        <h1>Come Visit <a class="btn btn-lg btn-primary" href="#" role="button">Go Hrvatska!</a></h1>
-        <h2>the jewel of the Adriatic awaits...</h2>
+        <div class="hero d-md-none">
+          <h1>Come Visit <a class="btn btn-lg btn-primary" onclick="changeView('adventure')" role="button">Go Hrvatska!</a></h1>
+          <h2>the Adriatic awaits</h2>
+        </div>
+      </div>
+      <div data-view="adventure" class="page-view">
+        <div class="hero">
+          <h1>Go HRVATSKA!</h1>
+          <h2>Pick your adventure</h2>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 col-md-3">
+            <div class="card">
+              <img class="card-img-top" src="assets/images/hero/lg/pula.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Castles & Culture</h5>
+                <p class="card-text">Spend your trip visiting castles and cultural sites throughout Croatia.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Places of interest include many Crown of Thrones settings.</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-3">
+            <div class="card">
+              <img class="card-img-top" src="assets/images/trips/skampi.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Wine & Dine</h5>
+                <p class="card-text">Enjoy the delights of region food hot spots and local vineyards.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-3">
+            <div class="card">
+              <img class="card-img-top" src="assets/images/hero/lg/hidden-bay_Dubrovnik.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Beach life</h5>
+                <p class="card-text">Spend the majority of your time by the sea catching the rays.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Winter Discount Rates!</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-3">
+            <div class="card">
+              <img class="card-img-top" src="assets/images/hero/lg/krka.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Natural Wonders</h5>
+                <p class="card-text">This tour focuses on the national park system including Krka and Plitvice's famous waterfalls.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
       </div>
     </main>
     <!-- >indicator of js to determine if small device or not -->

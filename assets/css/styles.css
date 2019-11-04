@@ -19,17 +19,28 @@
   -ms-transition: background-image 0.5s linear;
   transition: background-image 0.5s linear;
 }
+.page-view{
+    display:none;
+}
+[data-view = "hero-image"]{
+    display: block;
+}
 
 
 @media screen and (min-width: 768px) {
 
     .hero {
         padding: 20px;
-        width: 1140px;
+        width: 100%;
+    }
+    .carousel h2{
+        padding-right: 25%;
     }
     h2{
-        padding-right: 25%;
         text-align: right;
+    }
+    h1{
+        text-align: left;
     }
     .carousel-item{
         height: 550px;

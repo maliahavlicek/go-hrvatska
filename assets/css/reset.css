@@ -144,13 +144,13 @@ h6 {
 }
 
 h1 {
-    font-size: 2.8rem;
+    font-size: 2.6rem;
     line-height: 1.2em;
     font-family: "Sanchez", sans-serif;
 }
 
 h2 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     margin-top: 0.6rem;
     color: var(--white);
 }
@@ -159,15 +159,15 @@ h2:before, h2:after{
     content: "=  ";
     position: relative;
     bottom: 7px;
-    left: -10px;
-    width: 3px;
-    height: 3px;
+    left: -8px;
+    width: 2px;
+    height: 2px;
     border-radius: 50%;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 h2:after{
-    left: 10px;
+    left: 8px;
 }
 
 h3 {
@@ -220,7 +220,11 @@ section {
         margin-bottom: 0;
         margin-top: 1rem;
     }
-
+    h2:before, h2:after {
+        height: 3px;
+        width: 3px;
+        font-size: 1.5rem;
+    }
     h3 {
         font-size: 2.2rem;
     }
