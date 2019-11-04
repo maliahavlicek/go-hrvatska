@@ -2,6 +2,7 @@
     Hero Image Changes image every 3 seconds
  */
 var myIndex = 0;
+var myView = 1;
 setTimeout(function(){ carousel(myIndex) }, 3000);
 
 
@@ -20,7 +21,8 @@ function carousel(myIndex){
   {image: directory+"01-split.jpg",alt:"Diocletian's Palace, built for the Roman emperor in AD 305."},
   {image: directory+"hidden-bay_Dubrovnik.jpg",alt:"Hidden bay off the beaten path in Dubrovnik."},
   {image: directory+"plitvice-lakes-np.jpg",alt:"Plitvice Lakes National park is full of waterfalls, clear lakes of stunning blues and nature trails."},
-  {image: directory+"istria.jpg",alt:"Stunning sunset over a coastal town in the Istria region."}
+   {image: directory+"zadar.jpg",alt:"Zadar is a city rich in history."},
+ {image: directory+"istria.jpg",alt:"Stunning sunset over a coastal town in the Istria region."}
 
   ];
 

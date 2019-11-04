@@ -1,18 +1,24 @@
 .hero {
-        background: var(--primary);
-        color: var(--white);
-        text-align: center;
-        padding: 10px;
-        width: 100%;
-    }
+    background: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
 
-    .carousel-item {
-        height: 300px;
-        width: 100%;
-        background-image: url("../images/hero/lg/istria.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+.carousel-item {
+    height: 300px;
+    width: 100%;
+    background-image: url("../images/hero/lg/istria.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+  -webkit-transition: background-image 0.5s linear;
+  -moz-transition: background-image 0.5s linear;
+  -ms-transition: background-image 0.5s linear;
+  transition: background-image 0.5s linear;
+}
 
 
 @media screen and (min-width: 768px) {
@@ -21,8 +27,11 @@
         padding: 20px;
         width: 1140px;
     }
+    h2{
+        padding-right: 25%;
+        text-align: right;
+    }
     .carousel-item{
         height: 550px;
-        width: 100%;
     }
 }
