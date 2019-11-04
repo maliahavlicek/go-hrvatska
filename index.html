@@ -1,21 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Go Hrvatska!</title>
-        <link rel="stylesheet" href="assets/css/reset.css"/>
-        <link rel="stylesheet" href="assets/css/styles.css" />
-    </head>
-    <body>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <div id="carasoule">
-                <img class="slide" src="assets/images/hero/1_web_novigrad-kod-zadra--ivan-coric_0.jpg", alt="Stunning image of Novigrad near Zadar at night."/>
-        </div>
-        <div class="hero">
-            <h1>Go Hrvatska!</h1>
-            <h2>Visit the jewel of the Adriadic</h2>
-        </div>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Homegrown CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css"/>
+    <link rel="stylesheet" href="assets/css/styles.css" />
 
-    </body>
+    <title>Go Hrvatska!</title>
+
+  </head>
+  <body>
+    <main class="carousel" role="main">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div id ="carasouleImg" class="carousel-item active">
+            <div class="container d-none d-md-block">
+              <div class="carousel-caption text-left hero">
+                <h1>Come Visit <a class="btn btn-lg btn-primary" href="#" role="button">Go Hrvatska!</a></h1>
+                <h2>the jewel of the Adriatic awaits...</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero d-md-none">
+        <h1>Come Visit <a class="btn btn-lg btn-primary" href="#" role="button">Go Hrvatska!</a></h1>
+        <h2>the jewel of the Adriatic awaits...</h2>
+      </div>
+    </main>
+    <!-- >indicator of js to determine if small device or not -->
+    <span id="small_device_indr" class="d-md-none"></span>
+   <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Homegrown JavaScript -->
     <script src="assets/js/heroImage.js"></script>
+
+  </body>
 </html>

@@ -150,8 +150,8 @@ h1 {
 }
 
 h2 {
-    margin-bottom: 1rem;
-    margin-top: 12rem;
+    font-size: 2.2rem;
+    margin-top: 0.6rem;
     color: var(--white);
 }
 h2:before, h2:after{
@@ -216,13 +216,13 @@ section {
     }
 
     h2 {
-        font-size: 3.2rem;
-        margin-bottom: 2rem;
-        margin-top: 2rem;
+        font-size: 2.6rem;
+        margin-bottom: 0;
+        margin-top: 1rem;
     }
 
     h3 {
-        font-size: 2.8rem;
+        font-size: 2.2rem;
     }
 
     h4 {
@@ -240,86 +240,9 @@ section {
 
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1140px) {
     body {
-        background: var(--blue-light);
         margin: 0 auto;
     }
 
-}
-
-
-/* The CSS below is the responsive bit. It's based on the flex concept I found at https://codepen.io/taniarascia/pen/rOLEGe/ */
-
-.alwaysFlex {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-}
-
-.alwaysFlex .column {
-    flex: 1;
-}
-
-.alwaysFlex .column_25 {
-    flex: 2.5;
-}
-
-.alwaysFlex .column_50 {
-    flex: 5;
-}
-
-.alwaysFlex .column_75 {
-    flex: 7.5;
-}
-
-.column {
-    flex-basis: 100%;
-    margin: .1em 0;
-    padding: 0;
-}
-
-.row {
-    margin-bottom: 10px;
-}
-
-/* I'm only having one breakpoint fo the grid. Phones (768 and smaller will treat columns as rows,
-larger devices will auto adjust their widths.
-*/
-
-@media screen and (min-width: 768px) {
-    .row {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-    }
-    .column {
-        flex: 1;
-        margin: .1em 0;
-        padding: 0;
-    }
-    .column_25 {
-        flex: 2.5;
-    }
-    .column_50 {
-        flex: 5;
-    }
-    .column_75 {
-        flex: 7.5;
-    }
-    .column_60 {
-        flex: 6;
-    }
-    .column_40 {
-        flex: 4;
-    }
-    .col_first {
-        margin-right: 5px;
-        padding-left: 0;
-    }
-    .col_last {
-        margin-left: 5px;
-        padding-right: 0;
-    }
 }

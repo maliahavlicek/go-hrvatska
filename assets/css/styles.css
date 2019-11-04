@@ -1,11 +1,28 @@
 .hero {
-    background: var(--primary);
-    color: var(--white);
-    text-align: center;
-    padding: 20px;
-}
+        background: var(--primary);
+        color: var(--white);
+        text-align: center;
+        padding: 10px;
+        width: 100%;
+    }
 
-.slide{
-    width: 100%;
-    display: block;
+    .carousel-item {
+        height: 300px;
+        width: 100%;
+        background-image: url("../images/hero/lg/istria.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+
+@media screen and (min-width: 768px) {
+
+    .hero {
+        padding: 20px;
+        width: 1140px;
+    }
+    .carousel-item{
+        height: 550px;
+        width: 100%;
+    }
 }
