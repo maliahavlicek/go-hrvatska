@@ -5,6 +5,90 @@
     padding: 10px;
     width: 100%;
 }
+.split-img-wrapper{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin: 0;
+    padding: 0;
+    border: 3px solid var(--primary);
+
+}
+.adventure .card-body{
+    padding: 1rem 0rem;
+}
+.adventure .card-deck{
+    margin: 0px;
+}
+.adventure .card-deck .card{
+    background: var(--primary-light);
+    color: var( --black);
+    margin: 10px;
+    max-width: 44%;
+}
+.split-img-wrapper .card-title{
+    position: relative;
+    z-index: 10;
+    top: -235%;
+    margin: 0;
+    padding: 10px 0;
+    margin: 0px -25px;
+    background: white;
+    background: var(--primary);
+    color: var(--white);
+    border: 3px solid var(--white);
+    border-left: none;
+    border-right: none;
+}
+.part1 {
+    width: 100%;
+    height:100%;
+    background: url(../images/hero/lg/istria.jpg);
+    /* The points are: centered top, left bottom, right bottom */
+    clip-path: polygon( 0 100%, 100% 100%, 100% 0%);
+    background-size:cover;
+}
+.part2{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: -100%;
+    right: 0;
+    clip-path: polygon(98% 0%, 100% 0%, 100% 3%, 3% 100%, 0% 100%, 3% 95%);
+    background: white;
+}
+.part3{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: -200%;
+    right: 0;
+    background: url(../images/hero/lg/krka.jpg);
+    background-position: center;
+    background-size: auto 100%;
+    /* The points are:  left top, right top, bottom right */
+    clip-path: polygon( 0% 100%, 0% 0%,100% 0% );
+}
+.castles .part1{
+    background: url(../images/hero/lg/klis.jpg);
+    background-position: center;
+    background-size: auto 100%;
+}
+.castles .part3{
+    background: url(../images/hero/lg/krka.jpg);
+    background-position: center;
+    background-size: auto 100%;
+}
+.beaches .part3{
+    background: url(../images/trips/cres.jpeg);
+    background-position: center;
+    background-size: auto 100%;
+}
+.beaches .part1{
+    background: url(../images/trips/brac.jpg);
+    background-position: center;
+    background-size: auto 100%;
+}
 
 .carousel-item {
     height: 300px;
@@ -44,5 +128,15 @@
     }
     .carousel-item{
         height: 550px;
+    }
+    .split-img-wrapper .card-title{
+        margin: -10px -20px;
+    }
+    .adventure .card-body{
+        padding: 1rem 0rem;
+    }
+    .adventure .card-deck .card{
+        margin: 10px;
+        max-width: 50%;
     }
 }
