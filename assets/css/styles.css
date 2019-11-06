@@ -12,7 +12,12 @@
     margin: 0;
     padding: 0;
     border: 3px solid var(--primary);
-
+}
+.split-img-wrapper:hover{
+    opacity: 0.5;
+}
+.learn-more{
+    display:none;
 }
 .adventure .card-body{
     padding: 1rem 0rem;
@@ -40,6 +45,10 @@
     border-left: none;
     border-right: none;
 }
+/*
+triange slices were derived from https://tutorialzine.com/2017/03/css-triangles-without-hacks
+clip-paths determined using https://bennettfeely.com/clippy/
+*/
 .part1 {
     width: 100%;
     height:100%;
@@ -70,13 +79,13 @@
     clip-path: polygon( 0% 100%, 0% 0%,100% 0% );
 }
 .castles .part1{
-    background: url(../images/hero/lg/klis.jpg);
-    background-position: center;
-    background-size: auto 100%;
+    background: url(../images/trips/veliki-tabor.jpeg);
+    background-position: -3px -18px;
+    background-size: auto 123%;
 }
 .castles .part3{
-    background: url(../images/hero/lg/krka.jpg);
-    background-position: center;
+    background: url(../images/trips/djakovacka-katedrala.jpg);
+    background-position: -130px -6px;
     background-size: auto 100%;
 }
 .beaches .part3{
@@ -85,9 +94,29 @@
     background-size: auto 100%;
 }
 .beaches .part1{
-    background: url(../images/trips/brac.jpg);
-    background-position: center;
+    background: url(../images/trips/Plaza-pozora.jpg);
+    background-position: -44px 0px;
     background-size: auto 100%;
+}
+.wine .part3{
+    background: url(../images/trips/wineGlass.jpg);
+    background-position: -168px -18px;
+    background-size: auto 106%;
+}
+.wine .part1{
+    background: url(../images/trips/fresh-cheese.jpg);
+    background-position: -45px 5px;
+    background-size: auto 100%;
+}
+.nature .part3{
+    background: url(../images/trips/pazinCave.jpg);
+    background-position: -88px -57px;
+    background-size: auto 100%;
+}
+.nature .part1{
+    background: url(../images/trips/krka_01_np.jpg);
+    background-position: 49px 19px;
+    background-size: auto 116%;
 }
 
 .carousel-item {
@@ -109,7 +138,14 @@
 [data-view = "hero-image"]{
     display: block;
 }
-
+.btn-primary {
+    background: var(--secondary-dark);
+    border:none;
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+    background: var(--secondary);
+    border:none;
+}
 
 @media screen and (min-width: 768px) {
 
@@ -134,6 +170,7 @@
     }
     .adventure .card-body{
         padding: 1rem 0rem;
+        width: 210px;
     }
     .adventure .card-deck .card{
         margin: 10px;

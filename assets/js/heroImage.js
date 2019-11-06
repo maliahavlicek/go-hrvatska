@@ -93,7 +93,7 @@ function changeView(view){
     }
 
 }
-
+/*
 function findView(view){
     var foundItem = false
     views.forEach(function(item){
@@ -103,3 +103,7 @@ function findView(view){
     });
     return foundItem;
 }
+
+ */
+
+

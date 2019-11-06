@@ -24,5 +24,16 @@ var trips =
     }
   ]
 };
+//wait until page is ready
+$(document).ready(function() {
+	// Toggle the visibility of the paragraph when a button is hovered
+	$(".split-img-wrapper").mouseenter(function(){
+		$(this).next().slideToggle('slow');
+	});
+	$(".split-img-wrapper").mouseleave(function(){
+		$(this).next().slideToggle('slow');
+	});
+
+});
 
 
