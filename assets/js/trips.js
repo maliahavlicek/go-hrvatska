@@ -1,39 +1,61 @@
 //initialize trips that can are available (this way jqeuery can loop through build vs huge html file
-var trips =
-{
-  "trips":[
-    {
-      "name": "Wining & Dining",
-      "image": "../images/trips/wine.jpg",
-      "details": ""
-    },
-    {
-      "name": "Castles & Culture",
-      "image": "../images/trips/castles.jpg",
-      "details": ""
-    },
-    {
-      "name": "Nature Nut",
-      "image": "../images/trips/nature.jpg",
-      "details": ""
-    },
-    {
-      "name": "Beach Life",
-      "image": "../images/trips/beach.jpg",
-      "details": ""
-    }
-  ]
-};
-//wait until page is ready
-$(document).ready(function() {
-	// Toggle the visibility of the paragraph when a button is hovered
-	$(".split-img-wrapper").mouseenter(function(){
-		$(this).next().slideToggle('slow');
-	});
-	$(".split-img-wrapper").mouseleave(function(){
-		$(this).next().slideToggle('slow');
-	});
 
-});
+myTrip = 'none';
+var trips =
+[
+    {
+      "name" : "wine",
+      "label": "Wind & Dine",
+      "details": "Enjoy the delights of regional food hot spots, local vineyards and to die for pastries.",
+      "cities":[
+          { day1: ["Pula", "Church of St. Euphemia, Rovinj","konoba dolina" ]},
+          { day2: ["Riljeka", "Church of St. Euphemia, Rovinj","konoba dolina" ]}
+
+      ]
+    },
+    {
+      "name" : "castles",
+      "label": "Castles & Culture",
+      "details": "Tour castles, cathedrals, museums, fortresses, roman ruins and other cultural sites."
+    },
+    {
+      "name" : "nature",
+      "label": "Nature Nut",
+      "details": "Spend the majority of your time by the sea catching the rays and enjoying the sea air."
+    },
+    {
+      "name" : "beaches",
+      "label": "Beach Life",
+      "details": "Caves, waterfalls, crazy cliffs, stunning mountain views and the Kornati archipelago await."
+    }
+];
+
+
+function pickTrip(trip) {
+  //see if the trip is one of the expected and different from current
+  var newTrip = findView(trip, trips);
+  //default to first trip in list if no match is found
+  if (!newTrip) {
+    newTrip = trips[0];
+    trip = newTrip.name;
+  }
+}
+
+/*
+  <div class="card mb-md-4 col-6 col-md-3 box-shadow">
+    <div class="card-body">
+      <div class="split-img-wrapper castles">
+        <div class="part1"></div>
+        <div class="part2"></div>
+        <div class="part3"></div>
+        <h5 class="card-title">Castles & Culture</h5>
+      </div>
+      <div class="learn-more">
+        <p class="card-text">Tour castles, cathedrals, museums, fortresses, roman ruins and other cultural sites.</p>
+        <button onclick="pickTrip('castles')" type="button" class="btn btn-lg btn-block btn-primary">Go HRVATSKA!</button>
+      </div>
+    </div>
+  </div>
+*/
 
 

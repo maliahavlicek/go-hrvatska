@@ -4,6 +4,8 @@
 var myIndex = 0;
 var pauseHero = false;
 var myView = "hero-image";
+var myTrip = "mone";
+
 var views = [
     {name: "hero-image", view : 0, mustFollow: false},
     {name: "adventure", view: 1, mustFollow: true},
@@ -13,7 +15,6 @@ var views = [
     {name: "about", value: 10, mustFollow: false},
     {name: "language", value: 11, mustFollow: false}
 ];
-
 
 changeView('hero-image');
 
@@ -64,17 +65,16 @@ function carousel(myIndex){
 
 function changeView(view){
 
-
     //see if the view is one of the expected and different from current
-    var newView = findView(view);
-    var currView =  findView(myView);
+    var newView = findView(view,views);
+    var currView =  findView(myView,views);
     if(!newView){
         console.log("ERROR: unexpected view encountered: " + view.name);
-        newView =findView('hero-image');
+        newView =findView('hero-image',views);
     }
     if(newView.mustFollow && (newView.view != currView.view +1)){
         console.log("ERROR: view mustFollow violation encountered: newView: "+newView.name +" view value: " + newView.view +" current view: " +currView.name +" view value: "+ currView.value + ".");
-        newView = findView('hero-image');
+        newView = findView('hero-image',views);
     }
 
     //potential errors dealt with, swap the view
@@ -93,17 +93,29 @@ function changeView(view){
     }
 
 }
-/*
-function findView(view){
+
+//generic finder for list with key of name
+function findView(name,list){
     var foundItem = false
-    views.forEach(function(item){
-        if(item.name == view){
+    list.forEach(function(item){
+        if(item.name == name){
             foundItem = item;
         }
     });
     return foundItem;
 }
 
- */
 
+//set the trip and go to the itineray page
+function pickTrip(trip){
 
+}
+
+//wait until page is ready
+$(document).ready(function() {
+	// Toggle the visibility of the paragraph when a button is clicked
+	$(".split-img-wrapper").click(function(){
+		$(this).next().slideToggle('slow');
+	});
+
+});

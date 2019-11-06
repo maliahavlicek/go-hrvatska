@@ -29,12 +29,12 @@
             </div>
           </div>
         </div>
-
         <div class="hero d-md-none">
           <h1>Come Visit <a class="btn btn-lg btn-primary" onclick="changeView('adventure')" role="button">Go Hrvatska!</a></h1>
           <h2>the Adriatic awaits</h2>
         </div>
       </div>
+
       <div data-view="adventure" class="page-view adventure">
         <div class="hero">
           <h1>Go HRVATSKA!</h1>
@@ -52,8 +52,8 @@
                   <h5 class="card-title">Castles & Culture</h5>
                 </div>
                 <div class="learn-more">
-                  <p class="card-text">Spend your trip touring castles, museums, roman ruins and other cultural sites.</p>
-                  <button type="button" class="btn btn-lg btn-block btn-primary">Go HRVATSKA!</button>
+                  <p class="card-text">Tour castles, cathedrals, museums, fortresses, roman ruins and other cultural sites.</p>
+                  <button onclick="pickTrip('castles')" type="button" class="btn btn-lg btn-block btn-primary">Go HRVATSKA!</button>
                 </div>
               </div>
             </div>
@@ -67,7 +67,7 @@
                 </div>
                 <div class="learn-more">
                   <p class="card-text">Enjoy the delights of regional food hot spots, local vineyards and to die for pastries.</p>
-                  <button type="button" class="btn btn-lg btn-block btn-primary">Go HRVATSKA!</button>
+                  <button onclick="pickTrip('wine')" type="button" class="btn btn-lg btn-block btn-primary">Go HRVATSKA!</button>
                 </div>
               </div>
             </div>
@@ -81,7 +81,7 @@
                 </div>
                 <div class="learn-more">
                   <p class="card-text">Spend the majority of your time by the sea catching the rays and enjoying the sea air.</p>
-                  <button type="button" class="btn btn-lg btn-block btn-primary">Go HRVATSKA!</button>
+                  <button type="button" onclick="pickTrip('beaches')" class="btn btn-lg btn-block btn-primary">Go HRVATSKA!</button>
                 </div>
               </div>
             </div>
@@ -95,7 +95,7 @@
                 </div>
                 <div class="learn-more">
                   <p class="card-text">Caves, waterfalls, crazy cliffs, stunning mountain views and the Kornati archipelago await.</p>
-                  <button type="button" class="btn btn-lg btn-block btn-primary">Go HRVATSKA!</button>
+                  <button type="button" onclick="pickTrip('nature')" class="btn btn-lg btn-block btn-primary">Go HRVATSKA!</button>
                 </div>
               </div>
             </div>
@@ -107,7 +107,7 @@
     <span id="small_device_indr" class="d-md-none"></span>
    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
