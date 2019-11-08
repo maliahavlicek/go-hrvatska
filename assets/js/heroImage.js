@@ -4,16 +4,14 @@
 var myIndex = 0;
 var pauseHero = false;
 var myView = "hero-image";
-var myTrip = "mone";
 
 var views = [
     {name: "hero-image", view : 0, mustFollow: false},
     {name: "adventure", view: 1, mustFollow: true},
-    {name: "meal", value: 2, mustFollow: true},
-    {name: "room", value: 3, mustFollow: true },
-    {name: "itineray", value: 4, mustFollow: true},
-    {name: "about", value: 10, mustFollow: false},
-    {name: "language", value: 11, mustFollow: false}
+    {name: "room", view: 2, mustFollow: true },
+    {name: "itineray", view: 3, mustFollow: true},
+    {name: "about", view: 10, mustFollow: false},
+    {name: "language", view: 11, mustFollow: false}
 ];
 
 changeView('hero-image');
@@ -90,7 +88,11 @@ function changeView(view){
     }
     else{
         pauseHero = true;
+        if(newView.name =="adventure"){
+            buildTripContent();
+        }
     }
+    myView=newView.name;
 
 }
 
@@ -104,18 +106,3 @@ function findView(name,list){
     });
     return foundItem;
 }
-
-
-//set the trip and go to the itineray page
-function pickTrip(trip){
-
-}
-
-//wait until page is ready
-$(document).ready(function() {
-	// Toggle the visibility of the paragraph when a button is clicked
-	$(".split-img-wrapper").click(function(){
-		$(this).next().slideToggle('slow');
-	});
-
-});

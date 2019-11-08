@@ -41,67 +41,26 @@
           <h2>Pick your adventure</h2>
         </div>
 
-        <div class="card-deck mb-4 text-center">
-          <div class="row">
-            <div class="card mb-md-4 col-6 col-md-3 box-shadow">
-              <div class="card-body">
-                <div class="split-img-wrapper castles">
-                  <div class="part1"></div>
-                  <div class="part2"></div>
-                  <div class="part3"></div>
-                  <h5 class="card-title">Castles & Culture</h5>
-                </div>
-                <div class="learn-more">
-                  <p class="card-text">Tour castles, cathedrals, museums, fortresses, roman ruins and other cultural sites.</p>
-                  <button onclick="pickTrip('castles')" type="button" class="btn btn-lg btn-block btn-primary">Go HRVATSKA!</button>
-                </div>
-              </div>
-            </div>
-            <div class="card mb-md-4 col-6 col-md-3 box-shadow">
-              <div class="card-body">
-                <div class="split-img-wrapper wine">
-                  <div class="part1"></div>
-                  <div class="part2"></div>
-                  <div class="part3"></div>
-                  <h5 class="card-title">Wine & Dine</h5>
-                </div>
-                <div class="learn-more">
-                  <p class="card-text">Enjoy the delights of regional food hot spots, local vineyards and to die for pastries.</p>
-                  <button onclick="pickTrip('wine')" type="button" class="btn btn-lg btn-block btn-primary">Go HRVATSKA!</button>
-                </div>
-              </div>
-            </div>
-            <div class="card mb-md-4 col-6 col-md-3 box-shadow">
-              <div class="card-body">
-                <div class="split-img-wrapper beaches">
-                  <div class="part1"></div>
-                  <div class="part2"></div>
-                  <div class="part3"></div>
-                  <h5 class="card-title">Beach Life</h5>
-                </div>
-                <div class="learn-more">
-                  <p class="card-text">Spend the majority of your time by the sea catching the rays and enjoying the sea air.</p>
-                  <button type="button" onclick="pickTrip('beaches')" class="btn btn-lg btn-block btn-primary">Go HRVATSKA!</button>
-                </div>
-              </div>
-            </div>
-            <div class="card mb-md-4 col-6 col-md-3 box-shadow">
-              <div class="card-body">
-                <div class="split-img-wrapper nature">
-                  <div class="part1"></div>
-                  <div class="part2"></div>
-                  <div class="part3"></div>
-                  <h5 class="card-title">Natural Wonders</h5>
-                </div>
-                <div class="learn-more">
-                  <p class="card-text">Caves, waterfalls, crazy cliffs, stunning mountain views and the Kornati archipelago await.</p>
-                  <button type="button" onclick="pickTrip('nature')" class="btn btn-lg btn-block btn-primary">Go HRVATSKA!</button>
-                </div>
-              </div>
-            </div>
+        <div class="card-deck text-center">
+          <div id="trips" class="row">
           </div>
         </div>
       </div>
+
+      <div data-view="room" class="page-view room">
+        <div class="hero">
+          <h1>Go HRVATSKA!</h1>
+          <h2>Pick your accommodation</h2>
+        </div>
+
+        <div class="card-deck text-center">
+          <div id="room" class="row">
+          </div>
+        </div>
+      </div>
+
+
+
     </main>
     <!-- >indicator of js to determine if small device or not -->
     <span id="small_device_indr" class="d-md-none"></span>
@@ -113,6 +72,7 @@
 
     <!-- Homegrown JavaScript -->
     <script src="assets/js/heroImage.js"></script>
+    <script src="assets/js/trips.js"></script>
 
   </body>
 </html>
