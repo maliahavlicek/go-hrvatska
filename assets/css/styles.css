@@ -19,13 +19,13 @@
 .learn-more{
     display:none;
 }
-.adventure .card-body{
+.card-body{
     padding: 1rem 0rem;
 }
-.adventure .card-deck{
+.card-deck{
     margin: 0px;
 }
-.adventure .card-deck .card{
+.card-deck .card{
     background: var(--primary-light);
     color: var( --black);
     margin: 10px;
@@ -44,6 +44,9 @@
     border: 3px solid var(--white);
     border-left: none;
     border-right: none;
+}
+.room .split-img-wrapper .card-title{
+    top: 45%;
 }
 /*
 triange slices were derived from https://tutorialzine.com/2017/03/css-triangles-without-hacks
@@ -119,6 +122,20 @@ clip-paths determined using https://bennettfeely.com/clippy/
     background-size: auto 116%;
 }
 
+.room-image{
+    background: url(../images/rooms/sobe-zimmer.jpg);
+    background-position: 0 0;
+    background-size: auto 100%;
+}
+.bargain{
+    background: url(../images/rooms/sobe-zimmer.jpg);
+}
+.unique{
+    background: url(../images/rooms/treehouse.jpeg);
+}
+.homes{
+    background: url(../images/rooms/cave.jpg);
+}
 .carousel-item {
     height: 300px;
     width: 100%;
@@ -146,7 +163,13 @@ clip-paths determined using https://bennettfeely.com/clippy/
     background: var(--secondary);
     border:none;
 }
-
+.itinerary h3, .itinerary{
+    color: black;
+}
+#map{
+    height: 500px;
+    width: 500px;
+}
 @media screen and (min-width: 768px) {
 
     .hero {

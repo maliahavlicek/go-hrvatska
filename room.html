@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Homegrown CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css"/>
+    <link rel="stylesheet" href="assets/css/styles.css"/>
+
+    <title>Go Hrvatska!</title>
+
+</head>
+<body>
+<main role="main">
+
+
+    <div data-view="" class="page-view2 ">
+        <div class="hero">
+            <h1>Go HRVATSKA!</h1>
+            <h2>Pick your accommodation</h2>
+        </div>
+
+        <div class="card-deck text-center">
+            <div id="room" class="row">
+                <div class="card col-6 col-md-4 box-shadow">
+                    <div class="card-body">
+                        <div class="split-img-wrapper bargain">
+                            <div class="room-image"></div>
+                            <h5 class="card-title">Bargain</h5></div>
+                        <div class="learn-more"><p class="card-text">Sobe, Zimmer, Room Free signs along the road side
+                            indicate a family has a private room available. Don't expect meals or a private restroom,
+                            but you will save big, paying as little ast $20 a night.</p>
+                            <button type="button" onclick="pickRoom(`bargain`)"
+                                    class="pick_room btn btn-lg btn-block btn-primary">Go HRVATSKA!
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card col-6 col-md-4 box-shadow">
+                    <div class="card-body">
+                        <div class="split-img-wrapper camping">
+                            <div class="room-image"></div>
+                            <h5 class="card-title">Camping</h5></div>
+                        <div class="learn-more"><p class="card-text">There are over 300 registered campsites in Croatia
+                            with 90% close to a beach. Some of the larger campsites include restaurants, sports
+                            facilities, laundries, and general stores.</p>
+                            <button type="button" onclick="pickRoom(`Camping`)"
+                                    class="pick_room btn btn-lg btn-block btn-primary">Go HRVATSKA!
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card col-6 col-md-4 box-shadow">
+                    <div class="card-body">
+                        <div class="split-img-wrapper hostels">
+                            <div class="room-image"></div>
+                            <h5 class="card-title">Youth Hostels</h5></div>
+                        <div class="learn-more"><p class="card-text">Dormoratory style living with strict university
+                            schedules to boutique private rooms.</p>
+                            <button type="button" onclick="pickRoom(`hostels`)"
+                                    class="pick_room btn btn-lg btn-block btn-primary">Go HRVATSKA!
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+      <div class="card-deck text-center">
+            <div id="room2" class="row">
+                <div class="card col-6 col-md-4 box-shadow">
+                    <div class="card-body">
+                        <div class="split-img-wrapper hotels">
+                            <div class="room-image"></div>
+                            <h5 class="card-title">Hotels &amp; Apartments</h5></div>
+                        <div class="learn-more"><p class="card-text">Hotles are typically local in operation and include
+                            breakfast, some families rent basic apartments with private restrooms and kitchens.</p>
+                            <button type="button" onclick="pickRoom(`hotels`)"
+                                    class="pick_room btn btn-lg btn-block btn-primary">Go HRVATSKA!
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card col-6 col-md-4 box-shadow">
+                    <div class="card-body">
+                        <div class="split-img-wrapper Homes">
+                            <div class="room-image"></div>
+                            <h5 class="card-title">Private Homes</h5></div>
+                        <div class="learn-more"><p class="card-text">Need an apartment or private house with the ability
+                            to cook your own meals. Abnr.</p>
+                            <button type="button" onclick="pickRoom(`Homes`)"
+                                    class="pick_room btn btn-lg btn-block btn-primary">Go HRVATSKA!
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card col-6 col-md-4 box-shadow">
+                    <div class="card-body">
+                        <div class="split-img-wrapper unique">
+                            <div class="room-image"></div>
+                            <h5 class="card-title">Weird &amp; Wonderful</h5></div>
+                        <div class="learn-more"><p class="card-text">Can you, would you want to sleep in a Lighthouses,
+                            Treehouses, Wine Barrels, Castle or Boat?</p>
+                            <button type="button" onclick="pickRoom(`unique`)"
+                                    class="pick_room btn btn-lg btn-block btn-primary">Go HRVATSKA!
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</main>
+<!-- >indicator of js to determine if small device or not -->
+<span id="small_device_indr" class="d-md-none"></span>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+<!-- Homegrown JavaScript -->
+
+</body>
+</html>
