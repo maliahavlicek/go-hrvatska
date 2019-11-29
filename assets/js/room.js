@@ -9,7 +9,7 @@ let rooms =
     {
         "name" : "bargain",
         "label": "Bargain",
-        "details": "Sobe, Zimmer, Room Free signs along the road side indicate a family has a private room available. Don't expect meals or a private restroom, but you will save big, paying as little ast $20 a night.",
+        "details": "Sobe, Zimmer, Room Free signs along the road side indicate a family has a private room available. Don't expect meals or a private restroom, but you will save big, paying as little as $20 a night.",
         "booking": "You can't typically book this type of accommodation in advance. It's not regulated."
     },
     {
@@ -19,27 +19,27 @@ let rooms =
         "booking": "https://www.camping.hr"
     },
     {
-        "name": "hostels",
+        "name": "hostel",
         "label":"Youth Hostels",
-        "details": "Dormoratory style living with strict university schedules to boutique private rooms.",
+        "details": "Dormitory style living with strict university schedules to boutique private rooms.",
         "booking":"www.hfhs.hr"
     },
     {
         "name" : "hotels",
         "label": "Hotels & Apartments",
-        "details": "Hotles are typically local in operation and include breakfast, some families rent basic apartments with private restrooms and kitchens.",
+        "details": "Hotels in Croatia or small family run operations and include breakfast. The government groups privately run  vocational rental apartments with hotels as well.",
         "booking": "www.omh.hr"
     },
     {
         "name" : "homes",
         "label": "Private Homes",
-        "details": "Need an apartment or private house with the ability to cook your own meals. Abnr.",
+        "details": "Need an apartment or private house with the ability to cook your own meals. And want places vetted by.",
         "booking" : "www.airbnb.com"
     },
     {
         "name" : "unique",
         "label": "Weird & Wonderful",
-        "details": "Can you, would you want to sleep in a Lighthouses, Treehouses, Wine Barrels, Castle or Boat?",
+        "details": "Can you, would you want to sleep in a Lighthouse, Treehouse, Wine Barrel, Castle or Boat?",
         "booking": "https://www.chasingthedonkey.com/weird-accommodation-in-croatia/"
     }
 ];
@@ -66,21 +66,20 @@ function buildRoomContent() {
                 '              <div class="card-body">' +
                 '                <div class="split-img-wrapper ' + room['name'] + '">' +
                 '                  <div class="room-image"></div>' +
-                '                  <h5 class="card-title">' + room['label'] + '</h5>' +
-                '                </div>' +
-                '                <div class="learn-more">' +
-                '                  <p class="card-text">' + room['details'] + '</p>' +
+                '                    <h5 tab-index="0" class="card-title" data-toggle="popover" title="' + room['label'] + ' details"' +
+                '                      data-content="' + room['details'] + '" data-placement="top" data-container="body">'+ room['label'] +
+                '                    </h5>' +
+                '                  </div>' +
                 '                  <button type="button" onclick="pickRoom(`' + room['name'] + '`)" class="pick_room btn btn-lg btn-block btn-primary">Go HRVATSKA!</button>' +
                 '                </div>' +
-                '              </div>' +
                 '            </div>'
             room_elem.append(new_elm);
         });
 
         // add handlers to toggle the visibility of the paragraph when a button is clicked
-        $(".split-img-wrapper").click(function () {
-            $(this).next().slideToggle('slow');
-        });
 
+       $('[data-toggle="popover"]').click(function(){
+            $(this).popover('toggle');
+        });
     }
 }

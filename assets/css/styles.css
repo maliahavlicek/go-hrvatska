@@ -129,12 +129,36 @@ clip-paths determined using https://bennettfeely.com/clippy/
 }
 .bargain{
     background: url(../images/rooms/sobe-zimmer.jpg);
+    background-position: 0px -63px;
+    background-size: 165%;
+}
+.camping{
+    /* image from https://www.campparadisodrage.com/english/ */
+    background: url(../images/rooms/autocamp.jpeg);
+    background-position: -53px -31px;
+}
+.hostel{
+    /* image from https://www.hihostels.com/hostels/hi-hostel-zagreb */
+    background: url(../images/rooms/hostel.png);
+    background-position: -10px 219px;
+    background-size: 112%;
+}
+.hotels{
+    /* image from https://www.booking.com/hotel/hr/beni.html */
+    background: url(../images/rooms/hotel.jpg);
+    background-position:  0px;
+    background-size: 100%;
 }
 .unique{
-    background: url(../images/rooms/treehouse.jpeg);
+    /* image from https://swirled.com/croatia-lighthouse-airbnb/ */
+    background: url(../images/rooms/unique.jpg);
+    background-position:  0px;
+    background-size: 100%;
 }
 .homes{
     background: url(../images/rooms/cave.jpg);
+    background-position: -44px -75px;
+    background-size: 145%;
 }
 .carousel-item {
     height: 300px;
@@ -162,6 +186,24 @@ clip-paths determined using https://bennettfeely.com/clippy/
 .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
     background: var(--secondary);
     border:none;
+}
+#room .card.col-6.col-md-4.box-shadow{
+    margin-top: 15px;
+}
+#room{
+    justify-content: space-between;
+    margin: 0;
+}
+#room .row{
+    margin: 0;
+}
+#room .col-6 {
+    -ms-flex: 0 0 47%;
+    flex: 0 0 47%;
+    max-width: 47%;
+}
+button.pick_room {
+    margin-top: 15px;
 }
 #itinerary{
     background: rgb(57, 147, 156);
@@ -223,5 +265,10 @@ clip-paths determined using https://bennettfeely.com/clippy/
     .adventure .card-deck .card{
         margin: 10px;
         max-width: 50%;
+    }
+    #room .col-md-4 {
+        -ms-flex: 0 0 32%;
+        flex: 0 0 32%;
+        max-width: 32%;
     }
 }

@@ -33,8 +33,8 @@ let trips =
                 },
                 {
                     name: "Rijeka",
-                    lat: 45.2923441,
-                    lng: 14.403474,
+                    lat: 45.3330489,
+                    lng: 14.4202891,
                     places: [
                         {
                             name: "Bevanda Restaurant",
@@ -61,8 +61,91 @@ let trips =
                             name: "Restaurant Uskok",
                             lat: 44.9941219,
                             lng: 14.8915563
+                        },{
+                            name: "Nehaj Fortress",
+                            lat: 45.0201921,
+                            lng: 15.069873
+                        }, {
+                            name: "SIRANA GLIGORA Ltd",
+                            lat: 44.5059966,
+                            lng: 14.8417164
                         }
                     ]
+                },{
+                    name: "Novalja",
+                    lat: 44.5537814,
+                    lng: 14.8061262,
+                    places: [
+                        {
+                            name: "Kuna Snackbar: Mini-Donuts",
+                            lat: 44.5539833,
+                            lng: 14.8057828
+                        },{
+                            name: "Degarra Winery",
+                            lat: 44.564724,
+                            lng: 14.6310388
+                        }
+                    ]
+                },{
+                    name: "Zadar",
+                    lat: 44.1350574,
+                    lng: 15.1786925,
+                    places: [
+                        {
+                            name: "The Greeting to the Sun",
+                            lat: 44.1176075,
+                            lng: 15.2176507
+                        },{
+                            name: "Trattoria Mediterraneo",
+                            lat: 44.1146118,
+                            lng: 15.2232162
+                        },{
+                            name: "Plitvice Lakes National Park",
+                            lat: 45.020372,
+                            lng: 15.0682249
+                        }
+                    ]
+
+                },{
+                    name: "Lika Region",
+                    lat: 44.8798702,
+                    lng: 15.6090371,
+                    places: [
+                        {
+                            name: "Lička Kuća",
+                            lat: 44.865748,
+                            lng: 15.3003881
+                        },{
+                            name: "Beekeeping Brozovic",
+                            lat: 44.8552574,
+                            lng: 14.4505074
+                        },{
+                            name: "Dubovac Castle",
+                            lat: 45.0834187,
+                            lng: 14.4464181
+                        }
+                    ]
+
+                },{
+                    name: "Zagreb",
+                    lat: 45.8164017,
+                    lng: 15.9714403,
+                    places: [
+                        {
+                            name: "Deliticje",
+                            lat: 45.8149835,
+                            lng: 15.9645884
+                        },{
+                            name: "Museum of Broken Relationships",
+                            lat: 44.8552574,
+                            lng: 14.4505074
+                        },{
+                            name: "Mio Corazon",
+                            lat: 45.8149543,
+                            lng: 15.9646313
+                        }
+                    ]
+
                 }
             ]
         },

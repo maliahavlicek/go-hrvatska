@@ -130,11 +130,17 @@ function findView(name,list){
     default is zoom over Croatia
  */
 function initMap() {
-    let map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 7,
-        center: {
-            lat: 44.4467472,
-            lng: 16.4064762
-        }
-    });
+    try {
+        let map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 7,
+            center: {
+                lat: 44.4467472,
+                lng: 16.4064762
+            }
+        });
+    }
+    catch(mapError){
+        console.log("Mapping error: " + mapError.message);
+    }
+
 }
