@@ -13,8 +13,8 @@ let trips =
             "days": [
                 {
                     name: "Pula",
-                    lat: 44.8853321,
-                    lng: 13.7460965,
+                    lat: 44.8732299,
+                    lng: 13.8480518,
                     places: [
                         {
                             name: "Church of St. Euphemia, Rovinj",
@@ -33,8 +33,8 @@ let trips =
                 },
                 {
                     name: "Rijeka",
-                    lat: 45.3753656,
-                    lng: 13.8648394,
+                    lat: 45.2923441,
+                    lng: 14.403474,
                     places: [
                         {
                             name: "Bevanda Restaurant",
@@ -50,6 +50,17 @@ let trips =
                             name: "Castillo de Trast",
                             lat:45.3326798,
                             lng: 14.4553218
+                        }
+                    ]
+                },{
+                    name: "Senj",
+                    lat: 44.9912466,
+                    lng: 14.9026532,
+                    places:[
+                        {
+                            name: "Restaurant Uskok",
+                            lat: 44.9941219,
+                            lng: 14.8915563
                         }
                     ]
                 }

@@ -78,10 +78,11 @@ html {
     --primary: #254c5c;
     --primary-dark: #17343e;
     --primary-light: #9ce0f140;
+    --primary-med: rgb(35, 130, 140);
 
     /* Secondary Color is Orangey Red */
     --secondary: #ec7d62;
-    --secondary-dark: #ce4321;
+    --secondary-dark: #c74108;
     --secondary-light: #e6aa9b;
 
     --gray-light: #EBEDEE;
