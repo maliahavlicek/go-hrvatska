@@ -118,19 +118,23 @@ function findImage(place, day_num) {
             placeId: results[0].place_id,
             fields: ['name', 'formatted_address', 'place_id', 'geometry', 'photos']
         };
-        service.getDetails(request, function (place, status) {
+        service.getDetails(request, function (local, status) {
             if (status === google.maps.places.PlacesServiceStatus.OK) {
-                console.log("got details, inserting image");
-                if(place && place.photos.length >0) {
+                console.log("got details, inserting image for "+ place.name);
+                if(local && local.photos.length >0) {
                     let img_elm = document.getElementById('img-day-' + day_num);
-                    let new_elm = '<img class="details-img" src="' + place.photos[0].getUrl() + '" alt="Image of ' + place.name + '"/>';
-                    if (place.photos[0].html_attributions.length > 0) {
-                        new_elm += '<p class="disclaimer">Photo by: ' + place.photos[0].html_attributions[0] + '</p>';
+                    let new_elm = '<img class="details-img" src="' + local.photos[0].getUrl() + '" alt="Image of ' + place.name + '"/>';
+                    if (local.photos[0].html_attributions.length > 0) {
+                        new_elm += '<p class="disclaimer">Photo by: ' + local.photos[0].html_attributions[0] + '</p>';
                     }
                     img_elm.innerHTML = new_elm;
                 }
+            }else{
+                console.log(place.name +" status to get images not OK: " + status);
             }
         });
+    }else{
+        console.log(place.name +" status to get place_id not OK: " + status);
     }
 
   });
