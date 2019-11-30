@@ -15,6 +15,7 @@ let views = [
 let myIndex = 0;
 let pauseHero = false;
 let myView = "hero-image";
+let map;
 // initialize application to main view/hero image
 changeView('hero-image');
 
@@ -131,7 +132,7 @@ function findView(name,list){
  */
 function initMap() {
     try {
-        let map = new google.maps.Map(document.getElementById("map"), {
+         map = new google.maps.Map(document.getElementById("map"), {
             zoom: 7,
             center: {
                 lat: 44.4467472,

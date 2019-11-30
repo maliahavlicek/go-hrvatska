@@ -207,19 +207,43 @@ button.pick_room {
 }
 #itinerary{
     background: rgb(57, 147, 156);
-    width: 25%;
     color: var(--gray-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    -ms-flex: 25%;
+    flex: 25%;
+    max-width: 25%;
 }
 #itinerary h3{
     background: rgb(121, 199, 217);
     color: var(--primary-dark);
     text-align: left;
     padding: 10px;
+    margin-left: 15px;
+    font-size: 2rem;
 }
-#itinerary ul li{
+#itinerary-details{
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+    background: var(--primary);
+    color: var(--white);
+    text-align: left;
+    padding: 25px;
+}
+#itinerary h3 a {
+    color: var(--gray-light);
+    display: inline-block;
+}
+#itinerary h3 a:hover{
+    color: var(--gray-medium);
+    text-decoration: underline;
+}
+#itinerary-details ul li{
     margin-left: 15px;
 }
-#itinerary ul li:before{
+#itinerary-details ul li:before{
     font-family: "Webdings";
     content: "=  ";
     position: relative;
@@ -231,8 +255,11 @@ button.pick_room {
     color: white;
     font-size: 0.6rem;
 }
+#itinerary-details hr{
+    border-top: 2px solid var(--white);
+}
 #map{
-    height: 675px;
+    height: 575px;
     width: 768px;
     padding: 0;
     margin: 0;

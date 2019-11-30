@@ -152,7 +152,49 @@ let trips =
         {
             "name": "castles",
             "label": "Castles & Culture",
-            "details": "Tour castles, cathedrals, museums, fortresses, roman ruins and other cultural sites."
+            "details": "Tour castles, cathedrals, museums, fortresses, roman ruins and other cultural sites.",
+            "days": [
+                {
+                    name: "Osijek",
+                    lat: 45.5464305,
+                    lng: 18.6186473,
+                    places: [
+                        {
+                            name: "War Museum",
+                            lat: 45.5636445,
+                            lng: 18.4175953
+                        }, {
+                            name: "Church Of Saint Peter And Saint Paul",
+                            lat: 45.5608331,
+                            lng: 18.6759909
+                        }, {
+                            name: "King Petar Kresimir IV Grounds",
+                            lat: 45.5554131,
+                            lng: 18.6214556
+                        }
+                    ]
+                },{
+                    name: "Castle Pejačević",
+                    lat: 45.5548595,
+                    lng: 18.4140927,
+                    places: [
+                        {
+                            name: "Castle Pejačević",
+                            lat: 45.5548595,
+                            lng: 18.4140927
+                        }, {
+                            name: "Papuk Nature Park",
+                            lat: 45.5216295,
+                            lng: 17.6854224
+                        },{
+                            name: "Požega Cathedral",
+                            lat: 45.332597,
+                            lng: 17.678054
+                        }
+
+                    ]
+                }
+            ]
         },
         {
             "name": "nature",

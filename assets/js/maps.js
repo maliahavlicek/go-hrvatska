@@ -2,23 +2,35 @@
   Initialize Itinerary View
   (jQuery loop through build vs huge html file that repeats itself/ easier to maintain & dynamic based on user interaction)
 */
-
+let service;
 function buildMapContent(){
-    let itinerary_elem = $('#itinerary');
+
     //User could change mind so clean out itinerary each time view is seen and rebuild
+    let itinerary_elem = $('#itinerary');
     itinerary_elem.empty();
+
+    let details_elm = $('#itinerary-details');
+    details_elm.empty();
+
 
     $.each(myTrip.days, function (index, day){
         let day_num = index+1;
         let new_elm = '<div class="city">' +
-                '                <h3>Day ' + day_num + ': ' + day['name'] +
-                '                </h3>' +
-                '                  <ul>'
-        $.each(day.places, function (index2, item) {
-            new_elm += '<li>' + item.name + '</li>';
-        });
-        new_elm += '</ul></div>';
+                '        <h3><a href="#day-' + day_num + '">Day ' + day_num + ': ' + day['name'] + '</a></h3>';
+        new_elm += '</div>';
         itinerary_elem.append(new_elm);
+        let det_elm = '<div class="city" id="day-' + day_num + '">' +
+                '        <h3>Day ' + day_num + ': ' + day['name'] + '</h3>' +
+                '        <div class="details"><ul>';
+        $.each(day.places, function (index2, item) {
+            det_elm += '<li>' + item.name + '</li>';
+            findPlaces(item);
+        });
+        det_elm += '</ul></div></div>';
+        if(day_num != myTrip.days.length){
+            det_elm += '<hr>';
+        }
+        details_elm.append(det_elm);
     });
 
     finalizeMap(myTrip.days);
@@ -40,7 +52,6 @@ function finalizeMap(places){
     $.each(places, function (index, day){
         locations.push({ lat: day.lat, lng: day.lng });
     });
-
 
     let clickIcon = {
         path: google.maps.SymbolPath.CIRCLE,
@@ -77,5 +88,34 @@ function finalizeMap(places){
   });
 
   itineraryPath.setMap(map);
+
+}
+
+
+// find custom places function
+/* idea from https://developers-dot-devsite-v2-prod.appspot.com/maps/documentation/javascript/examples/place-search */
+function findPlaces(place, map) {
+    // prepare request to Places
+    let spot = new google.maps.LatLng(place.lat, place.lng);
+
+  let infowindow = new google.maps.InfoWindow();
+
+  map = new google.maps.Map(
+      document.getElementById('map'), {center: spot, zoom: 15});
+
+  let request = {
+    query: place.name + ', Croatia',
+    fields: ['name', 'geometry','place_id'],
+  };
+
+  service = new google.maps.places.PlacesService(map);
+
+  service.findPlaceFromQuery(request, function(results, status) {
+    if (status === google.maps.places.PlacesServiceStatus.OK) {
+
+      console.log(place.name + " id: " + results[0].place_id);
+    }
+  });
+
 
 }
