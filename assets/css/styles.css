@@ -231,6 +231,16 @@ button.pick_room {
     color: var(--white);
     text-align: left;
     padding: 25px;
+    flex-direction: row;
+}
+#itinerary-details .city, #itinerary-details .details{
+    -ms-flex: 33%;
+    flex: 33%;
+    max-width: 33%;
+    margin: 10px;
+}
+.details-img-wrap{
+    margin: 10px 10px 10px 0px;
 }
 #itinerary h3 a {
     color: var(--gray-light);
@@ -258,6 +268,15 @@ button.pick_room {
 #itinerary-details hr{
     border-top: 2px solid var(--white);
 }
+#itinerary-details img{
+    max-width: 100%;
+}
+.disclaimer a, .disclaimer {
+    color: var(--gray-light);
+    font-size: .8rem;
+    font-weight: normal;
+}
+
 #map{
     height: 575px;
     width: 768px;

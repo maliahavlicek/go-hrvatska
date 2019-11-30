@@ -11,26 +11,29 @@ function buildMapContent(){
 
     let details_elm = $('#itinerary-details');
     details_elm.empty();
-
-
+    /*
+    TODO details section - 3 sections per row
+    1.  Day h3 with image
+    2.  list of spots
+    3.  map of spots to see that day
+    */
     $.each(myTrip.days, function (index, day){
         let day_num = index+1;
-        let new_elm = '<div class="city">' +
-                '        <h3><a href="#day-' + day_num + '">Day ' + day_num + ': ' + day['name'] + '</a></h3>';
-        new_elm += '</div>';
+        let new_elm = '<div class="city"><h3><a href="#day-' + day_num + '">Day ' + day_num + ': ' + day['name'] + '</a></h3></div>';
         itinerary_elem.append(new_elm);
-        let det_elm = '<div class="city" id="day-' + day_num + '">' +
-                '        <h3>Day ' + day_num + ': ' + day['name'] + '</h3>' +
-                '        <div class="details"><ul>';
+        let det_elm = '<div class="d-flex flex-row"><div class="city" id="day-' + day_num + '">' +
+                '        <h3>Day ' + day_num + ': ' + day['name'] + '</h3>'+
+                '        <div class="details-img-wrap" id="img-day-' + day_num + '"></div></div>';
+        det_elm += '   <div class="details"><h3>Places to See</h3><ul>';
         $.each(day.places, function (index2, item) {
             det_elm += '<li>' + item.name + '</li>';
-            findPlaces(item);
         });
         det_elm += '</ul></div></div>';
         if(day_num != myTrip.days.length){
             det_elm += '<hr>';
         }
         details_elm.append(det_elm);
+        findImage(day, day_num);
     });
 
     finalizeMap(myTrip.days);
@@ -94,27 +97,42 @@ function finalizeMap(places){
 
 // find custom places function
 /* idea from https://developers-dot-devsite-v2-prod.appspot.com/maps/documentation/javascript/examples/place-search */
-function findPlaces(place, map) {
+function findImage(place, day_num) {
     // prepare request to Places
     let spot = new google.maps.LatLng(place.lat, place.lng);
 
-  let infowindow = new google.maps.InfoWindow();
-
-  map = new google.maps.Map(
+    map = new google.maps.Map(
       document.getElementById('map'), {center: spot, zoom: 15});
 
-  let request = {
-    query: place.name + ', Croatia',
-    fields: ['name', 'geometry','place_id'],
-  };
+    let request = {
+        query: place.name + ', Croatia',
+        fields: ['name', 'geometry','place_id'],
+    };
 
-  service = new google.maps.places.PlacesService(map);
+    service = new google.maps.places.PlacesService(map);
 
   service.findPlaceFromQuery(request, function(results, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
-
-      console.log(place.name + " id: " + results[0].place_id);
+        console.log(place.name + " id: " + results[0].place_id);
+        request = {
+            placeId: results[0].place_id,
+            fields: ['name', 'formatted_address', 'place_id', 'geometry', 'photos']
+        };
+        service.getDetails(request, function (place, status) {
+            if (status === google.maps.places.PlacesServiceStatus.OK) {
+                console.log("got details, inserting image");
+                if(place && place.photos.length >0) {
+                    let img_elm = document.getElementById('img-day-' + day_num);
+                    let new_elm = '<img class="details-img" src="' + place.photos[0].getUrl() + '" alt="Image of ' + place.name + '"/>';
+                    if (place.photos[0].html_attributions.length > 0) {
+                        new_elm += '<p class="disclaimer">Photo by: ' + place.photos[0].html_attributions[0] + '</p>';
+                    }
+                    img_elm.innerHTML = new_elm;
+                }
+            }
+        });
     }
+
   });
 
 
