@@ -41,20 +41,39 @@ function finalizeMap(places){
         locations.push({ lat: day.lat, lng: day.lng });
     });
 
+
+    let clickIcon = {
+        path: google.maps.SymbolPath.CIRCLE,
+        scale: 15,
+        fillColor: "rgb(121, 199, 217)",
+        fillOpacity: .8,
+        strokeColor: "rgb(57, 147, 156)",
+        strokeWeight: 1
+    };
+
     let markers = locations.map(function(location, i) {
         let marker =  new google.maps.Marker({
             position: location,
-            label: labels[i % labels.length]
+            label: labels[i % labels.length],
+            draggable: false,
+            animation: google.maps.Animation.DROP,
+            icon: clickIcon
         });
-        marker.setMap(map);
+        let timeout = i * 200;
+        window.setTimeout(function() {
+            marker.setMap(map);
+
+        }, timeout);
+
     });
 
     let itineraryPath = new google.maps.Polyline({
     path: locations,
     geodesic: true,
-    strokeColor: '#5cafc3',
+    strokeColor: '#ec7d62',
     strokeOpacity: 0.9,
-    strokeWeight: 5
+    strokeWeight: 5,
+    animation: google.maps.Animation.DROP
   });
 
   itineraryPath.setMap(map);

@@ -66,8 +66,8 @@ function buildRoomContent() {
                 '              <div class="card-body">' +
                 '                <div class="split-img-wrapper ' + room['name'] + '">' +
                 '                  <div class="room-image"></div>' +
-                '                    <h5 tab-index="0" class="card-title" data-toggle="popover" title="' + room['label'] + ' details"' +
-                '                      data-content="' + room['details'] + '" data-placement="top" data-container="body">'+ room['label'] +
+                '                    <h5 tabindex="0" class="card-title" data-trigger="focus" data-placement="top" data-toggle="popover" title="' + room['label'] + ' details"' +
+                '                      data-content="' + room['details'] + '" data-container="body">'+ room['label'] +
                 '                    </h5>' +
                 '                  </div>' +
                 '                  <button type="button" onclick="pickRoom(`' + room['name'] + '`)" class="pick_room btn btn-lg btn-block btn-primary">Go HRVATSKA!</button>' +
@@ -77,9 +77,11 @@ function buildRoomContent() {
         });
 
         // add handlers to toggle the visibility of the paragraph when a button is clicked
-
-       $('[data-toggle="popover"]').click(function(){
+        $('[data-toggle="popover"]').click(function(){
             $(this).popover('toggle');
+        });
+        $('.popover-dismiss').popover({
+            trigger: 'focus'
         });
     }
 }

@@ -73,8 +73,8 @@ let trips =
                     ]
                 },{
                     name: "Novalja",
-                    lat: 44.5537814,
-                    lng: 14.8061262,
+                    lat: 44.5526593,
+                    lng: 14.8848009,
                     places: [
                         {
                             name: "Kuna Snackbar: Mini-Donuts",
@@ -88,8 +88,8 @@ let trips =
                     ]
                 },{
                     name: "Zadar",
-                    lat: 44.1350574,
-                    lng: 15.1786925,
+                    lat: 44.118044,
+                    lng: 15.2239898,
                     places: [
                         {
                             name: "The Greeting to the Sun",
