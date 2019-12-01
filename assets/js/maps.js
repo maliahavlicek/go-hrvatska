@@ -110,12 +110,22 @@ function findImage(place, day_num) {
     map = new google.maps.Map(
       document.getElementById('map-'+day_num), {center: spot, zoom: 7});
 
-    //set the day map
+    //set the day map with the places to explore/visit
     let markers = place.places.map(function(location, i) {
+        let contentString = '<div id="content' + day_num + '_' + i + '"><h1 class="firstHeading">' + location.name + '</h1></div>';
+
+        let infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
         let loc = new google.maps.LatLng(location.lat, location.lng);
         let marker = new google.maps.Marker({
             position: loc,
-            draggable: false
+            draggable: false,
+            title: location.name
+        });
+        marker.addListener('click', function() {
+            infowindow.open(map, marker);
         });
         marker.setMap(map);
     });

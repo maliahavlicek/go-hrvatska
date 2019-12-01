@@ -287,13 +287,23 @@ button.pick_room {
     height: 300px;
     width: 300px;
 }
+.lodging{
+    margin: 10px -25px -25px;
+    padding: 9px 25px 25px;
+    background: rgb(57, 147, 156);
+    color: var(--gray-light);
+}
 .popover-header {
     background: rgb(57, 147, 156);
 }
 .popover-body , .popover .arrow {
     background: rgb(121, 199, 217);
 }
-
+h1.firstHeading {
+    color: var(--primary);
+    font-size: 1rem;
+    font-weight: normal;
+}
 @media screen and (min-width: 768px) {
 
     .hero {
