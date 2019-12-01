@@ -27,14 +27,20 @@ function buildMapContent(){
         det_elm += '   <div class="details"><h3>Places to See</h3><ul>';
         $.each(day.places, function (index2, item) {
             det_elm += '<li>' + item.name + '</li>';
+
         });
-        det_elm += '</ul></div></div>';
+        det_elm += '</ul></div>';
+        det_elm += '<div class="details-map" id ="map-' + day_num + '"></div></div>';
         if(day_num != myTrip.days.length){
             det_elm += '<hr>';
         }
         details_elm.append(det_elm);
         findImage(day, day_num);
     });
+    details_elm = $('#itinerary-details');
+    let room_elm = '<div class="lodging"><h3>Accommodations</h3><p>';
+    room_elm += myTrip.room.booking + '</p></div>';
+    details_elm.append(room_elm);
 
     finalizeMap(myTrip.days);
 
@@ -102,7 +108,17 @@ function findImage(place, day_num) {
     let spot = new google.maps.LatLng(place.lat, place.lng);
 
     map = new google.maps.Map(
-      document.getElementById('map'), {center: spot, zoom: 15});
+      document.getElementById('map-'+day_num), {center: spot, zoom: 7});
+
+    //set the day map
+    let markers = place.places.map(function(location, i) {
+        let loc = new google.maps.LatLng(location.lat, location.lng);
+        let marker = new google.maps.Marker({
+            position: loc,
+            draggable: false
+        });
+        marker.setMap(map);
+    });
 
     let request = {
         query: place.name + ', Croatia',
@@ -111,7 +127,7 @@ function findImage(place, day_num) {
 
     service = new google.maps.places.PlacesService(map);
 
-  service.findPlaceFromQuery(request, function(results, status) {
+    service.findPlaceFromQuery(request, function(results, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
         console.log(place.name + " id: " + results[0].place_id);
         request = {

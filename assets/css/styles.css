@@ -233,7 +233,7 @@ button.pick_room {
     padding: 25px;
     flex-direction: row;
 }
-#itinerary-details .city, #itinerary-details .details{
+#itinerary-details .city, #itinerary-details .details, #itinerary-details .details-map{
     -ms-flex: 33%;
     flex: 33%;
     max-width: 33%;
@@ -282,6 +282,10 @@ button.pick_room {
     width: 768px;
     padding: 0;
     margin: 0;
+}
+#map-1,#map-2, #map-3, #map-4, #map-5, #map-6, #map-7{
+    height: 300px;
+    width: 300px;
 }
 .popover-header {
     background: rgb(57, 147, 156);
