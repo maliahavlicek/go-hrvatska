@@ -112,7 +112,9 @@ function findImage(place, day_num) {
 
     //set the day map with the places to explore/visit
     let markers = place.places.map(function(location, i) {
-        let contentString = '<div id="content' + day_num + '_' + i + '"><h1 class="firstHeading">' + location.name + '</h1></div>';
+        let contentString = '<div id="content' + day_num + '_' + i + '"><h1 class="firstHeading">' + location.name + '</h1>' +
+            '<p class="infoContent">' + location.description + '</p><p class="infoDisclaimer">'+ location.attribution +
+            '</p></div>';
 
         let infowindow = new google.maps.InfoWindow({
           content: contentString

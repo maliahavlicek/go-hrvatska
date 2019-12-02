@@ -302,7 +302,21 @@ button.pick_room {
 h1.firstHeading {
     color: var(--primary);
     font-size: 1rem;
+    font-weight: 700;
+    display: block;
+    text-align: center;
+}
+.infoContent{
+    color: var(--primary);
+    font-size: .8rem;
     font-weight: normal;
+    text-align: left;
+}
+.infoDisclaimer{
+    color: var(--primary);
+    font-size: .6rem;
+    font-weight: normal;
+    text-align: left;
 }
 @media screen and (min-width: 768px) {
 
