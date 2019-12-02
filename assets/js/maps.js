@@ -35,7 +35,11 @@ function buildMapContent(){
             det_elm += '<hr>';
         }
         details_elm.append(det_elm);
-        findImage(day, day_num);
+
+        let timeout = day_num * 350;
+        window.setTimeout(function() {
+            findImage(day, day_num);
+        }, timeout);
     });
     details_elm = $('#itinerary-details');
     let room_elm = '<div class="lodging"><h3>Accommodations</h3><p>';

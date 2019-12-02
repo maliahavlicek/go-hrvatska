@@ -55,7 +55,7 @@ clip-paths determined using https://bennettfeely.com/clippy/
 .part1 {
     width: 100%;
     height:100%;
-    background: url(../images/hero/lg/istria.jpg);
+    background: url(../images/hero/istria.jpg);
     /* The points are: centered top, left bottom, right bottom */
     clip-path: polygon( 0 100%, 100% 100%, 100% 0%);
     background-size:cover;
@@ -75,7 +75,7 @@ clip-paths determined using https://bennettfeely.com/clippy/
     position: relative;
     top: -200%;
     right: 0;
-    background: url(../images/hero/lg/krka.jpg);
+    background: url(../images/hero/krka.jpg);
     background-position: center;
     background-size: auto 100%;
     /* The points are:  left top, right top, bottom right */
@@ -163,7 +163,7 @@ clip-paths determined using https://bennettfeely.com/clippy/
 .carousel-item {
     height: 300px;
     width: 100%;
-    background-image: url("../images/hero/lg/istria.jpg");
+    background-image: url("../images/hero/istria.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 

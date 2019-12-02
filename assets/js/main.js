@@ -26,7 +26,7 @@ changeView('hero-image');
  */
 function carousel(myIndex){
     if(!pauseHero) {
-        let directory = "assets/images/hero/lg/";
+        let directory = "assets/images/hero/";
 
         let images = [
             {image: directory + "split.jpg", alt: "Split downtown coast at night is beautiful."},
