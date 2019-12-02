@@ -21,10 +21,11 @@ There is a start over button as well for views past the Main view.
 Malia Havlicek
 
 ## UX 
-The Go Hrvatska! Project was envisioned as a mobile website and then expanded to desktop. It is a simple flow that helps
-users determine an itinerary of places to see and visit while on Holiday.
+The Go Hrvatska! Project was envisioned as a mobile website and then expanded to desktop. It is a single page application that helps
+users determine an itinerary of places to see and visit while on Holiday in Croatia.
 
 ### Mockups
+Note: The wireframes are not entirely accurate, they only give a rough estimate on how the website will look on a mobile device.
 [Figma.com](https://www.figma.com/) was used to create the following mockups:
 - [Home Page](https://www.figma.com/file/741n0nfS9y7b1T2ICOAqDn/Go-Hrvatska?node-id=1%3A2)\
 ![homepage mockup](assets/images/mockups/Go-hrvatska-homepage.png) 
@@ -33,14 +34,14 @@ users determine an itinerary of places to see and visit while on Holiday.
 - [Itinerary](https://www.figma.com/file/741n0nfS9y7b1T2ICOAqDn/Go-Hrvatska?node-id=17%3A41)\
 ![itinerary mockup](assets/images/mockups/Go-hrvatska-itinerary.png) 
 ### User Stories
-
-
-## Features
 - **Hero Banner**: Eye Catching Landing Page with Enticing Imagery swapping out. Note: Only one image is required for initial banner. The subsequent images are injected via jquery.
 - **Choose Adventure** html is built by looping through TRIPS json object. Fancy clip path CSS to do diagonal image on buttons. Customization of Bootstrap card and buttons.
 - **Choose Accommodation** HTML is build by looping through ROOMS json object. Customization of Bootstap button and popover.
 - **Itinerary** Uses google maps and google places API to highlight a 7 day trip based on User's Adventure Choice. HTML is built by looping through TRIPS json. Email.js is also provided to 
 allow user to email the proposed agenda to themselves or others.
+
+## Features
+qu
 
 ### Features Left to Implement
 - use google places API to suggest matches on lodging choice via [nearby](https://developers.google.com/maps/documentation/javascript/places?utm_source=google&utm_medium=cpc&utm_campaign=FY18-Q2-global-demandgen-paidsearchonnetworkhouseads-cs-maps_contactsal_saf&utm_content=text-ad-none-none-DEV_c-CRE_315916118099-ADGP_Hybrid+%7C+AW+SEM+%7C+SKWS+~+Nearby+Search-KWID_43700039136946351-kwd-582432942915-userloc_9028759&utm_term=KW_%2Bnearby%20%2Bsearch-ST_%2Bnearby+%2Bsearch&gclid=EAIaIQobChMI8IKMxKaW5gIVj8DACh1GrQ6WEAAYASAAEgLKjvD_BwE#place_search_requests)
@@ -85,9 +86,17 @@ During manual unit testing, it was noticed that the imagery retrieved from googl
 the Query Limit. To overcome this issue, the findImage call within maps.js BuildMapContent function was wrapped in a setTimout.
 
 ## Deployment
+Note: The coding for the project was done in PyCharm in a local environment with default configurations as it only requires javascript, CSS and HTML files. This website is 
+hosted using GitHub pages, deployed directly from the master branch.
 
-
-
+1. Logged into GitHub and created a new repository called go-hrvatska with a description of Milestone Project 2.
+2. Cloned the repository to my local machine via PyCharm by clicking the VCS menu, then the git menu, then clone option and setting the url to https://github.com/maliahavlicek/go-hrvatska.git.
+(could have opened the terminal and typed <strong>git clone https://github.com/maliahavlicek/go-hrvatska.git</strong>)
+3. Created files and used the VCS menu to commit and push files as changes were made.
+4. Once I was ready to deploy my solution, I logged into gitHub and navigated to the go-hrvatska repository.
+5. Click on the settings icon and scroll down to the GitHub Pages section.
+6. Select master-branch as the source.
+7. Wait up to 10 minutes, then check your-username.github.io. Your website should be there!
 
 ## Credits
 
@@ -98,7 +107,7 @@ To gather rich imagery and interesting places to visit, I made use of the follow
 - [Croatia Week](https://www.croatiaweek.com) - This site has articles with lists of places of interest that I used when customizing the prescribed trips and was used to help fact check which sites might be of most interest to tourists.
 - Other sites used for specific places to see are attributed in the map pin info windows.
 ### Media
-Hero imagery seen in this project was gleaned from the sites listed below. Orginal imagery has been renamed and resized.
+Hero imagery seen in this project was gleaned from the sites listed below. Ordinal imagery has been renamed and resized.
 - [Croatia.hr](http://croatia.hr/en-GB) 
 - [ChasingTheDonkey](https://www.chasingthedonkey.com/croatia-travel-blog/) 
 - [CroatiaWeek](https://www.croatiaweek.com)
