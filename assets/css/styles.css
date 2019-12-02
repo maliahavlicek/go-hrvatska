@@ -46,7 +46,13 @@
     border-right: none;
 }
 .room .split-img-wrapper .card-title{
-    top: 45%;
+    top: 65%;
+}
+.room span.more-link {
+    -webkit-appearance: none;
+    float: right;
+    color: var(--primary);
+    text-decoration: underline;
 }
 /*
 triangle slices were derived from https://tutorialzine.com/2017/03/css-triangles-without-hacks

@@ -28,11 +28,10 @@ function buildRoomContent() {
                 '              <div class="card-body">' +
                 '                <div class="split-img-wrapper ' + room['name'] + '">' +
                 '                  <div class="room-image"></div>' +
-                '                    <h5 tabindex="0" class="card-title" data-trigger="focus" data-placement="top" data-toggle="popover" title="' + room['label'] + ' details"' +
-                '                      data-content="' + room['details'] + '" data-container="body">'+ room['label'] +
-                '                    </h5>' +
+                '                    <h5 class="card-title" onclick="pickRoom(`' + room['name'] + '`)">'+ room['label']+ '</h5>' +
                 '                  </div>' +
-                '                  <button type="button" onclick="pickRoom(`' + room['name'] + '`)" class="pick_room btn btn-lg btn-block btn-primary">Go HRVATSKA!</button>' +
+                '                  <span type="button" tabindex="0" class="more-link" data-trigger="focus" data-placement="top" data-toggle="popover" title="' + room['label'] + ' details"' +
+                '                      data-content="' + room['details'] + '" data-container="body">Learn More</span>' +
                 '                </div>' +
                 '            </div>'
             room_elem.append(new_elm);
