@@ -324,7 +324,14 @@ h1.firstHeading {
     font-weight: normal;
     text-align: left;
 }
+@media screen and (min-width: 1024px) {
+    #map{
+        width: 75%;
+    }
+}
+
 @media screen and (min-width: 768px) {
+
 
     .hero {
         padding: 20px;

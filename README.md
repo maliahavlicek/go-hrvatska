@@ -117,6 +117,7 @@ Hero imagery seen in this project was gleaned from the sites listed below. Ordin
 - [w3schools](https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_slideshow_rr) - The main page slideshow of images found its beginnings from w3school's example.
 - [tutorialzine](https://tutorialzine.com/2017/03/css-triangles-without-hacks) - The diagonal cut of images on the trip selection page started from this tutorial on how to make CSS triangles.
 - [clippy](https://bennettfeely.com/clippy/) - This tool makes it easy to determine clip paths without getting lost in the inverse y coordinate bliss of CSS.
-- [google places search](https://developers-dot-devsite-v2-prod.appspot.com/maps/documentation/javascript/examples/place-search)- Documentation helped set up request for places search to get a google place_id
-- [google places details](https://developers-dot-devsite-v2-prod.appspot.com/maps/documentation/javascript/examples/place-details)- Provided a good example of how use a place_id to retrieve Places Details response to get imagery for itinerary page.
+- [google Maps Javascript API](https://developers-dot-devsite-v2-prod.appspot.com/maps/documentation/javascript/examples/) - Custom Animated Markers, polylines and infowindows for main map.
+- [google Places Search API ](https://developers-dot-devsite-v2-prod.appspot.com/maps/documentation/javascript/examples/place-search)- Documentation helped set up request for places search to get a google place_id
+- [google Places Details API](https://developers-dot-devsite-v2-prod.appspot.com/maps/documentation/javascript/examples/place-details)- Provided a good example of how use a place_id to retrieve Places Details response to get imagery for itinerary page.
 - [javascript constants](https://www.linkedin.com/in/syedmhassan/) - Moosa Hassan suggested to move large json constants out of functional javascript files into constants.js
