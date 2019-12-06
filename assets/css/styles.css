@@ -305,6 +305,10 @@ button.pick_room {
 .popover-body , .popover .arrow {
     background: rgb(121, 199, 217);
 }
+.start{
+    postion: relative;
+    float: right;
+}
 h1.firstHeading {
     color: var(--primary);
     font-size: 1rem;

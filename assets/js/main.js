@@ -5,7 +5,7 @@
  */
 let views = [
     {name: "hero-image", view : 0, mustFollow: false},
-    {name: "adventure", view: 1, mustFollow: true},
+    {name: "adventure", view: 1, mustFollow: false},
     {name: "room", view: 2, mustFollow: true },
     {name: "itinerary", view: 3, mustFollow: true},
     {name: "about", view: 10, mustFollow: false},
