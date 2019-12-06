@@ -12,7 +12,7 @@ function buildMapContent(){
     let details_elm = $('#itinerary-details');
     details_elm.empty();
     /*
-    TODO details section - 3 sections per row
+    details section - 3 sections per row
     1.  Day h3 with image
     2.  list of spots
     3.  map of spots to see that day
@@ -48,6 +48,9 @@ function buildMapContent(){
 
     finalizeMap(myTrip.days);
 
+    let trip_name = $('#selected_trip');
+    trip_name.empty();
+    trip_name.append('<span>' + myTrip.label + '</span>');
 }
 
 function finalizeMap(places){

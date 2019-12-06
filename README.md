@@ -41,7 +41,6 @@ Note: The wireframes are not entirely accurate, they only give a rough estimate 
 allow user to email the proposed agenda to themselves or others.
 
 ## Features
-qu
 
 ### Features Left to Implement
 - use google places API to suggest matches on lodging choice via [nearby](https://developers.google.com/maps/documentation/javascript/places?utm_source=google&utm_medium=cpc&utm_campaign=FY18-Q2-global-demandgen-paidsearchonnetworkhouseads-cs-maps_contactsal_saf&utm_content=text-ad-none-none-DEV_c-CRE_315916118099-ADGP_Hybrid+%7C+AW+SEM+%7C+SKWS+~+Nearby+Search-KWID_43700039136946351-kwd-582432942915-userloc_9028759&utm_term=KW_%2Bnearby%20%2Bsearch-ST_%2Bnearby+%2Bsearch&gclid=EAIaIQobChMI8IKMxKaW5gIVj8DACh1GrQ6WEAAYASAAEgLKjvD_BwE#place_search_requests)
@@ -60,6 +59,7 @@ Constant integration testing was preformed to ensure no console/javascript. Beyo
 Used the following validation websites to test the code:
 - [CSS Validator](https://jigsaw.w3.org/css-validator/) Note, any error associated with root: color variables were ignored.
 - [HTML Validator](https://validator.w3.org/)
+- [JSON Validator](https://jsonlint.com/)
 
 ### Cross Browser and Cross Device Testing
 For device testing, I would ideally have access to browser stack and derive a list of iOs devices and versions to test with from 
@@ -121,3 +121,4 @@ Hero imagery seen in this project was gleaned from the sites listed below. Ordin
 - [google Places Search API ](https://developers-dot-devsite-v2-prod.appspot.com/maps/documentation/javascript/examples/place-search)- Documentation helped set up request for places search to get a google place_id
 - [google Places Details API](https://developers-dot-devsite-v2-prod.appspot.com/maps/documentation/javascript/examples/place-details)- Provided a good example of how use a place_id to retrieve Places Details response to get imagery for itinerary page.
 - [javascript constants](https://www.linkedin.com/in/syedmhassan/) - Moosa Hassan suggested to move large json constants out of functional javascript files into constants.js
+- [geographic points](https://maps.sygic.com/) - Accurate latitude and longitude points for map pins that don't float in the sea.
