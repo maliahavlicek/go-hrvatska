@@ -39,19 +39,19 @@ const TRIPS = [{
             "lng": 14.2952159,
             "description": "Bevanda, a renowned restaurant, uses only fresh ingredients from the continent and the sea to create classic, but versatile dishes with a touch of modernity.",
             "attribution": "http://www.bevanda.hr/en/restoran/"
-            }, {
-                "name": "Restaurant Jist",
-                "lat": 45.3475939,
-                "lng": 14.3917946,
-                "description": "J-I-S-T is a fine–dining restaurant located in Rijeka, Croatia that mainly serves Boškarin meat, a strain of long-horned cattle from the Istrian peninsula.",
-                "attribution": "https://zambellidesign.com/portfolio/jist/"
-            }, {
-                "name": "Castillo de Trast",
-                "lat": 45.3326798,
-                "lng": 14.4553218,
-                "description": "The Castle of Trsat, on the outskirts of Rijeka ,plays a triple role: it is a historical monument, a place of recreation and a privileged point of observation to the Gulf of Kvarner. Formerly there stood a Roman fortress, today its tourist destination with summer banquets being offered in the main courtyard.",
-                "attribution": "https://www.rutasymapas.com/castillo-de-trast/"
-            }]
+        }, {
+            "name": "Restaurant Jist",
+            "lat": 45.3475939,
+            "lng": 14.3917946,
+            "description": "J-I-S-T is a fine–dining restaurant located in Rijeka, Croatia that mainly serves Boškarin meat, a strain of long-horned cattle from the Istrian peninsula.",
+            "attribution": "https://zambellidesign.com/portfolio/jist/"
+        }, {
+            "name": "Castillo de Trast",
+            "lat": 45.3326798,
+            "lng": 14.4553218,
+            "description": "The Castle of Trsat, on the outskirts of Rijeka ,plays a triple role: it is a historical monument, a place of recreation and a privileged point of observation to the Gulf of Kvarner. Formerly there stood a Roman fortress, today its tourist destination with summer banquets being offered in the main courtyard.",
+            "attribution": "https://www.rutasymapas.com/castillo-de-trast/"
+        }]
     }, {
         "name": "Senj",
         "lat": 44.9912466,
@@ -205,19 +205,19 @@ const TRIPS = [{
             "attribution": "https://travelguide.michelin.com/europe/croatia/osijek-baranja-county/osijek/king-peter-kresimir-iv-park"
         }]
     }, {
-        "name": "Slovania Region",
-        "lat": 45.4811677,
-        "lng": 17.981144,
+        "name": "Papuk",
+        "lat": 45.5216295,
+        "lng": 17.6854224,
         "places": [{
             "name": "Castle Pejačević - Nasice",
             "lat": 45.5548595,
             "lng": 18.4140927,
             "description": "This castle built in 1811 on the edge of the park and the crest of a hill, is classical in style with a few late Baroque details.",
             "attribution": "https://travelguide.michelin.com/europe/croatia/osijek-baranja-county/nasice/pejacevic-castle"
-        }, {
-            "name": "Papuk Nature Park",
-            "lat": 45.5216295,
-            "lng": 17.6854224,
+        },{
+            "name": "Ružica Grad",
+            "lat": 45.511156,
+            "lng": 17.858181,
             "description": "A great number of medieval fortifications, most of them originating from the 13th century, witness about the importance of the area of Papuk, especially during the time of the invasion of the Turks.",
             "attribution": "https://pp-papuk.hr/en/kulturno-povijesna-bastina/srednji-vijek/"
         }, {
@@ -226,6 +226,76 @@ const TRIPS = [{
             "lng": 17.678054,
             "description": "Saint Teresa of Ávila Cathedral is a cathedral in Požega and it is a beautiful example of Baroque architecture. ",
             "attribution": "https://croatiareviews.com/culture-and-heritage/pozega-cathedral"
+        }]
+    }, {
+        "name": "Karlovac",
+        "lat": 45.489252,
+        "lng": 15.548630,
+        "places": [{
+            "name": "Ozalj Castle",
+            "lat": 45.614280,
+            "lng": 15.470743,
+            "description": "he Ozalj fortress, located on the stone cliff perched above the Kupa River, is a very old stronghold that has been converted into a castle.",
+            "attribution": "https://croatiareviews.com/culture-and-heritage/ozalj-castle"
+        }, {
+            "name": "Dubovac Castle",
+            "lat": 45.495117,
+            "lng": 15.5257941,
+            "description": "This 13th century fortress was the first major settlement building in the Karlovac area, existing at the time as one of a series of defensive fortresses defending this area of strategic importance",
+            "attribution": "https://www.timeout.com/croatia/attractions/dubovac-castle"
+        }, {
+            "name": "Aquatika Museum",
+            "lat": 45.485100,
+            "lng": 15.562098,
+            "description": "Croatia is one of the European countries with the richest ichthyofauna and flora, and the city of Karlovac, famous for its four rivers, is a particularly suitable place for the presentation of the natural richness of our fresh waters.",
+            "attribution": "https://aquariumkarlovac.com/en/"
+        }]
+    }, {
+        "name": "Zadar",
+        "lat": 44.118608,
+        "lng": 15.232136,
+        "places": [{
+            "name": "Plitvice Lakes",
+            "lat": 45.020372,
+            "lng": 15.0682249,
+            "description": "The national park was founded in 1949 and is in the mountainous karst area of central Croatia, at the border to Bosnia and Herzegovina.",
+            "attribution": "https://en.wikipedia.org/wiki/Plitvice_Lakes_National_Park"
+        }, {
+            "name": "Nikola Tesla Memorial Center",
+            "lat": 44.559580,
+            "lng": 15.309660,
+            "description": "The Nikola Tesla Memorial Center is a cultural-historical site and museum located in Smiljan, Croatia, located at the birthplace of Nikola Tesla, one of the world's foremost electrical researchers and inventors.",
+            "attribution": "http://www.mcnikolatesla.hr/memorijalni-centar/o-nama/"
+
+        }, {
+            "name": "Zadar Walking tour",
+            "lat": 44.112110,
+            "lng": 15.228485,
+            "description": "Avoid the impersonal nature of big city tours and discover Zadar by foot on a small-group excursion, gaining intimate insight into the city’s cultural heritage with visits to landmarks including the Sea Organ and Church of St. Donatus, as well as liqueur and cheese tasting in the market.",
+            "attribution": "https://www.viator.com/tours/Zadar/Zadar-walking-tour/d22433-30182P4?mcid=56757"
+        }]
+    }, {
+        "name": "Split",
+        "lat": 43.507303,
+        "lng": 16.441423,
+        "places": [{
+            "name": "Klis Fortress",
+            "lat": 43.560050,
+            "lng": 16.524220,
+            "description": "The Fortress of Klis has a history of more than 2000 years, beginning with the Illyrian tribe called Dalmatae that used it as a stronghold before it was taken by the Romans. After the fall of the Roman Empire, the site became a seat for several Croatian kings.",
+            "attribution": "https://www.expatincroatia.com/visiting-klis-fortress/"
+        }, {
+            "name": "Cathedral of St. Lawrence",
+            "lat": 43.517046,
+            "lng": 16.251428,
+            "description": "The Cathedral in Trogir is the most distinctive building, dominating the area. Built on foundations of the old basilica which was destroyed after Saracens attack 1123, construction of this splendid structure started in 1193 and has been building for four centuries until finally completed around 1500.",
+            "attribution": "https://split-excursions.com/attractions/cathedral-of-st-lawrence-in-trogir/"
+        },{
+            "name": "Diocletian's Palace",
+            "lat": 43.508359,
+            "lng": 16.440183,
+            "description": "Considered to be one of the most imposing Roman ruins, Diocletian’s palace is certainly the main attraction of the city of Split, Croatia.",
+            "attribution": "http://www.diocletianspalace.org/"
         }]
     }]
 }, {
@@ -242,311 +312,310 @@ const TRIPS = [{
             "lng": 17.858181,
             "description": "A great number of medieval fortifications, most of them originating from the 13th century, witness about the importance of the area of Papuk, especially during the time of the invasion of the Turks.",
             "attribution": "https://pp-papuk.hr/en/kulturno-povijesna-bastina/srednji-vijek/"
-            }, {
-                "name": "Skakavac Waterfall",
-                "lat": 45.523237,
-                "lng": 17.684505,
-                "description": "One of the most beautiful waterfalls in Papuk Nature Park.",
-                "attribution": "https://www.chasingthedonkey.com/papuk-nature-park-slavonia-croatia-unesco-geopark/"
-            }, {
-                "name": "Jankovac Forest Park",
-                "lat": 45.560265,
-                "lng": 17.500889,
-                "description": "There are ten different natural forest communities in Papuk Nature Park, woods covering about 95% of the entire park. Its lower areas are predominantly hornbeam and oak forest, while the higher altitudes are where you’ll find the beech forests.",
-                "attribution": "https://www.chasingthedonkey.com/papuk-nature-park-slavonia-croatia-unesco-geopark/"
-            }]
         }, {
-            "name": "Lonjsko Polje ",
-            "lat": 45.359070,
-            "lng": 16.816789,
-            "places": [{
-                "name": "Čigoć - stork village",
-                "lat": 45.415395,
-                "lng": 16.630886,
-                "description": "Hundreds of the creatures descend on Čigoć every year, and almost every house in the village boasts a stork’s nest.",
-                "attribution": "https://www.timeout.com/croatia/things-to-do/lonjsko-polje"
-            }, {
-                "name": "Krapje - traditional houses",
-                "lat": 45.302066,
-                "lng": 16.827112,
-                "description": " Krapje is and exemplary bucolic villages made up of traditional wooden houses and barns.",
-                "attribution": "https://www.timeout.com/croatia/things-to-do/lonjsko-polje"
-            }, {
-                "name": "Mužilovčica - wetlands and horses",
-                "lat": 45.390890,
-                "lng": 16.682421,
-                "description": "Rent a canoe, explore the wetlands, catch sight of the posavski horse, a local breed that grazes in the oak forests.",
-                "attribution": "https://www.lonelyplanet.com/croatia/attractions/lonjsko-polje-nature-park/a/poi-sig/1271901/358781"
-            }]
+            "name": "Skakavac Waterfall",
+            "lat": 45.523237,
+            "lng": 17.684505,
+            "description": "One of the most beautiful waterfalls in Papuk Nature Park.",
+            "attribution": "https://www.chasingthedonkey.com/papuk-nature-park-slavonia-croatia-unesco-geopark/"
         }, {
-            "name": "Plitvice Lakes",
-            "lat": 45.020372,
-            "lng": 15.0682249,
-            "places": [{
-                "name": "Veliki Slap",
-                "lat": 44.902543,
-                "lng": 15.607900,
-                "description": "The highest waterfall in the Plitvice National Park is the Large (Great) Waterfall (aka Veliki slap in Croatian) – 78 meters high situated at the very end of the Lower Lakes",
-                "attribution": "https://www.plitvice-lakes.info/waterfalls/veliki-slap-waterfall/"
-            }, {
-                "name": "Barac Caves",
-                "lat": 44.983817,
-                "lng": 15.722790,
-                "description": "Located in a village of Nova Krslja, just few kilometers from the lakes, the Barac caves were first open to visitors back in 1893, but soon forgotten following the WWII.",
-                "attribution": "https://www.frankaboutcroatia.com/plitvice-lakes/"
-            }, {
-                "name": "Velika Kaskada ",
-                "lat": 44.899876,
-                "lng": 15.611025,
-                "description": "Take a walk along and over a series of Lovely cascades located on the border of Gavanovac and Kaluđerovac lake.",
-                "attribution": "https://www.plitvice-lakes.info/cascades/velike-kaskade/"
-            }]
+            "name": "Jankovac Forest Park",
+            "lat": 45.560265,
+            "lng": 17.500889,
+            "description": "There are ten different natural forest communities in Papuk Nature Park, woods covering about 95% of the entire park. Its lower areas are predominantly hornbeam and oak forest, while the higher altitudes are where you’ll find the beech forests.",
+            "attribution": "https://www.chasingthedonkey.com/papuk-nature-park-slavonia-croatia-unesco-geopark/"
+        }]
+    }, {
+        "name": "Lonjsko Polje ",
+        "lat": 45.359070,
+        "lng": 16.816789,
+        "places": [{
+            "name": "Čigoć - stork village",
+            "lat": 45.415395,
+            "lng": 16.630886,
+            "description": "Hundreds of the creatures descend on Čigoć every year, and almost every house in the village boasts a stork’s nest.",
+            "attribution": "https://www.timeout.com/croatia/things-to-do/lonjsko-polje"
         }, {
-            "name": "Paklenica Mountain",
-            "lat": 44.341576,
-            "lng": 15.489762,
-            "places": [{
-                "name": "Manita Pec Cave",
-                "lat": 44.314565,
-                "lng": 15.474718,
-                "description": "Manita Peć has a wealth of stalagmites and stalactites enhanced by strategically placed lighting in the main chamber (40m long and 32m high).",
-                "attribution": "http://www.np-paklenica.hr/en/index.php/park/tourist-facilities/manita-pec-cave"
-            }, {
-                "name": "Mali Vaganac adventure Park",
-                "lat": 44.304790,
-                "lng": 15.429620,
-                "description": "Get outdoors, challenge yourself, and experience the exhilaration of rock climbing, abseiling, balancing and zipping!",
-                "attribution": "http://distinct-travel.com/?page_id=11"
-            }, {
-                "name": "Zrmanja River Tours",
-                "lat": 44.182897,
-                "lng": 15.694342,
-                "description": "The upper reaches of the Zrmanja are one of the country’s hottest spots for rafting and kayaking through its spectacular limestone canyons",
-                "attribution": "https://www.viator.com/Zadar-attractions/Zrmanja/d22433-a21399"
-            }]
+            "name": "Krapje - traditional houses",
+            "lat": 45.302066,
+            "lng": 16.827112,
+            "description": " Krapje is and exemplary bucolic villages made up of traditional wooden houses and barns.",
+            "attribution": "https://www.timeout.com/croatia/things-to-do/lonjsko-polje"
         }, {
-            "name": "Kornati",
-            "lat": 43.821580,
-            "lng": 15.319932,
-            "places": [{
-                "name": "Najada diving",
-                "lat": 43.826843,
-                "lng": 15.580262,
-                "description": "The Dive sites in Kornati National Park are among the most beautiful in the Mediterranean, we know all the best spots to visit from shipwrecks to where the most diverse sea life can be found.",
-                "attribution": "https://www.najada.com/word-press/divesites/"
-            }, {
-                "name": "Telašćica",
-                "lat": 43.891586,
-                "lng": 15.168010,
-                "description": "The contrasts of nature is very expressed here with peaceful bays and rugged cliffs, forests of Aleppo pine on one side and Holm oak on the other side, the area of cultivated fields of vineyards and olive-trees, as well as the area of rocky meadows.",
-                "attribution": "http://www.dugiotok.hr/en/attractions-telascica"
-            }, {
-                "name": "Nin - KiteBoarding",
-                "lat": 44.247832,
-                "lng": 15.047539,
-                "description": "Nin’s sandy beaches are great places for windsurfing and kitesurfing and to learn surfing",
-                "attribution": "https://visitnin.com/surfing/"
-            }]
-
+            "name": "Mužilovčica - wetlands and horses",
+            "lat": 45.390890,
+            "lng": 16.682421,
+            "description": "Rent a canoe, explore the wetlands, catch sight of the posavski horse, a local breed that grazes in the oak forests.",
+            "attribution": "https://www.lonelyplanet.com/croatia/attractions/lonjsko-polje-nature-park/a/poi-sig/1271901/358781"
+        }]
+    }, {
+        "name": "Plitvice Lakes",
+        "lat": 45.020372,
+        "lng": 15.0682249,
+        "places": [{
+            "name": "Veliki Slap",
+            "lat": 44.902543,
+            "lng": 15.607900,
+            "description": "The highest waterfall in the Plitvice National Park is the Large (Great) Waterfall (aka Veliki slap in Croatian) – 78 meters high situated at the very end of the Lower Lakes",
+            "attribution": "https://www.plitvice-lakes.info/waterfalls/veliki-slap-waterfall/"
         }, {
-            "name": "Krka",
-            "lat": 43.915454,
-            "lng": 16.012183,
-            "places": [{
-                "name": "Visovac Monestary",
-                "lat": 43.861037,
-                "lng": 15.973209,
-                "description": "At the center of Lake Viskovac is a tree-fringed island, the perfect place for a monastery.",
-                "attribution": "https://www.lonelyplanet.com/croatia/attractions/mother-of-mercy-franciscan-monastery/a/poi-sig/1336736/1318910"
-            }, {
-                "name": "Skradinski Buk - waterfalls",
-                "lat": 43.804920,
-                "lng": 15.964044,
-                "description": "Swim in the Krka river, see if you are strong enough to make it to the falls.",
-                "attribution": "https://www.swedishnomad.com/krka-national-park-in-croatia/"
-            }, {
-                "name": "Skradin - Boat trip",
-                "lat": 43.817866,
-                "lng": 15.923372,
-                "description": "the advantage to starting your visit to Krka National Park in Skradin is that the park admission fee includes a boat ride through the canyon to Skradinski Buk waterfall.",
-                "attribution": "https://www.swedishnomad.com/krka-national-park-in-croatia/"
-            }]
+            "name": "Barac Caves",
+            "lat": 44.983817,
+            "lng": 15.722790,
+            "description": "Located in a village of Nova Krslja, just few kilometers from the lakes, the Barac caves were first open to visitors back in 1893, but soon forgotten following the WWII.",
+            "attribution": "https://www.frankaboutcroatia.com/plitvice-lakes/"
+        }, {
+            "name": "Velika Kaskada ",
+            "lat": 44.899876,
+            "lng": 15.611025,
+            "description": "Take a walk along and over a series of Lovely cascades located on the border of Gavanovac and Kaluđerovac lake.",
+            "attribution": "https://www.plitvice-lakes.info/cascades/velike-kaskade/"
+        }]
+    }, {
+        "name": "Paklenica Mountain",
+        "lat": 44.341576,
+        "lng": 15.489762,
+        "places": [{
+            "name": "Manita Pec Cave",
+            "lat": 44.314565,
+            "lng": 15.474718,
+            "description": "Manita Peć has a wealth of stalagmites and stalactites enhanced by strategically placed lighting in the main chamber (40m long and 32m high).",
+            "attribution": "http://www.np-paklenica.hr/en/index.php/park/tourist-facilities/manita-pec-cave"
+        }, {
+            "name": "Mali Vaganac adventure Park",
+            "lat": 44.304790,
+            "lng": 15.429620,
+            "description": "Get outdoors, challenge yourself, and experience the exhilaration of rock climbing, abseiling, balancing and zipping!",
+            "attribution": "http://distinct-travel.com/?page_id=11"
+        }, {
+            "name": "Zrmanja River Tours",
+            "lat": 44.182897,
+            "lng": 15.694342,
+            "description": "The upper reaches of the Zrmanja are one of the country’s hottest spots for rafting and kayaking through its spectacular limestone canyons",
+            "attribution": "https://www.viator.com/Zadar-attractions/Zrmanja/d22433-a21399"
+        }]
+    }, {
+        "name": "Kornati",
+        "lat": 43.821580,
+        "lng": 15.319932,
+        "places": [{
+            "name": "Najada diving",
+            "lat": 43.826843,
+            "lng": 15.580262,
+            "description": "The Dive sites in Kornati National Park are among the most beautiful in the Mediterranean, we know all the best spots to visit from shipwrecks to where the most diverse sea life can be found.",
+            "attribution": "https://www.najada.com/word-press/divesites/"
+        }, {
+            "name": "Telašćica",
+            "lat": 43.891586,
+            "lng": 15.168010,
+            "description": "The contrasts of nature is very expressed here with peaceful bays and rugged cliffs, forests of Aleppo pine on one side and Holm oak on the other side, the area of cultivated fields of vineyards and olive-trees, as well as the area of rocky meadows.",
+            "attribution": "http://www.dugiotok.hr/en/attractions-telascica"
+        }, {
+            "name": "Nin - KiteBoarding",
+            "lat": 44.247832,
+            "lng": 15.047539,
+            "description": "Nin’s sandy beaches are great places for windsurfing and kitesurfing and to learn surfing",
+            "attribution": "https://visitnin.com/surfing/"
         }]
 
     }, {
-        "name": "beaches",
-        "label": "Beach Life",
-        "details": "Caves, waterfalls, crazy cliffs, stunning mountain views and the Kornati archipelago await.",
-        "days": [{
-            "name": "Novalja",
-            "lat": 44.5526593,
-            "lng": 14.8848009,
-            "places": [{
-                "name": "Zrce",
-                "lat": 44.539592,
-                "lng": 14.915023,
-                "description": "An exciting pebbly beach with many facilities and sport opportunities. A good spot to party the night away in one of the open-air clubs.",
-                "attribution": "https://zrce.eu/en/"
-            }, {
-                "name": "Babe Beach",
-                "lat": 44.567268,
-                "lng": 14.866303,
-                "description": "Babe beach lies in a shallow cove west of Novalja. It is the shallowest and warmest of Novalja’s beaches, with fine sand, ideal for playing with picigin with your friends.",
-                "attribution": "http://croatia.hr/en-GB/experiences/beaches/babe-beach"
-            }, {
-                "name": "Planjka – Trinćel Beach",
-                "lat": 44.571195,
-                "lng": 14.887818,
-                "description": "The winner of “The most beautiful beach on the Adriatic” is a must-see for anybody vacationing on Pag. It has a lot of kid-friendly activities, as well as sports courts for the adults.",
-                "attribution": "https://www.camping-simuni.hr/en/blog/which-are-the-best-sandy-beaches-in-croatia/"
-            }, {
-                "name": "Nin - KiteBoarding",
-                "lat": 44.247832,
-                "lng": 15.047539,
-                "description": "Nin’s sandy beaches are great places for windsurfing and kitesurfing and to learn surfing",
-                "attribution": "https://visitnin.com/surfing/"
-            }]
+        "name": "Krka",
+        "lat": 43.915454,
+        "lng": 16.012183,
+        "places": [{
+            "name": "Visovac Monestary",
+            "lat": 43.861037,
+            "lng": 15.973209,
+            "description": "At the center of Lake Viskovac is a tree-fringed island, the perfect place for a monastery.",
+            "attribution": "https://www.lonelyplanet.com/croatia/attractions/mother-of-mercy-franciscan-monastery/a/poi-sig/1336736/1318910"
         }, {
-            "name": "Kornati Islands",
-            "lat": 43.821580,
-            "lng": 15.319932,
-            "places": [{
-                "name": "Sakarun",
-                "lat": 44.133719,
-                "lng": 14.871812,
-                "description": "One of Croatia's best nightlife beaches where the party doesn't stop until the morning. Well-equipped with bars and other facilities.",
-                "attribution": "http://www.dugiotok.hr/en/attractions-telascica"
-            }, {
-                "name": "Telašćica",
-                "lat": 43.891586,
-                "lng": 15.168010,
-                "description": "The contrasts of nature is very expressed here with peaceful bays and rugged cliffs, forests of Aleppo pine on one side and Holm oak on the other side, the area of cultivated fields of vineyards and olive-trees, as well as the area of rocky meadows.",
-                "attribution": "http://www.dugiotok.hr/en/attractions-telascica"
-            }, {
-                "name": "Lojena Cove",
-                "lat": 43.820556,
-                "lng": 15.250562,
-                "description": "The sandy cove of Lojena on the island of Levrnaki is the most beautiful beach of the Kornati National Park.",
-                "attribution": "http://croatia.hr/en-GB/experiences/nautical/paradise-coves-in-the-adriatic-that-only-sailors-know-of"
-            }]
+            "name": "Skradinski Buk - waterfalls",
+            "lat": 43.804920,
+            "lng": 15.964044,
+            "description": "Swim in the Krka river, see if you are strong enough to make it to the falls.",
+            "attribution": "https://www.swedishnomad.com/krka-national-park-in-croatia/"
         }, {
-            "name": "Split",
-            "lat": 43.507303,
-            "lng": 16.441423,
-            "places": [{
-                "name": "Trstenik beach",
-                "lat": 43.501913,
-                "lng": 16.464737,
-                "description": "Water is very clear, mostly because it's open for currents, and if you need bigger company, over crowded Žnjan is just around the corner.",
-                "attribution": "https://visitsplit.com/en/2457/swimming-in-split-top-5-beaches"
-            }, {
-                "name": "Bacvice Beach",
-                "lat": 43.502243,
-                "lng": 16.446891,
-                "description": "It's the central city beach, popular among locals and young tourists looking for some fun.",
-                "attribution": "https://visitsplit.com/en/2457/swimming-in-split-top-5-beaches"
-            }, {
-                "name": "Bene -kayak tour",
-                "lat": 43.514264,
-                "lng": 16.401528,
-                "description": "Located in Marjan Hill Forest Park just north of Split, kayak tours start from a shady beach.",
-                "attribution": "https://visitsplit.com/en/2457/swimming-in-split-top-5-beaches"
-            }]
-        }, {
-            "name": "Brac",
-            "lat": 43.319969,
-            "lng": 16.644528,
-            "places": [{
-                "name": "Golden Horn - Zlatni Rat",
-                "lat": 43.257460,
-                "lng": 16.634258,
-                "description": "One of Croatia's best nightlife beaches where the party doesn't stop until the morning. Well-equipped with bars and other facilities.",
-                "attribution": "http://www.dugiotok.hr/en/attractions-telascica"
-            }, {
-                "name": "Lovrecina Beach",
-                "lat": 43.372175,
-                "lng": 16.660535,
-                "description": "A wonderful sandy beach, located near charming Positra town, on the northern side of the island. The sand on the beach and in the sea stretches for almost 100 m.",
-                "attribution": "http://www.dugiotok.hr/en/attractions-telascica"
-            }, {
-                "name": "Blaca cove",
-                "lat": 43.292984,
-                "lng": 16.497051,
-                "description": "Not only is Blaca famous for its historical hermitage (cave monastery), but also for its stunning cove, which is surrounded by a dense pine forest. Deep in the same cove lays a lovely beach.",
-                "attribution": "http://www.dugiotok.hr/en/attractions-telascica"
-            }]
-        }, {
-            "name": "Hvar",
-            "lat": 43.156604,
-            "lng": 16.728718,
-            "places": [{
-                "name": "Dubovica",
-                "lat": 43.145968,
-                "lng": 16.534604,
-                "description": "This beach is regularly found in many top lists throughout Croatian listings. Perfect and peaceful spot for those who enjoy swimming in crystal clear waters with not so many people around.",
-                "attribution": "https://www.via-croatia.com/blog/the-best-beaches-in-hvar/"
-            }, {
-                "name": "Kordovon ",
-                "lat": 43.159308,
-                "lng": 16.434939,
-                "description": "Going out by kayak can present you with a fantastic place to enjoy the beach and take in some sunshine.",
-                "attribution": "https://www.via-croatia.com/blog/the-best-beaches-in-hvar/"
-            }, {
-                "name": "Grebišće",
-                "lat": 43.159405,
-                "lng": 16.710760,
-                "description": "This beach is a favorite amongst families and it can be found near the North end of Jelsa harbor and a popular spot to watch sunsets.",
-                "attribution": "https://www.via-croatia.com/blog/the-best-beaches-in-hvar/"
-            }]
-        }, {
-            "name": "Korčula",
-            "lat": 42.941492,
-            "lng": 16.898200,
-            "places": [{
-                "name": "Proizd",
-                "lat": 42.986544,
-                "lng": 16.613283,
-                "description": "Renowned for its crystal clear turquoise seas, Proizd is located in the Vela Luka gulf area.",
-                "attribution": "https://www.croatiaweek.com/10-great-beaches-on-korcula-island/"
-            }, {
-                "name": "Vaja Beach",
-                "lat": 42.975141,
-                "lng": 17.004354,
-                "description": "A small beach with white pebbles and azure sea water. It is a picturesque and romantic place, isolated and rarely visited.",
-                "attribution": "https://www.korculainfo.com/vaja/"
-            }, {
-                "name": "Istruga Bay",
-                "lat": 42.909735,
-                "lng": 16.857803,
-                "description": "The most special thing about Istruga bays is it's 6 metres thick sediments of 'peloid' - dark sea mud which is created by sedimentation of organic and inorganic substances brought by river and sea waters and has great therapeutic value.",
-                "attribution": "http://www.ikorculainfo.com/island-korcula/korcula-beaches.htm"
-            }]
-        }, {
-            "name": "Dubrovnik",
-            "lat": 42.649964,
-            "lng": 18.093695,
-            "places": [{
-                "name": "Copacabana Beach",
-                "lat": 42.663620,
-                "lng": 18.065433,
-                "description": "A half-moon of pebbles and gravel set in Seka Bay, Copacabana is one of Dubrovnik's best beaches.",
-                "attribution": "https://www.timeout.com/croatia/travel/the-best-dubrovnik-beaches"
-            }, {
-                "name": "Lapad Beach",
-                "lat": 42.655120,
-                "lng": 18.070047,
-                "description": "A family-friendly public beach complete with showers, sunloungers and shallow waters overseen by lifeguards",
-                "attribution": "https://www.timeout.com/croatia/travel/the-best-dubrovnik-beaches"
-            }, {
-                "name": "Bellevue Beach",
-                "lat": 42.646285,
-                "lng": 18.092268,
-                "description": "This pebbly cove is sheltered by high cliffs, which provide a platform for daredevil cliff divers but also cast a shadow over the beach by late afternoon – a boon on a scorching day.",
-                "attribution": "https://www.lonelyplanet.com/croatia/dubrovnik/activities/bellevue-beach/a/poi-act/1544881/358783"
-            }]
+            "name": "Skradin - Boat trip",
+            "lat": 43.817866,
+            "lng": 15.923372,
+            "description": "the advantage to starting your visit to Krka National Park in Skradin is that the park admission fee includes a boat ride through the canyon to Skradinski Buk waterfall.",
+            "attribution": "https://www.swedishnomad.com/krka-national-park-in-croatia/"
         }]
-    }
-];
+    }]
+
+}, {
+    "name": "beaches",
+    "label": "Beach Life",
+    "details": "Caves, waterfalls, crazy cliffs, stunning mountain views and the Kornati archipelago await.",
+    "days": [{
+        "name": "Novalja",
+        "lat": 44.5526593,
+        "lng": 14.8848009,
+        "places": [{
+            "name": "Zrce",
+            "lat": 44.539592,
+            "lng": 14.915023,
+            "description": "An exciting pebbly beach with many facilities and sport opportunities. A good spot to party the night away in one of the open-air clubs.",
+            "attribution": "https://zrce.eu/en/"
+        }, {
+            "name": "Babe Beach",
+            "lat": 44.567268,
+            "lng": 14.866303,
+            "description": "Babe beach lies in a shallow cove west of Novalja. It is the shallowest and warmest of Novalja’s beaches, with fine sand, ideal for playing with picigin with your friends.",
+            "attribution": "http://croatia.hr/en-GB/experiences/beaches/babe-beach"
+        }, {
+            "name": "Planjka – Trinćel Beach",
+            "lat": 44.571195,
+            "lng": 14.887818,
+            "description": "The winner of “The most beautiful beach on the Adriatic” is a must-see for anybody vacationing on Pag. It has a lot of kid-friendly activities, as well as sports courts for the adults.",
+            "attribution": "https://www.camping-simuni.hr/en/blog/which-are-the-best-sandy-beaches-in-croatia/"
+        }, {
+            "name": "Nin - KiteBoarding",
+            "lat": 44.247832,
+            "lng": 15.047539,
+            "description": "Nin’s sandy beaches are great places for windsurfing and kitesurfing and to learn surfing",
+            "attribution": "https://visitnin.com/surfing/"
+        }]
+    }, {
+        "name": "Kornati Islands",
+        "lat": 43.821580,
+        "lng": 15.319932,
+        "places": [{
+            "name": "Sakarun",
+            "lat": 44.133719,
+            "lng": 14.871812,
+            "description": "One of Croatia's best nightlife beaches where the party doesn't stop until the morning. Well-equipped with bars and other facilities.",
+            "attribution": "http://www.dugiotok.hr/en/attractions-telascica"
+        }, {
+            "name": "Telašćica",
+            "lat": 43.891586,
+            "lng": 15.168010,
+            "description": "The contrasts of nature is very expressed here with peaceful bays and rugged cliffs, forests of Aleppo pine on one side and Holm oak on the other side, the area of cultivated fields of vineyards and olive-trees, as well as the area of rocky meadows.",
+            "attribution": "http://www.dugiotok.hr/en/attractions-telascica"
+        }, {
+            "name": "Lojena Cove",
+            "lat": 43.820556,
+            "lng": 15.250562,
+            "description": "The sandy cove of Lojena on the island of Levrnaki is the most beautiful beach of the Kornati National Park.",
+            "attribution": "http://croatia.hr/en-GB/experiences/nautical/paradise-coves-in-the-adriatic-that-only-sailors-know-of"
+        }]
+    }, {
+        "name": "Split",
+        "lat": 43.507303,
+        "lng": 16.441423,
+        "places": [{
+            "name": "Trstenik beach",
+            "lat": 43.501913,
+            "lng": 16.464737,
+            "description": "Water is very clear, mostly because it's open for currents, and if you need bigger company, over crowded Žnjan is just around the corner.",
+            "attribution": "https://visitsplit.com/en/2457/swimming-in-split-top-5-beaches"
+        }, {
+            "name": "Bacvice Beach",
+            "lat": 43.502243,
+            "lng": 16.446891,
+            "description": "It's the central city beach, popular among locals and young tourists looking for some fun.",
+            "attribution": "https://visitsplit.com/en/2457/swimming-in-split-top-5-beaches"
+        }, {
+            "name": "Bene -kayak tour",
+            "lat": 43.514264,
+            "lng": 16.401528,
+            "description": "Located in Marjan Hill Forest Park just north of Split, kayak tours start from a shady beach.",
+            "attribution": "https://visitsplit.com/en/2457/swimming-in-split-top-5-beaches"
+        }]
+    }, {
+        "name": "Brac",
+        "lat": 43.319969,
+        "lng": 16.644528,
+        "places": [{
+            "name": "Golden Horn - Zlatni Rat",
+            "lat": 43.257460,
+            "lng": 16.634258,
+            "description": "One of Croatia's best nightlife beaches where the party doesn't stop until the morning. Well-equipped with bars and other facilities.",
+            "attribution": "http://www.dugiotok.hr/en/attractions-telascica"
+        }, {
+            "name": "Lovrecina Beach",
+            "lat": 43.372175,
+            "lng": 16.660535,
+            "description": "A wonderful sandy beach, located near charming Positra town, on the northern side of the island. The sand on the beach and in the sea stretches for almost 100 m.",
+            "attribution": "http://www.dugiotok.hr/en/attractions-telascica"
+        }, {
+            "name": "Blaca cove",
+            "lat": 43.292984,
+            "lng": 16.497051,
+            "description": "Not only is Blaca famous for its historical hermitage (cave monastery), but also for its stunning cove, which is surrounded by a dense pine forest. Deep in the same cove lays a lovely beach.",
+            "attribution": "http://www.dugiotok.hr/en/attractions-telascica"
+        }]
+    }, {
+        "name": "Hvar",
+        "lat": 43.156604,
+        "lng": 16.728718,
+        "places": [{
+            "name": "Dubovica",
+            "lat": 43.145968,
+            "lng": 16.534604,
+            "description": "This beach is regularly found in many top lists throughout Croatian listings. Perfect and peaceful spot for those who enjoy swimming in crystal clear waters with not so many people around.",
+            "attribution": "https://www.via-croatia.com/blog/the-best-beaches-in-hvar/"
+        }, {
+            "name": "Kordovon ",
+            "lat": 43.159308,
+            "lng": 16.434939,
+            "description": "Going out by kayak can present you with a fantastic place to enjoy the beach and take in some sunshine.",
+            "attribution": "https://www.via-croatia.com/blog/the-best-beaches-in-hvar/"
+        }, {
+            "name": "Grebišće",
+            "lat": 43.159405,
+            "lng": 16.710760,
+            "description": "This beach is a favorite amongst families and it can be found near the North end of Jelsa harbor and a popular spot to watch sunsets.",
+            "attribution": "https://www.via-croatia.com/blog/the-best-beaches-in-hvar/"
+        }]
+    }, {
+        "name": "Korčula",
+        "lat": 42.941492,
+        "lng": 16.898200,
+        "places": [{
+            "name": "Proizd",
+            "lat": 42.986544,
+            "lng": 16.613283,
+            "description": "Renowned for its crystal clear turquoise seas, Proizd is located in the Vela Luka gulf area.",
+            "attribution": "https://www.croatiaweek.com/10-great-beaches-on-korcula-island/"
+        }, {
+            "name": "Vaja Beach",
+            "lat": 42.975141,
+            "lng": 17.004354,
+            "description": "A small beach with white pebbles and azure sea water. It is a picturesque and romantic place, isolated and rarely visited.",
+            "attribution": "https://www.korculainfo.com/vaja/"
+        }, {
+            "name": "Istruga Bay",
+            "lat": 42.909735,
+            "lng": 16.857803,
+            "description": "The most special thing about Istruga bays is it's 6 metres thick sediments of 'peloid' - dark sea mud which is created by sedimentation of organic and inorganic substances brought by river and sea waters and has great therapeutic value.",
+            "attribution": "http://www.ikorculainfo.com/island-korcula/korcula-beaches.htm"
+        }]
+    }, {
+        "name": "Dubrovnik",
+        "lat": 42.649964,
+        "lng": 18.093695,
+        "places": [{
+            "name": "Copacabana Beach",
+            "lat": 42.663620,
+            "lng": 18.065433,
+            "description": "A half-moon of pebbles and gravel set in Seka Bay, Copacabana is one of Dubrovnik's best beaches.",
+            "attribution": "https://www.timeout.com/croatia/travel/the-best-dubrovnik-beaches"
+        }, {
+            "name": "Lapad Beach",
+            "lat": 42.655120,
+            "lng": 18.070047,
+            "description": "A family-friendly public beach complete with showers, sunloungers and shallow waters overseen by lifeguards",
+            "attribution": "https://www.timeout.com/croatia/travel/the-best-dubrovnik-beaches"
+        }, {
+            "name": "Bellevue Beach",
+            "lat": 42.646285,
+            "lng": 18.092268,
+            "description": "This pebbly cove is sheltered by high cliffs, which provide a platform for daredevil cliff divers but also cast a shadow over the beach by late afternoon – a boon on a scorching day.",
+            "attribution": "https://www.lonelyplanet.com/croatia/dubrovnik/activities/bellevue-beach/a/poi-act/1544881/358783"
+        }]
+    }]
+}];
 
 const ROOMS =
     [

@@ -24,7 +24,7 @@ function buildMapContent(){
         let det_elm = '<div class="d-flex flex-row"><div class="city" id="day-' + day_num + '">' +
                 '        <h3>Day ' + day_num + ': ' + day['name'] + '</h3>'+
                 '        <div class="details-img-wrap" id="img-day-' + day_num + '"></div></div>';
-        det_elm += '   <div class="details"><h3>Places to See</h3><ul>';
+        det_elm += '   <div class="details" id="details-' + day_num +'"><h3>Places to See</h3><ul>';
         $.each(day.places, function (index2, item) {
             det_elm += '<li>' + item.name + '</li>';
 
@@ -158,7 +158,7 @@ function findImage(place, day_num) {
                 console.log("got details, inserting image for "+ place.name);
                 if(local && local.photos.length >0) {
                     let img_elm = document.getElementById('img-day-' + day_num);
-                    let new_elm = '<img class="details-img" src="' + local.photos[0].getUrl() + '" alt="Image of ' + place.name + '"/>';
+                    let new_elm = '<img class="details-img" src="' + local.photos[0].getUrl() + '" width="100%" alt="Image of ' + place.name + '"/>';
                     if (local.photos[0].html_attributions.length > 0) {
                         new_elm += '<p class="disclaimer">Photo by: ' + local.photos[0].html_attributions[0] + '</p>';
                     }

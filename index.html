@@ -12,6 +12,13 @@
     <!-- Homegrown CSS -->
     <link rel="stylesheet" href="assets/css/reset.css"/>
     <link rel="stylesheet" href="assets/css/styles.css" />
+    <!-- Email JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init("user_QxqbTJ64EJafBGLHni6tU");
+       })();
+    </script>
 
     <title>Go Hrvatska!</title>
 
@@ -71,6 +78,17 @@
         </div>
         <div>
             <div id="itinerary-details"></div>
+            <div>
+                <h3 class="contact-heading uppercase text-center">Like this?</h3>
+                <h5 class="uppercase text-center">Email it:</h5>
+            </div>
+            <div class="center-form">
+                <form onsubmit="return sendMail(this);" method="POST">
+                  <input type="text" name="name" class="form-control" id="fullname" placeholder="Name" required/>
+                  <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Email" required/>
+                  <button type="submit" class="btn btn-secondary center-block">Send Itinerary</button>
+                </form>
+            </div>
         </div>
       </div>
 
@@ -94,5 +112,7 @@
     <!-- Google Maps scripts -->
     <script async defer src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCD-9puVD1uHScbV1KsCFisP6EsKg5FbhE&callback=initMap&libraries=places"></script>
+    <!-- Email -->
+    <script src="assets/js/email.js"></script>
   </body>
 </html>
