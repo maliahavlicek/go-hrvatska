@@ -299,6 +299,10 @@ button.pick_room {
     background: rgb(57, 147, 156);
     color: var(--gray-light);
 }
+.lodging a{
+    color: var(--gray-light);
+    text-decoration: underline;
+}
 .popover-header {
     background: rgb(57, 147, 156);
 }
@@ -331,6 +335,26 @@ h1.firstHeading {
     font-weight: normal;
     text-align: left;
 }
+.sendEmail{
+    background: var(--primary);
+    color: var(--white);
+    padding: 20px;
+    text-align: left;
+}
+.sendEmail .form {
+    margin: 20px;
+}
+.sendEmail .form-group{
+    display: inline-block;
+}
+.email-submit{
+    display: block;
+}
+input#emailaddress {
+    max-width: 33%;
+    min-width: 300px;
+}
+
 @media screen and (min-width: 1024px) {
     #map{
         width: 75%;

@@ -78,17 +78,17 @@
         </div>
         <div>
             <div id="itinerary-details"></div>
-            <div>
-                <h3 class="contact-heading uppercase text-center">Like this?</h3>
-                <h5 class="uppercase text-center">Email it:</h5>
-            </div>
-            <div class="center-form">
-                <form onsubmit="return sendMail(this);" method="POST">
-                  <input type="text" name="name" class="form-control" id="fullname" placeholder="Name" required/>
-                  <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Email" required/>
-                  <button type="submit" class="btn btn-secondary center-block">Send Itinerary</button>
-                </form>
-            </div>
+        </div>
+        </iv><div class="sendEmail">
+          <h3 class="contact-heading uppercase">Like this itinerary?</h3>
+            <form class="form" onsubmit="return sendMail(this);" method="POST">
+              <div class="form-group">
+                <label for="emailaddress"  class="sr-only">Email Address</label>
+                <input required type="email"  id="emailaddress" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text disclaimer">We'll never share your email with anyone else.</small>
+              </div>
+              <button type="submit" class="btn btn-primary email-submit">Send Itinerary</button>
+            </form>
         </div>
       </div>
 

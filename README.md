@@ -51,6 +51,7 @@ allow user to email the proposed agenda to themselves or others.
 - [HTML5](https://www.w3schools.com/html/default.asp) The project uses **HTML** to define DOM elements.
 - [Bootstrap 4.0](https://getbootstrap.com/docs/4.0/getting-started/introduction/) Rather than re-invent many things, I chose to customize the look and feel of bootstrap 4.0 
 - [jQuery3.3.1](https://api.jquery.com/) Used jQuery 3.3.1.slim.min.js as recommended by Bootstrap
+- [emailJS](https://emailjs.com) - Send user the suggested itinerary via emailjs service
 
 ## Testing
 Constant integration testing was preformed to ensure no console/javascript. Beyond that, validation testing, cross browser testing and accessibility testing were manually performed. 
@@ -77,6 +78,9 @@ Below are the scenarios I picked to test my website:
 ### Accessibility Testing
 I used the AXE chrome plugin to test the accessibility of the website. https://www.deque.com/axe/ 
 
+### Email Testing
+Email was evaluated in Microsoft Outlook and gmail.
+
 ### automated testing
 Jasmine was considered as an automated testing option, but this site is heavy in presentation
 and there are no standalone utility functions that Jasmine could help validate their continual functionality.
@@ -84,6 +88,18 @@ and there are no standalone utility functions that Jasmine could help validate t
 ### Testing Results
 During manual unit testing, it was noticed that the imagery retrieved from google's places API was hitting
 the Query Limit. To overcome this issue, the findImage call within maps.js BuildMapContent function was wrapped in a setTimout.
+
+When adding the start over functionality, the user was going to the hero-banner view, not the select trip view. I had to change the trip view to have mustFolow false.
+
+Detailed maps sometimes had pins in the sea versus land despite pulling values from google.com/maps url parameters. I ended up using Sygic Maps to collect accurate values.
+
+When building out my trips constant, I would often miss a closing bracket or comma. I used the JSON validator many times to quickly identify the problems.
+
+EmailJS has a limit oj the size of the email sent via the free service. I opted for the challenge of sending a larger email and registered for th $5 tier. By embedding
+imagery in emails, I had to add a lot of jquery and inline styles to provide a coherent email that matches the website version.
+
+When unit testing, I noticed EmailJS allows you to send bad email addresses, rather than  build validation logic, I used Bootstrap 4.0's build in by changing my
+input form to match an example in their documentation.
 
 ## Deployment
 Note: The coding for the project was done in PyCharm in a local environment with default configurations as it only requires javascript, CSS and HTML files. This website is 
@@ -105,6 +121,7 @@ To gather rich imagery and interesting places to visit, I made use of the follow
 - [Croatia.hr](http://croatia.hr/en-GB) - A huge variety of fantastic imagery and numerous places to visit were gleaned from reading this site. Hvala!
 - [Chasing The Donkey](https://www.chasingthedonkey.com/croatia-travel-blog/) - Is a blog site that has many interesting facts and things to do while visiting Croatia that only insiders know about including quirky museums, great local festivals and everything about The Game of Thrones filming. I used bits of their various lists to customize the itineraries.
 - [Croatia Week](https://www.croatiaweek.com) - This site has articles with lists of places of interest that I used when customizing the prescribed trips and was used to help fact check which sites might be of most interest to tourists.
+- [Sygic Maps](https://maps.sygic.com/?utm_source=content-pages&utm_medium=cta&utm_campaign=list#/?item=poi:5232499&map=9,44.917167,14.004822) - This map has spots flagged by categories and provides accurate lat, lng values for them.
 - Other sites used for specific places to see are attributed in the map pin info windows.
 ### Media
 Hero imagery seen in this project was gleaned from the sites listed below. Ordinal imagery has been renamed and resized.
@@ -122,3 +139,4 @@ Hero imagery seen in this project was gleaned from the sites listed below. Ordin
 - [google Places Details API](https://developers-dot-devsite-v2-prod.appspot.com/maps/documentation/javascript/examples/place-details)- Provided a good example of how use a place_id to retrieve Places Details response to get imagery for itinerary page.
 - [javascript constants](https://www.linkedin.com/in/syedmhassan/) - Moosa Hassan suggested to move large json constants out of functional javascript files into constants.js
 - [geographic points](https://maps.sygic.com/) - Accurate latitude and longitude points for map pins that don't float in the sea.
+- [styling emails](https://www.campaignmonitor.com/css/) - Making emails look good is incredibly difficult
