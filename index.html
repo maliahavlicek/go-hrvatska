@@ -79,16 +79,17 @@
         <div>
             <div id="itinerary-details"></div>
         </div>
-        </iv><div class="sendEmail">
+        <div class="sendEmail">
           <h3 class="contact-heading uppercase">Like this itinerary?</h3>
-            <form class="form" onsubmit="return sendMail(this);" method="POST">
-              <div class="form-group">
-                <label for="emailaddress"  class="sr-only">Email Address</label>
-                <input required type="email"  id="emailaddress" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                <small id="emailHelp" class="form-text disclaimer">We'll never share your email with anyone else.</small>
-              </div>
-              <button type="submit" class="btn btn-primary email-submit">Send Itinerary</button>
-            </form>
+          <form class="form" onsubmit="return sendMail(this);" method="POST">
+            <div class="form-group">
+              <label for="emailaddress"  class="sr-only">Email Address</label>
+              <input required type="email"  id="emailaddress" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+              <small id="emailHelp" class="form-text disclaimer">We'll never share your email with anyone else.</small>
+            </div>
+            <button type="submit" class="btn btn-primary email-submit">Send Itinerary</button>
+          </form>
+          <p class="email-error"></p>
         </div>
       </div>
 

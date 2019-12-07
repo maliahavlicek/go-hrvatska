@@ -21,7 +21,7 @@ function buildMapContent(){
         let day_num = index+1;
         let new_elm = '<div class="city"><h3><a href="#day-' + day_num + '">Day ' + day_num + ': ' + day['name'] + '</a></h3></div>';
         itinerary_elem.append(new_elm);
-        let det_elm = '<div class="d-md-flex flex-row"><div class="city" id="day-' + day_num + '">' +
+        let det_elm = '<div class="d-md-flex flex-row day"><div class="city" id="day-' + day_num + '">' +
                 '        <h3>Day ' + day_num + ': ' + day['name'] + '</h3>'+
                 '        <div class="details-img-wrap" id="img-day-' + day_num + '"></div></div>';
         det_elm += '   <div class="details" id="details-' + day_num +'"><h3>Places to See</h3><ul>';

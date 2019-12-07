@@ -1,11 +1,14 @@
 function sendMail(contactForm){
 
     try {
+        //clear out error message
+        let error = $('.email-error');
+        error.empty();
         let itinerary = '<div style="background: #254c5c; max-width: 900px; color: #FFF; font-size: 18px; margin: 0px; padding: 0; font-family:\' Quicksand\', arial; font-weight: normal;"><h1 style="font-size: 3.6rem; margin: 10px 20px;">Go Hrvatska!</h1>';
         itinerary += '<h2 style="font-size: 2.6rem; margin: 20px 20px 30px;">Here\'s your ' + myTrip.label + ' itinerary:</h2>';
         itinerary += '<div id="itinerary-details">';
 
-        $('#itinerary-details .d-flex.flex-row').each( function (index, day) {
+        $('#itinerary-details .day').each( function (index, day) {
             itinerary += '<div style="flex-direction: row!important; display: flex!important; margin:10px; padding: 0; border-top: 1px solid #fff;">';
 
             let city = day.children[0];
@@ -45,13 +48,14 @@ function sendMail(contactForm){
             "itinerary_details": itinerary
         })
             .then(function (response) {
-                console.log('SUCCESS!', response.status, response.text);
+                error.append("You should be receiving an email at "+ contactForm.emailaddress.value +" shortly.");
             }, function (error) {
-                console.log('FAILED...', error);
+                error.append("Sorry, there was an issue sending you an email. Please try again.")
             });
         return false;
     }
     catch(emailError){
-        console.log(emailError.message);
+        error.append("Sorry, there was an issue sending you an email. Please try again.")
+        return false;
     }
 }
