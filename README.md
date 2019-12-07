@@ -60,9 +60,9 @@ Constant integration testing was preformed to ensure no console/javascript. Beyo
 
 ### Validation Testing
 Used the following validation websites to test the code:
-- [CSS Validator](https://jigsaw.w3.org/css-validator/) Note, any error associated with root: color variables were ignored.
+- [CSS Validator](https://jigsaw.w3.org/css-validator/) Note, any error associated with root: color variables were ignored. Vendor extension warnings were also ignored.
 - [HTML Validator](https://validator.w3.org/)
-- [JSON Validator](https://jsonlint.com/)
+- [JSON Validator](https://jsonlint.com/) Note: warnings were ignored.
 - [JavaScript Validator](http://beautifytools.com/javascript-validator.php) Note any errors for let, variables set in other .js files, and constants were ignored.
 
 ### Cross Browser and Cross Device Testing
