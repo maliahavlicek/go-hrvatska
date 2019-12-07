@@ -304,10 +304,17 @@ button.pick_room {
     text-decoration: underline;
 }
 .popover-header {
-    background: rgb(57, 147, 156);
+    background: rgb(121, 199, 217);
+    color: var(--primary-dark);
+    border: 1px solid var(--primary);
+    text-transform: capitalize;
+    font-size: 1.2rem;
 }
 .popover-body , .popover .arrow {
-    background: rgb(121, 199, 217);
+    background: var(--gray-light);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    font-size: 1rem;
 }
 .start{
     margin-top: 10px;
