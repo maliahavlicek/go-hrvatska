@@ -33,7 +33,7 @@ function buildRoomContent() {
                 '                  <span type="button" tabindex="0" class="more-link" data-trigger="focus" data-placement="top" data-toggle="popover" title="' + room['label'] + ' details"' +
                 '                      data-content="' + room['details'] + '" data-container="body">Learn More</span>' +
                 '                </div>' +
-                '            </div>'
+                '            </div>';
             room_elem.append(new_elm);
         });
 

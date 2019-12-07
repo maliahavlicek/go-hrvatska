@@ -63,6 +63,7 @@ Used the following validation websites to test the code:
 - [CSS Validator](https://jigsaw.w3.org/css-validator/) Note, any error associated with root: color variables were ignored.
 - [HTML Validator](https://validator.w3.org/)
 - [JSON Validator](https://jsonlint.com/)
+- [JavaScript Validator](http://beautifytools.com/javascript-validator.php) Note any errors for let, variables set in other .js files, and constants were ignored.
 
 ### Cross Browser and Cross Device Testing
 For device testing, I would ideally have access to browser stack and derive a list of iOs devices and versions to test with from 

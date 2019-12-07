@@ -64,10 +64,10 @@ function carousel(myIndex){
         //reset to beginning of image array if going past bounds
         myIndex++;
         if (myIndex >= images.length) {
-            myIndex = 0
+            myIndex = 0;
         }
         setTimeout(function () {
-            carousel(myIndex)
+            carousel(myIndex);
         }, 3000);
     }
 }
@@ -104,7 +104,7 @@ function changeView(view){
     }
     if(newView.name == 'hero-image'){
         pauseHero = false;
-        setTimeout(function(){ carousel(myIndex) }, 3000);
+        setTimeout(function(){ carousel(myIndex); }, 3000);
     }
     else{
         pauseHero = true;
@@ -124,7 +124,7 @@ function changeView(view){
 
 //generic finder for list with key of name
 function findView(name,list){
-    let foundItem = false
+    let foundItem = false;
     list.forEach(function(item){
         if(item.name == name){
             foundItem = item;

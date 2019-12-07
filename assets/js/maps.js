@@ -93,7 +93,7 @@ function finalizeMap(places){
         path: google.maps.SymbolPath.CIRCLE,
         scale: 15,
         fillColor: "rgb(121, 199, 217)",
-        fillOpacity: .8,
+        fillOpacity: 0.8,
         strokeColor: "rgb(57, 147, 156)",
         strokeWeight: 1
     };

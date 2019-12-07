@@ -36,7 +36,7 @@ function buildTripContent(){
                 '                  <button type="button" onclick="pickTrip(`'+trip['name']+'`)" class="pick_trip btn btn-lg btn-block btn-primary">Go HRVATSKA!</button>' +
                 '                </div>' +
                 '              </div>' +
-                '            </div>'
+                '            </div>';
             trip_elem.append(new_elm);
         });
 
