@@ -36,10 +36,13 @@ function sendMail(contactForm){
         }
         itinerary += '</div>';
 
-        console.log("in send email");
-        console.log("user_email: " + contactForm.emailaddress.value);
-        console.log("trip_type: ") + myTrip.label;
-        console.log("itinerary_details: " + itinerary);
+        //wrap consoles in debug check so we don't deploy with any logging
+        if(debug) {
+            console.log("in send email");
+            console.log("user_email: " + contactForm.emailaddress.value);
+            console.log("trip_type: ") + myTrip.label;
+            console.log("itinerary_details: " + itinerary);
+        }
 
         emailjs.send("malia_havlicek_gmail_com", "codeinstitue", {
             "user_name": contactForm.name.value,

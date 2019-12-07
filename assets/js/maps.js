@@ -196,14 +196,20 @@ function findImage(place, day_num) {
 
     service.findPlaceFromQuery(request, function(results, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
-        console.log(place.name + " id: " + results[0].place_id);
+        //wrap consoles in debug check so we don't deploy with any logging
+        if(debug) {
+            console.log(place.name + " id: " + results[0].place_id);
+        }
         request = {
             placeId: results[0].place_id,
             fields: ['name', 'formatted_address', 'place_id', 'geometry', 'photos']
         };
         service.getDetails(request, function (local, status) {
             if (status === google.maps.places.PlacesServiceStatus.OK) {
-                console.log("got details, inserting image for "+ place.name);
+                //wrap consoles in debug check so we don't deploy with any logging
+                if(debug) {
+                    console.log("got details, inserting image for "+ place.name);
+                }
                 if(local && local.photos.length >0) {
                     let img_elm = document.getElementById('img-day-' + day_num);
                     let new_elm = '<img class="details-img" src="' + local.photos[0].getUrl() + '" width="100%" alt="Image of ' + place.name + '"/>';
@@ -213,11 +219,17 @@ function findImage(place, day_num) {
                     img_elm.innerHTML = new_elm;
                 }
             }else{
-                console.log(place.name +" status to get images not OK: " + status);
+                //wrap consoles in debug check so we don't deploy with any logging
+                if(debug) {
+                    console.log(place.name +" status to get images not OK: " + status);
+                }
             }
         });
     }else{
-        console.log(place.name +" status to get place_id not OK: " + status);
+        //wrap consoles in debug check so we don't deploy with any logging
+        if(debug) {
+            console.log(place.name +" status to get place_id not OK: " + status);
+        }
     }
 
   });

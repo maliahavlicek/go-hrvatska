@@ -12,6 +12,7 @@ let views = [
     {name: "language", view: 11, mustFollow: false}
 ];
 
+let debug = false;
 let myIndex = 0;
 let pauseHero = false;
 let myView = "hero-image";
@@ -80,11 +81,17 @@ function changeView(view){
     let newView = findView(view,views);
     let currView =  findView(myView,views);
     if(!newView){
-        console.log("ERROR: unexpected view encountered: " + view.name);
+        //wrap consoles in debug check so we don't deploy with any logging
+        if(debug) {
+            console.log("ERROR: unexpected view encountered: " + view.name);
+        }
         newView =findView('hero-image',views);
     }
     if(newView.mustFollow && (newView.view != currView.view +1)){
-        console.log("ERROR: view mustFollow violation encountered: newView: "+newView.name +" view value: " + newView.view +" current view: " +currView.name +" view value: "+ currView.value + ".");
+        //wrap consoles in debug check so we don't deploy with any logging
+        if(debug) {
+            console.log("ERROR: view mustFollow violation encountered: newView: " + newView.name + " view value: " + newView.view + " current view: " + currView.name + " view value: " + currView.value + ".");
+        }
         newView = findView('hero-image',views);
     }
 
@@ -141,7 +148,10 @@ function initMap() {
         });
     }
     catch(mapError){
-        console.log("Mapping error: " + mapError.message);
+        //wrap consoles in debug check so we don't deploy with any logging
+        if(debug) {
+            console.log("Mapping error: " + mapError.message);
+        }
     }
 
 }

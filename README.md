@@ -25,7 +25,8 @@ The Go Hrvatska! Project was envisioned as a mobile website and then expanded to
 users determine an itinerary of places to see and visit while on Holiday in Croatia.
 
 ### Mockups
-Note: The wireframes are not entirely accurate, they only give a rough estimate on how the website will look on a mobile device.
+Note: The wireframes are not entirely accurate, they only give a rough estimate on how the website will look on a mobile device. The implied navigation in the
+mockups was dropped once a single page application was determined as the solution framework.
 [Figma.com](https://www.figma.com/) was used to create the following mockups:
 - [Home Page](https://www.figma.com/file/741n0nfS9y7b1T2ICOAqDn/Go-Hrvatska?node-id=1%3A2)\
 ![homepage mockup](assets/images/mockups/Go-hrvatska-homepage.png) 
@@ -45,6 +46,7 @@ allow user to email the proposed agenda to themselves or others.
 ### Features Left to Implement
 - use google places API to suggest matches on lodging choice via [nearby](https://developers.google.com/maps/documentation/javascript/places?utm_source=google&utm_medium=cpc&utm_campaign=FY18-Q2-global-demandgen-paidsearchonnetworkhouseads-cs-maps_contactsal_saf&utm_content=text-ad-none-none-DEV_c-CRE_315916118099-ADGP_Hybrid+%7C+AW+SEM+%7C+SKWS+~+Nearby+Search-KWID_43700039136946351-kwd-582432942915-userloc_9028759&utm_term=KW_%2Bnearby%20%2Bsearch-ST_%2Bnearby+%2Bsearch&gclid=EAIaIQobChMI8IKMxKaW5gIVj8DACh1GrQ6WEAAYASAAEgLKjvD_BwE#place_search_requests)
 - migrate constants into database to reduce duplicate destinations
+- store images in database to reduce flickering first time hero images are rotated through.
 
 ## Technologies Used
 - [CSS3](https://www.w3schools.com/w3css/default.asp) The project uses **CSS** to define DOM appearance. 
