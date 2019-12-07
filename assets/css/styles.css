@@ -310,7 +310,7 @@ button.pick_room {
     background: rgb(121, 199, 217);
 }
 .start{
-    postion: relative;
+    margin-top: 10px;
     float: right;
     padding: .25rem .5rem;
     font-size: 1rem;
@@ -322,6 +322,15 @@ h1.firstHeading {
     font-weight: 700;
     display: block;
     text-align: center;
+}
+.main_info h1.firstHeading{
+    font-size: 1.2rem;
+}
+.main_info {
+    font-size: 1rem;
+}
+.underline{
+    text-decoration: underline;
 }
 .infoContent{
     color: var(--primary);
@@ -355,14 +364,8 @@ input#emailaddress {
     min-width: 300px;
 }
 
-@media screen and (min-width: 1024px) {
-    #map{
-        width: 75%;
-        height: 575px;
-    }
-}
 
-/*desktop styles */
+/* desktop styles */
 @media screen and (min-width: 768px) {
 
    #itinerary{
@@ -382,11 +385,18 @@ input#emailaddress {
         margin: 10px;
     }
 
+    #map{
+        width: 75%;
+        height: 575px;
+    }
+
     #map-1,#map-2, #map-3, #map-4, #map-5, #map-6, #map-7{
         height: 300px;
         width: 300px;
     }
-
+    .start {
+        margin-top: 0px;
+    }
     .hero {
         padding: 20px;
         width: 100%;

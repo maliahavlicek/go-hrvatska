@@ -53,6 +53,7 @@ function buildMapContent(){
     trip_name.append('<span>' + myTrip.label + '</span>');
 }
 
+
 function finalizeMap(places){
     let map = new google.maps.Map(document.getElementById("map"), {
         zoom: 7,
@@ -72,6 +73,8 @@ function finalizeMap(places){
         fullscreenControl: true
 
     });
+
+    //reduce map controls on small devices and zoom out a bit so entire country is visible
     if(window.innerWidth <=768) {
         map.zoom=6.5;
         map.mapTypeControl=false;
@@ -85,6 +88,7 @@ function finalizeMap(places){
         locations.push({ lat: day.lat, lng: day.lng });
     });
 
+    //set up custom map icon (light blue circle)
     let clickIcon = {
         path: google.maps.SymbolPath.CIRCLE,
         scale: 15,
@@ -94,7 +98,9 @@ function finalizeMap(places){
         strokeWeight: 1
     };
 
+    // set marker on map
     let markers = locations.map(function(location, i) {
+
         let marker =  new google.maps.Marker({
             position: location,
             label: labels[i % labels.length],
@@ -102,6 +108,22 @@ function finalizeMap(places){
             animation: google.maps.Animation.DROP,
             icon: clickIcon
         });
+
+        // add info window with name and link to details content
+        let day_num =  i+1;
+        let contentString = '<div class="main_info" id="content_main' + day_num + '_' + i + '">'+
+            '<h1 class="firstHeading">' + places[i].name + '</h1>' +
+            '<a class="underline" href="#day-' + day_num +'">See places</a> to visit.' +
+            '</div>';
+
+        let infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+        marker.addListener('click', function() {
+            infowindow.open(map, marker);
+        });
+
+        //animate the marker
         let timeout = i * 200;
         window.setTimeout(function() {
             marker.setMap(map);
@@ -110,6 +132,7 @@ function finalizeMap(places){
 
     });
 
+    //draw line on map between days
     let itineraryPath = new google.maps.Polyline({
     path: locations,
     geodesic: true,
@@ -124,7 +147,7 @@ function finalizeMap(places){
 }
 
 
-// find custom places function
+// The find Image function takes in a place and the day number in order to create a map showing the suggested places to visit for a given day
 /* idea from https://developers-dot-devsite-v2-prod.appspot.com/maps/documentation/javascript/examples/place-search */
 function findImage(place, day_num) {
     // prepare request to Places
@@ -134,22 +157,11 @@ function findImage(place, day_num) {
       document.getElementById('map-'+day_num), {
             center: spot,
             zoom: 7,
-            mapTypeControl: true,
-            mapTypeControlOptions: {
-                style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
-                position: google.maps.ControlPosition.TOP_CENTER
-            },
-            streetViewControl: true,
-            streetViewControlOptions: {
-                position: google.maps.ControlPosition.LEFT_TOP
-            },
+            mapTypeControl: false,
+            streetViewControl: false,
             fullscreenControl: true
         });
 
-        if(window.innerWidth <=768) {
-            map.mapTypeControl=false;
-            map.streetViewControl=false;
-        }
 
     //set the day map with the places to explore/visit
     let markers = place.places.map(function(location, i) {
@@ -157,8 +169,10 @@ function findImage(place, day_num) {
             '<p class="infoContent">' + location.description + '</p><p class="infoDisclaimer">'+ location.attribution +
             '</p></div>';
 
+        // add an info window
         let infowindow = new google.maps.InfoWindow({
-          content: contentString
+            content: contentString,
+            maxWidth: 300
         });
 
         let loc = new google.maps.LatLng(location.lat, location.lng);
