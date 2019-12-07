@@ -366,7 +366,7 @@ input#emailaddress {
 
 
 /* desktop styles */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
 
    #itinerary{
         background: rgb(57, 147, 156);

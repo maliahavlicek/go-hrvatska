@@ -70,10 +70,11 @@ Since I don't have a handful of devices or a proper testing tool suite at my fin
 
 Below are the scenarios I picked to test my website:
 * Windows 10, Edge
-* Windows 10, Chrome
-* Chrome Emulator iphone 6
-* Chrome Emulator iPadAir
+* Macbook Pro, Chrome
 * Chrome Emulator Pixel 2
+* ipad pro 9.7, Chrome
+
+Note, I did look at my site in IE11 and it doesn't function as the flex grid from bootstrap 4 auto margins that I'm using are noted as [incompatible](https://getbootstrap.com/docs/4.4/utilities/flex/#auto-margins).
 
 ### Accessibility Testing
 I used the AXE chrome plugin to test the accessibility of the website. https://www.deque.com/axe/ 
@@ -81,25 +82,51 @@ I used the AXE chrome plugin to test the accessibility of the website. https://w
 ### Email Testing
 Email was evaluated in Microsoft Outlook and gmail.
 
-### automated testing
+### Automated testing
 Jasmine was considered as an automated testing option, but this site is heavy in presentation
 and there are no standalone utility functions that Jasmine could help validate their continual functionality.
 
-### Testing Results
+### Bugs Encountered
+* **Image Query Limit** 
 During manual unit testing, it was noticed that the imagery retrieved from google's places API was hitting
-the Query Limit. To overcome this issue, the findImage call within maps.js BuildMapContent function was wrapped in a setTimout.
+the Query Limit. To overcome this issue, the findImage call within maps.js BuildMapContent function was wrapped in a setTimout and incremented by 50ms starting at 100ms to 350ms in order
+to prevent the issue.
 
+* **Start over button going to wrong screen**
 When adding the start over functionality, the user was going to the hero-banner view, not the select trip view. I had to change the trip view to have mustFolow false.
 
+* **Map pins in the sea when zooming in**
 Detailed maps sometimes had pins in the sea versus land despite pulling values from google.com/maps url parameters. I ended up using Sygic Maps to collect accurate values.
 
-When building out my trips constant, I would often miss a closing bracket or comma. I used the JSON validator many times to quickly identify the problems.
+* **Bad JSON**
+When building out my trips constant, I would often miss a closing bracket or comma. I used the JSON validator many times to quickly identify the problems when the console would show an
+error with TRIPS not being defined.
 
-EmailJS has a limit oj the size of the email sent via the free service. I opted for the challenge of sending a larger email and registered for th $5 tier. By embedding
-imagery in emails, I had to add a lot of jquery and inline styles to provide a coherent email that matches the website version.
+* **Email too large**
+EmailJS has a limit oj the size of the email sent via the free service. I opted for the challenge of sending a larger email and registered for th $5 tier. 
 
-When unit testing, I noticed EmailJS allows you to send bad email addresses, rather than  build validation logic, I used Bootstrap 4.0's build in by changing my
+* **Email rendered horribly**
+By embedding imagery in emails, I had to add a lot of inline styles to provide a coherent email that matches the website version rather than just stealing my itineray-details element.
+
+* **blank and invalid email input accepted**
+When unit testing, I noticed EmailJS allows you to send bad email addresses, rather than  build validation logic, I used Bootstrap 4.0's  by changing my
 input form to match an example in their documentation.
+
+* **user doesn't know status of email send**
+I had console logs for errors and success for the send email function and the user had no idea what was going on. I updated the success and failures to output a message to the screen.
+
+* **small devices places to visit map controls**
+When testing small devices it was noted that the map controls were taking up too much space. I read the maps API documenation and figured out how to turn off some of the controls and
+how to move them to a different location.
+
+* **Small Devices other content required scrolling**
+The desktop has a nice left side summary/legend of the Days, but it had to be hidden for small devices. There was no way for the user to really know  there was content below the main map.
+I updated the main map to have infoWindows so the user can click on a marker, then expose a link to the places to see for that particular day. 
+I also figured out how to change the zoom of the map if on small devices by looking at window.innerWidth. This allowed me to make the map shorter for small devices with the entire country in view. 
+And a shorter map allows  a bit of the section under the map to visible on page load for small devices.
+
+* **ipad pro 9.7 portrait view**
+The site looked really bad for this view and I didn't want to waste more time for tablet CSS tweaking so I changed my breakpoint from 768px to 992.
 
 ## Deployment
 Note: The coding for the project was done in PyCharm in a local environment with default configurations as it only requires javascript, CSS and HTML files. This website is 
