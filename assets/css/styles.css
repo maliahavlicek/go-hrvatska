@@ -211,16 +211,7 @@ clip-paths determined using https://bennettfeely.com/clippy/
 button.pick_room {
     margin-top: 15px;
 }
-#itinerary{
-    background: rgb(57, 147, 156);
-    color: var(--gray-light);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    -ms-flex: 25%;
-    flex: 25%;
-    max-width: 25%;
-}
+
 #itinerary h3{
     background: rgb(121, 199, 217);
     color: var(--primary-dark);
@@ -240,13 +231,16 @@ button.pick_room {
     flex-direction: row;
 }
 #itinerary-details .city, #itinerary-details .details, #itinerary-details .details-map{
-    -ms-flex: 33%;
-    flex: 33%;
-    max-width: 33%;
-    margin: 10px;
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+    margin: 0;
 }
 .details-img-wrap{
     margin: 10px 10px 10px 0px;
+}
+#itinerary{
+    display:none;
 }
 #itinerary h3 a {
     color: var(--gray-light);
@@ -271,6 +265,12 @@ button.pick_room {
     color: white;
     font-size: 0.6rem;
 }
+#itinerary-details {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+    margin: 0px;
+}
 #itinerary-details hr{
     border-top: 2px solid var(--white);
 }
@@ -284,14 +284,14 @@ button.pick_room {
 }
 
 #map{
-    height: 575px;
-    width: 768px;
+    height: 330px;
+    width: 100%;
     padding: 0;
     margin: 0;
 }
-#map-1,#map-2, #map-3, #map-4, #map-5, #map-6, #map-7{
-    height: 300px;
-    width: 300px;
+#map-1, #map-2, #map-3, #map-4, #map-5, #map-6, #map-7 {
+    height: 250px;
+    width: 100%;
 }
 .lodging{
     margin: 10px -25px -25px;
@@ -358,11 +358,34 @@ input#emailaddress {
 @media screen and (min-width: 1024px) {
     #map{
         width: 75%;
+        height: 575px;
     }
 }
 
+/*desktop styles */
 @media screen and (min-width: 768px) {
 
+   #itinerary{
+        background: rgb(57, 147, 156);
+        color: var(--gray-light);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        -ms-flex: 25%;
+        flex: 25%;
+        max-width: 25%;
+    }
+    #itinerary-details .city, #itinerary-details .details, #itinerary-details .details-map{
+        -ms-flex: 33%;
+        flex: 33%;
+        max-width: 33%;
+        margin: 10px;
+    }
+
+    #map-1,#map-2, #map-3, #map-4, #map-5, #map-6, #map-7{
+        height: 300px;
+        width: 300px;
+    }
 
     .hero {
         padding: 20px;

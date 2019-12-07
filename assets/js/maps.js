@@ -21,7 +21,7 @@ function buildMapContent(){
         let day_num = index+1;
         let new_elm = '<div class="city"><h3><a href="#day-' + day_num + '">Day ' + day_num + ': ' + day['name'] + '</a></h3></div>';
         itinerary_elem.append(new_elm);
-        let det_elm = '<div class="d-flex flex-row"><div class="city" id="day-' + day_num + '">' +
+        let det_elm = '<div class="d-md-flex flex-row"><div class="city" id="day-' + day_num + '">' +
                 '        <h3>Day ' + day_num + ': ' + day['name'] + '</h3>'+
                 '        <div class="details-img-wrap" id="img-day-' + day_num + '"></div></div>';
         det_elm += '   <div class="details" id="details-' + day_num +'"><h3>Places to See</h3><ul>';
@@ -59,8 +59,24 @@ function finalizeMap(places){
         center: {
             lat: 44.4467472,
             lng: 16.4064762
-        }
+        },
+        mapTypeControl: true,
+        mapTypeControlOptions: {
+            style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+            position: google.maps.ControlPosition.TOP_CENTER
+        },
+        streetViewControl: true,
+        streetViewControlOptions: {
+            position: google.maps.ControlPosition.LEFT_TOP
+        },
+        fullscreenControl: true
+
     });
+    if(window.innerWidth <=768) {
+        map.zoom=6.5;
+        map.mapTypeControl=false;
+        map.streetViewControl=false;
+    }
 
     let labels = "12345679";
     let locations = [];
@@ -115,7 +131,25 @@ function findImage(place, day_num) {
     let spot = new google.maps.LatLng(place.lat, place.lng);
 
     map = new google.maps.Map(
-      document.getElementById('map-'+day_num), {center: spot, zoom: 7});
+      document.getElementById('map-'+day_num), {
+            center: spot,
+            zoom: 7,
+            mapTypeControl: true,
+            mapTypeControlOptions: {
+                style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+                position: google.maps.ControlPosition.TOP_CENTER
+            },
+            streetViewControl: true,
+            streetViewControlOptions: {
+                position: google.maps.ControlPosition.LEFT_TOP
+            },
+            fullscreenControl: true
+        });
+
+        if(window.innerWidth <=768) {
+            map.mapTypeControl=false;
+            map.streetViewControl=false;
+        }
 
     //set the day map with the places to explore/visit
     let markers = place.places.map(function(location, i) {
