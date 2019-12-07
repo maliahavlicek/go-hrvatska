@@ -80,7 +80,11 @@ Below are the scenarios I picked to test my website:
 Note, I did look at my site in IE11 and it doesn't function as the flex grid from bootstrap 4 auto margins that I'm using are noted as [incompatible](https://getbootstrap.com/docs/4.4/utilities/flex/#auto-margins).
 
 ### Accessibility Testing
-I used the AXE chrome plugin to test the accessibility of the website. https://www.deque.com/axe/ 
+To ensure the contrast and colors are ok for most users, I used the following plugins:
+* [AXE](https://www.deque.com/axe/)  
+![axe audit](assets/images/mockups/go-hrvatska-axe-audit-12.06.2019.png) 
+* [lighthouse](https://developers.google.com/web/tools/lighthouse/)
+![lighthouse audit](assets/images/mockups/go-hrvatska-lighthouse-audit-12.06.2019.png) 
 
 ### Email Testing
 Email was evaluated in Microsoft Outlook and gmail.
