@@ -15,8 +15,8 @@ function sendMail(contactForm){
             if (city) {
                 city = city.innerHTML;
                 city = city.replace('<h3>', '<h3 style="font-size: 2.2rem; margin: 0px;">');
-                city = city.replace('class="disclaimer"', 'style="font-size: .6rem;"');
-                city =  city.replace('<a href=', '<a style="font-size: .6rem; color: #FFF!important;" href=');
+                city = city.replace('class="disclaimer"', 'style="font-size: 0.8rem;"');
+                city =  city.replace('<a href=', '<a style="font-size: 0.8rem; color: #FFF!important; text-decoration: underline;" href=');
                 city = city.replace('width="100%"', 'width="300px"');
                 itinerary += '<div style="flex: 50%; max-width: 300px; margin: 10px;">' + city +'</div>';
             }
@@ -31,7 +31,7 @@ function sendMail(contactForm){
         if (lodging){
             let room = '<div style="margin: 0; padding: 9px 25px 25px; background: rgb(57, 147, 156); color: #EBEDEE;">';
             lodging = lodging[0].innerHTML;
-            lodging = lodging.replace("<a href=", "<a style='color: #FFF!important;' href=");
+            lodging = lodging.replace("<a href=", "<a style='color: #FFF!important; text-decoration: underline;' href=");
             itinerary += room + lodging + '</div>';
         }
         itinerary += '</div>';
