@@ -41,7 +41,7 @@ function buildRoomContent() {
         $('[data-toggle="popover"]').click(function(){
             $(this).popover('toggle');
         });
-        // if user clicks anywhere else, hide the poopover
+        // if user clicks anywhere else, hide the popover
         $('.popover-dismiss').popover({
             trigger: 'focus'
         });

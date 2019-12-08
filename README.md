@@ -158,7 +158,7 @@ To gather rich imagery and interesting places to visit, I made use of the follow
 - [Sygic Maps](https://maps.sygic.com/?utm_source=content-pages&utm_medium=cta&utm_campaign=list#/?item=poi:5232499&map=9,44.917167,14.004822) - This map has spots flagged by categories and provides accurate lat, lng values for them.
 - Other sites used for specific places to see are attributed in the map pin info windows.
 ### Media
-Hero imagery seen in this project was gleaned from the sites listed below. Ordinal imagery has been renamed and resized.
+Hero imagery seen in this project was gleaned from the sites listed below. Original imagery has been renamed and resized to make it easier to correlate to the alt-text.
 - [Croatia.hr](http://croatia.hr/en-GB) 
 - [ChasingTheDonkey](https://www.chasingthedonkey.com/croatia-travel-blog/) 
 - [CroatiaWeek](https://www.croatiaweek.com)

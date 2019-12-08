@@ -22,14 +22,8 @@
 .card-body{
     padding: 1rem 0rem;
 }
-.card-deck{
-    margin: 0px;
-}
-.card-deck .card{
+.card{
     background: var(--primary-light);
-    color: var( --black);
-    margin: 10px;
-    max-width: 44%;
 }
 .split-img-wrapper .card-title{
     position: relative;
@@ -48,7 +42,7 @@
 .room .split-img-wrapper .card-title{
     top: 65%;
 }
-.room span.more-link {
+.more-link {
     -webkit-appearance: none;
     float: right;
     color: var(--primary);
@@ -193,17 +187,18 @@ clip-paths determined using https://bennettfeely.com/clippy/
     background: var(--secondary);
     border:none;
 }
-#room .card.col-6.col-md-4.box-shadow{
+
+#room .card.col-6.col-md-4.box-shadow, #trips .card.col-6.col-md-3.box-shadow{
     margin-top: 15px;
 }
-#room{
+#room, #trips{
     justify-content: space-between;
     margin: 0;
 }
-#room .row{
+#room .row, #trips .row{
     margin: 0;
 }
-#room .col-6 {
+#room .col-6 , #trips .col-6{
     -ms-flex: 0 0 47%;
     flex: 0 0 47%;
     max-width: 47%;
@@ -303,19 +298,29 @@ button.pick_room {
     color: var(--gray-light);
     text-decoration: underline;
 }
-.popover-header {
-    background: rgb(121, 199, 217);
-    color: var(--primary-dark);
-    border: 1px solid var(--primary);
-    text-transform: capitalize;
-    font-size: 1.2rem;
-}
-.popover-body , .popover .arrow {
-    background: var(--gray-light);
-    color: var(--primary);
-    border: 1px solid var(--primary);
+.popover-body{
     font-size: 1rem;
 }
+.popover-header {
+    background: var(--primary-dark);
+    color: var(--gray-light);
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    border: 2px solid var(--gray-light);
+    border-bottom: none;
+}
+.popover:after, .popoer-header:after{
+    content:"";
+    display:block;
+    position:absolute;
+    z-index:-1;
+    top:2px;
+    left:2px;
+    right:2px;
+    bottom:2px;
+    border:2px solid var(--primary-dark)
+}
+
 .start{
     margin-top: 10px;
     float: right;
@@ -435,5 +440,10 @@ input#emailaddress {
         -ms-flex: 0 0 32%;
         flex: 0 0 32%;
         max-width: 32%;
+    }
+    #trips .col-md-3 {
+        -ms-flex: 0 0 24%;
+        flex: 0 0 24%;
+        max-width: 24%;
     }
 }
