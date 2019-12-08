@@ -629,7 +629,7 @@ const ROOMS =
             "name": "camping",
             "label": "Camping",
             "details": "There are over 300 registered campsites in Croatia with 90% close to a beach. Glamping may be a more appropriate term for camping in Croatia as most campgrounds have permanent bungalows and tents on site. Some of the larger campsites include restaurants, sports facilities, laundries, and general store too.",
-            "booking": "Glamping here you come. Be sure to book your camping experience early via <a target='_blank' href='https://www.camping.hr'> www.capming.hr</a>"
+            "booking": "Glamping here you come. Be sure to book your camping experience early via <a href='https://www.camping.hr' target='_blank'> www.capming.hr</a>"
         },
         {
             "name": "hostel",

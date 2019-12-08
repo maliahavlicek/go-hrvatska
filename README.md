@@ -5,7 +5,7 @@ This website allows users to pick one of 4 prescribed tours of Croatia for their
 There is a call to action button to start choosing your trip below the banner.
 
 **Picking Adventure View:** Upon clicking the Go Hrvatska button, the user is presented a screen where they choose from 4 trips.
-Each tour has an image button across it which when clicked reveals a short description of the tour and a go Hrvatska button.
+Each tour has a lean more link below itwhich when clicked reveals a short description of the tour. The label wrapped over the imagery is the button which takes the user to the next page.
 
 **Pick Accommodation View:** following the pick adventure view, the user is shown options regarding 6 different lodging options. Clicking the button label takes the user to the next view.
 There is also a learn more button that reveals a popover that provides greater detail about each lodging choice.
@@ -134,6 +134,12 @@ And a shorter map allows  a bit of the section under the map to visible on page 
 
 * **ipad pro 9.7 portrait view**
 The site looked really bad for this view and I didn't want to waste more time for tablet CSS tweaking so I changed my breakpoint from 768px to 992.
+
+* **room vs trips inconsistent button issue**
+Accommodation page button took you to next page, but trip button did a slide down, made things consistent.
+
+* **email accommodation link is hard to make out**
+Unit testing showed that the inline style for accommodations a tag wasn't working. I forgot to assign the value to the replacement string.
 
 ## Deployment
 Note: The coding for the project was done in PyCharm in a local environment with default configurations as it only requires javascript, CSS and HTML files. This website is 

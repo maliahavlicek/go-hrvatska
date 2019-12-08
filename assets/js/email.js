@@ -29,9 +29,9 @@ function sendMail(contactForm){
         itinerary += '</div>';
         let lodging = $('.lodging');
         if (lodging){
-            let room = '<div style = "margin: 0; padding: 9px 25px 25px; background: rgb(57, 147, 156); color: #EBEDEE;">';
+            let room = '<div style="margin: 0; padding: 9px 25px 25px; background: rgb(57, 147, 156); color: #EBEDEE;">';
             lodging = lodging[0].innerHTML;
-            lodging.replace('<a ', '<a style="color: #FFF!important;" ');
+            lodging = lodging.replace("<a href=", "<a style='color: #FFF!important;' href=");
             itinerary += room + lodging + '</div>';
         }
         itinerary += '</div>';
