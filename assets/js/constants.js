@@ -235,7 +235,7 @@ const TRIPS = [{
             "name": "Ozalj Castle",
             "lat": 45.614280,
             "lng": 15.470743,
-            "description": "he Ozalj fortress, located on the stone cliff perched above the Kupa River, is a very old stronghold that has been converted into a castle.",
+            "description": "The Ozalj fortress, located on the stone cliff perched above the Kupa River, is a very old stronghold that has been converted into a castle.",
             "attribution": "https://croatiareviews.com/culture-and-heritage/ozalj-castle"
         }, {
             "name": "Dubovac Castle",
@@ -297,11 +297,59 @@ const TRIPS = [{
             "description": "Considered to be one of the most imposing Roman ruins, Diocletian’s palace is certainly the main attraction of the city of Split, Croatia.",
             "attribution": "http://www.diocletianspalace.org/"
         }]
+    }, {
+        "name": "Korčula",
+        "lat": 42.941492,
+        "lng": 16.898200,
+        "places": [
+            {
+                "name": "Vela Spila",
+                "lat": 42.9696657,
+                "lng": 16.7183617,
+                "description": "Hidden among olive groves above the town is Vela Spila ('The Great Cave'), a gaping limestone cavity with a sea-facing entrance and two large holes in its roof, producing a eerily atmospheric play of light. Inhabited since the Stone Age, the cave is the earliest known home of modern humans on the Adriatic, and has become a major centre for archaeological research.",
+                "attribution": "https://www.timeout.com/croatia/attractions/vela-spila"
+            }, {
+                "name": "Cathedral of Saint Mark",
+                "lat": 42.9615986,
+                "lng": 17.1362542,
+                "description": "Korčula's cathedral is one of the finest examples of Dalmatian church architecture. Taking three centuries to build, it features several styles, including Gothic, Romanesque and Baroque.",
+                "attribution": "https://www.timeout.com/croatia/attractions/st-marks-cathedral"
+
+            },{
+                "name": "Toreta Winery and Museum",
+                "lat": 42.928707,
+                "lng": 16.8904913,
+                "description": "A family business at least four generations, Toreta winery is just below the main street that leads through Smokvica. There's a display of wine-pressing equipment used in the old days, and a selection of wines to taste and buy. Pošip is Toreta's main one, although Rukatac is exceedingly good too. Toreta's rakijas and liqueurs are simply superb.",
+                "attribution": "https://www.timeout.com/croatia/bars-and-pubs/toreta-winery"
+            }]
+    }, {
+        "name": "Dubrovnik",
+        "lat": 42.649964,
+        "lng": 18.093695,
+        "places": [{
+            "name":"Trsteno Arboretum",
+            "lat": 42.712328,
+            "lng": 17.976510,
+            "description": "Trsteno is a picturesque, old village located along the main road (D8) between the villages of Orasac and Slano with a small population and some of the most beautiful views around.",
+            "attribution": "https://www.total-croatia-news.com/see-in-dubrovnik/16153-dubrovnik-s-perfect-escapes-trsteno-arboretum"
+        }, {
+            "name":"Dubrovnik’s City Walls",
+            "lat": 42.641719,
+            "lng": 18.107286,
+            "description": "Walking along the top of the city’s medieval walls is a highlight of any stay in Dubrovnik. The walls encircle the entire Old Town quarter and take at least an hour to explore. Most of the walls were constructed during the 13th century but have been reinforced over the years to withstand repeated attacks",
+            "attribution": "https://www.touropia.com/tourist-attractions-in-dubrovnik/"
+        }, {
+            "name":"Lovrijenac Fort",
+            "lat": 42.640865,
+            "lng": 18.104305,
+            "description": "Situated on a towering rock overlooking the Adriatic Sea, Lovrijenac was constructed as a detached fortress to repel attackers from both land and sea. The original structure dates back to at least 1301",
+            "attribution": "https://www.touropia.com/tourist-attractions-in-dubrovnik/"
+        }]
     }]
 }, {
     "name": "nature",
     "label": "Nature Nut",
-    "details": "Spend the majority of your time by the sea catching the rays and enjoying the sea air.",
+    "details": "Caves, waterfalls, crazy cliffs, stunning mountain views and the Kornati archipelago await.",
     "days": [{
         "name": "Papuk",
         "lat": 45.5216295,
@@ -446,7 +494,7 @@ const TRIPS = [{
 }, {
     "name": "beaches",
     "label": "Beach Life",
-    "details": "Caves, waterfalls, crazy cliffs, stunning mountain views and the Kornati archipelago await.",
+    "details": "Spend the majority of your time by the sea catching the rays and enjoying the salty sea air.",
     "days": [{
         "name": "Novalja",
         "lat": 44.5526593,
@@ -623,13 +671,13 @@ const ROOMS =
             "name": "bargain",
             "label": "Bargain",
             "details": "Sobe, Zimmer, Room Free signs along the road side indicate a family has a private room available. Sometimes there's a woman with a sign at the bus stop or train depot.  Don't expect meals or a private restroom, but you will save big, paying as little as $20 a night. But be warned, this venue is not regulated.",
-            "booking": "You chose to choose your lodging on the fly. You can't typically book bargain accommodations in advance, but most of the time you get a decent roof over your head. Just start looking before sunset for those signs or the callers at the public transportation sites."
+            "booking": "You chose to find your lodging on the fly. You can't typically book bargain accommodations in advance, but most of the time you get a decent roof over your head. Just start looking before sunset for those signs or the callers at the public transportation sites."
         },
         {
             "name": "camping",
             "label": "Camping",
             "details": "There are over 300 registered campsites in Croatia with 90% close to a beach. Glamping may be a more appropriate term for camping in Croatia as most campgrounds have permanent bungalows and tents on site. Some of the larger campsites include restaurants, sports facilities, laundries, and general store too.",
-            "booking": "Glamping here you come. Be sure to book your camping experience early via <a href='https://www.camping.hr' target='_blank'> www.capming.hr</a>"
+            "booking": "Glorified, glamorous camping options await. Be sure to book your camping experience early via <a href='https://www.camping.hr' target='_blank'> www.capming.hr</a>"
         },
         {
             "name": "hostel",
