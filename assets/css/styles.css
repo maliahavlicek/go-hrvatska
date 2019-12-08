@@ -48,6 +48,10 @@
     color: var(--primary);
     text-decoration: underline;
 }
+.more-link.details{
+    color: var(--white);
+    float: none;
+}
 /*
 triangle slices were derived from https://tutorialzine.com/2017/03/css-triangles-without-hacks
 clip-paths determined using https://bennettfeely.com/clippy/

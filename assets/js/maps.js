@@ -26,7 +26,8 @@ function buildMapContent(){
                 '        <div class="details-img-wrap" id="img-day-' + day_num + '"></div></div>';
         det_elm += '   <div class="details" id="details-' + day_num +'"><h3>Places to See</h3><ul>';
         $.each(day.places, function (index2, item) {
-            det_elm += '<li>' + item.name + '</li>';
+            det_elm += '<li>' + '<span type="button" tabindex="0" class="more-link details" data-trigger="focus" data-placement="top" data-toggle="popover" title="' +
+                item['name'] + ' details" data-content="' + item['description'] + '" data-container="body">' + item.name + '</span></li>';
 
         });
         det_elm += '</ul></div>';
@@ -144,6 +145,14 @@ function finalizeMap(places){
 
   itineraryPath.setMap(map);
 
+  // add handlers to toggle the visibility of the paragraph when a button is clicked
+        $('[data-toggle="popover"]').click(function(){
+            $(this).popover('toggle');
+        });
+        // if user clicks anywhere else, hide the popover
+        $('.popover-dismiss').popover({
+            trigger: 'focus'
+        });
 }
 
 
