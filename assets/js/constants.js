@@ -180,23 +180,23 @@ const TRIPS = [{
         "lat": 45.5464305,
         "lng": 18.6186473,
         "places": [{
+            "name": "Vučedol Culture Museum",
+            "lat": 45.3363581,
+            "lng": 19.0590116,
+            "description": "See artifacts fround along the bank of the Danube river dating from the Vučedol culture which flourished between 3000 and 2200 BC.",
+            "attribution": "https://en.wikipedia.org/wiki/Vu%C4%8Dedol_Culture_Museum"
+        }, {
             "name": "Place of Remembrance - Vukovar Hospital",
             "lat": 45.3578582,
             "lng": 18.9926594,
-            "description": "The place of remembrance – the Vukovar hospital 1991 is a tragic truth ... In mass grave at Ovčara, the sacred place in Croatia, 261 persons lost their lives.",
-            "attribution": "http://www.visitvukovar-srijem.com/en/sights-and-more/cultural-and-historical-tourism/vukovar-nocturne/"
+            "description": "The Vukovar hospital is solemn war memorial dedicated to the memory of 261 Croatian prisoners of war and civilians who were killed during the Croatian war of Independence in 1991.",
+             "attribution": "http://www.visitvukovar-srijem.com/en/sights-and-more/cultural-and-historical-tourism/vukovar-nocturne/"
         }, {
             "name": "Church of St Peter & Paul",
-            "lat": 45.5608331,
-            "lng": 18.6759909,
-            "description": "This red-brick neo-Gothic church's 90m-high tower is surpassed in height only by the cathedral in Zagreb and dominates downtown Osijek. Built in the 1890s, the interior has 40 elaborate stained-glass windows in Viennese style and vividly coloured frescos by Croatian painter Mirko Rački.",
+            "lat": 45.560836,
+            "lng": 18.675571,
+            "description": "This red-brick neo-Gothic church's 90m-high tower is surpassed in height only by the cathedral in Zagreb and dominates downtown Osijek. Built in the 1890s, the interior has 40 elaborate stained-glass windows in Viennese style and vividly coloured frescoes by Croatian painter Mirko Rački.",
             "attribution": "https://www.lonelyplanet.com/croatia/osijek/attractions/church-of-st-peter-paul/a/poi-sig/1047806/1002809"
-        }, {
-            "name": "Vučedol Culture Museum",
-            "lat": 45.5554131,
-            "lng": 18.6214556,
-            "description": "See artifacts from the Vučedol culture which flourished between 3000 and 2200 BC which flourished along the right bank of the Danube river.",
-            "attribution": "https://en.wikipedia.org/wiki/Vu%C4%8Dedol_Culture_Museum"
         }, {
             "name": "King Peter Krešimir IV Park",
             "lat": 45.5554131,
@@ -212,19 +212,19 @@ const TRIPS = [{
             "name": "Castle Pejačević - Nasice",
             "lat": 45.5548595,
             "lng": 18.4140927,
-            "description": "This castle built in 1811 on the edge of the park and the crest of a hill, is classical in style with a few late Baroque details.",
+            "description": "This castle built in 1811 on the edge of the park and the crest of a hill, is classical in style with a few late Baroque details. It was the home to generations of Croatian nobles and is one of the largest and most valuable historical monuments in eastern Croatia.",
             "attribution": "https://travelguide.michelin.com/europe/croatia/osijek-baranja-county/nasice/pejacevic-castle"
         },{
             "name": "Ružica Grad",
             "lat": 45.511156,
             "lng": 17.858181,
-            "description": "A great number of medieval fortifications, most of them originating from the 13th century, witness about the importance of the area of Papuk, especially during the time of the invasion of the Turks.",
-            "attribution": "https://pp-papuk.hr/en/kulturno-povijesna-bastina/srednji-vijek/"
+            "description": "This 13th century medieval fortress is one of the largest medieval fortification complexes in Croatia occupying an area of ​​8000 m2 at a height of 378 m. After the expulsion of the Ottoman Empire in 1685, the Ružica town remains a ruin.",
+            "attribution": "https://destinationner.com/ancient-orahovica/"
         }, {
             "name": "Požega Cathedral",
             "lat": 45.332597,
             "lng": 17.678054,
-            "description": "Saint Teresa of Ávila Cathedral is a cathedral in Požega and it is a beautiful example of Baroque architecture. ",
+            "description": "Saint Teresa of Ávila Cathedral is a cathedral in Požega and it is a beautiful example of Baroque architecture. The interior is decorated with wall paintings painted by famous Croatian painters Celestin Medović and Oton Iveković.",
             "attribution": "https://croatiareviews.com/culture-and-heritage/pozega-cathedral"
         }]
     }, {
@@ -247,7 +247,7 @@ const TRIPS = [{
             "name": "Aquatika Museum",
             "lat": 45.485100,
             "lng": 15.562098,
-            "description": "Croatia is one of the European countries with the richest ichthyofauna and flora, and the city of Karlovac, famous for its four rivers, is a particularly suitable place for the presentation of the natural richness of our fresh waters.",
+            "description": "Croatia is one of the European countries with the richest fish and flora, and the city of Karlovac, famous for its four rivers, is a particularly suitable place for the presentation of the natural richness of our fresh waters.",
             "attribution": "https://aquariumkarlovac.com/en/"
         }]
     }, {
@@ -450,8 +450,8 @@ const TRIPS = [{
             "name": "Najada diving",
             "lat": 43.826843,
             "lng": 15.580262,
-            "description": "The Dive sites in Kornati National Park are among the most beautiful in the Mediterranean, we know all the best spots to visit from shipwrecks to where the most diverse sea life can be found.",
-            "attribution": "https://www.najada.com/word-press/divesites/"
+            "description": "The underwater topography in the Kornati archipelago is as varied under the surface as it is above. Divers will delight in the caves, tunnels, crevices, sheer walls, cliffs and reefs. The boulders are covered in colorful soft corals and red gorgonians while plentiful small to medium marine life creates fascinating diversions. Because of its history and position, there are also a number of wrecks to explore surrounding the islands.",
+            "attribution": "https://travel.padi.com/d/kornati/"
         }, {
             "name": "Telašćica",
             "lat": 43.891586,
@@ -460,9 +460,9 @@ const TRIPS = [{
             "attribution": "http://www.dugiotok.hr/en/attractions-telascica"
         }, {
             "name": "Nin - KiteBoarding",
-            "lat": 44.247832,
-            "lng": 15.047539,
-            "description": "Nin’s sandy beaches are great places for windsurfing and kitesurfing and to learn surfing",
+            "lat": 44.2433171,
+            "lng": 15.1810147,
+            "description": "Nin’s sandy beaches are great places for windsurfing and kite surfing with stunning views of the adriatic sea and Kornati islands.",
             "attribution": "https://visitnin.com/surfing/"
         }]
 
@@ -486,10 +486,40 @@ const TRIPS = [{
             "name": "Skradin - Boat trip",
             "lat": 43.817866,
             "lng": 15.923372,
-            "description": "the advantage to starting your visit to Krka National Park in Skradin is that the park admission fee includes a boat ride through the canyon to Skradinski Buk waterfall.",
+            "description": "The advantage to starting your visit to Krka National Park in Skradin is that the park admission fee includes a boat ride through the canyon to Skradinski Buk waterfall.",
             "attribution": "https://www.swedishnomad.com/krka-national-park-in-croatia/"
         }]
+    }, {
+        "name": "Brac",
+        "lat": 43.507303,
+        "lng": 16.441423,
+        "places": [{
+            "name": "Vranjaca Cave",
+            "lat": 43.562237,
+            "lng": 16.648709,
+            "description": "The Vranjača cave is made up of two chambers. The first has no stalactites. The second consists of a system of nine smaller chambers in colors ranging from green through blue, some of which shimmer due to the presence of crystals.",
+            "attribution": "https://www.inyourpocket.com/split/sightseeing/The-Vranjaca-cave"
+        },{
+            "name": "Dragons Cave",
+            "lat": 43.269325,
+            "lng": 16.599030,
+            "description": "Drakonjina špilja (meaning Dragon's cave), also known as Zmajeva pećina (Wurm's cave), is called so because of the relief of a dragon found inside which was carved by unknown monk in the 15th century, when the monks lived in the caves and even built a chapel in them.",
+            "attribution": "https://en.wikipedia.org/?curid=26214641"
+    }, {
+            "name": "Golden Horn - Zlatni Rat",
+            "lat": 43.257460,
+            "lng": 16.634258,
+            "description": "Kayak or standup paddle board and calm days, windsurf or kitesurf on the windier days, or just lounge on one of the most picturesque beaches in the world.",
+            "attribution": "http://www.dugiotok.hr/en/attractions-telascica"
+        }, {
+            "name": "Biševo - Blue Grotto",
+            "lat": 42.980212,
+            "lng": 16.022108,
+            "description": "Not only is the Blue Cave one of the unique natural phenomena in the world, but this bright and beryl attraction on Bisevo island is destined to be the highlight of your Croatian holiday.",
+            "attribution": "https://www.daytripsfromsplit.com/split-islands/island-vis/top-vis-attractions/blue-cave-croatia/"
     }]
+
+}]
 
 }, {
     "name": "beaches",
@@ -662,6 +692,7 @@ const TRIPS = [{
             "description": "This pebbly cove is sheltered by high cliffs, which provide a platform for daredevil cliff divers but also cast a shadow over the beach by late afternoon – a boon on a scorching day.",
             "attribution": "https://www.lonelyplanet.com/croatia/dubrovnik/activities/bellevue-beach/a/poi-act/1544881/358783"
         }]
+
     }]
 }];
 

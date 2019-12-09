@@ -24,13 +24,13 @@ function buildMapContent(){
         let det_elm = '<div class="d-md-flex flex-row day"><div class="city" id="day-' + day_num + '">' +
                 '        <h3>Day ' + day_num + ': ' + day['name'] + '</h3>'+
                 '        <div class="details-img-wrap" id="img-day-' + day_num + '"></div></div>';
-        det_elm += '   <div class="details" id="details-' + day_num +'"><h3>Places to See</h3><ul>';
+        det_elm += '   <div class="details" id="details-' + day_num +'"><h3>Places to See</h3><ol type="a">';
         $.each(day.places, function (index2, item) {
             det_elm += '<li>' + '<span type="button" tabindex="0" class="more-link details" data-trigger="focus" data-placement="top" data-toggle="popover" title="' +
-                item['name'] + ' details" data-content="' + item['description'] + '" data-container="body">' + item.name + '</span></li>';
+                item['name'] + '" data-content="' + item['description'] + '" data-container="body">' + item.name + '</span></li>';
 
         });
-        det_elm += '</ul></div>';
+        det_elm += '</ol></div>';
         det_elm += '<div class="details-map" id ="map-' + day_num + '"></div></div>';
         if(day_num != myTrip.days.length){
             det_elm += '<hr>';
@@ -183,12 +183,13 @@ function findImage(place, day_num) {
             content: contentString,
             maxWidth: 300
         });
-
+        let labels="abcdefg";
         let loc = new google.maps.LatLng(location.lat, location.lng);
         let marker = new google.maps.Marker({
             position: loc,
             draggable: false,
-            title: location.name
+            title: location.name,
+            label: labels[i % labels.length]
         });
         marker.addListener('click', function() {
             infowindow.open(map, marker);

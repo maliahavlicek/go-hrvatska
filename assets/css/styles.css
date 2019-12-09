@@ -249,20 +249,12 @@ button.pick_room {
     color: var(--gray-medium);
     text-decoration: underline;
 }
-#itinerary-details ul li{
+#itinerary-details ol li{
     margin-left: 15px;
 }
-#itinerary-details ul li:before{
-    font-family: "Webdings";
-    content: "=  ";
-    position: relative;
-    bottom: 2px;
-    left: 0px;
-    width: 2px;
-    height: 2px;
-    border-radius: 50%;
-    color: white;
-    font-size: 0.6rem;
+#itinerary-details ol {
+    margin-left: 10px;
+    list-style: lower-alpha;
 }
 #itinerary-details {
     -ms-flex: 100%;
