@@ -31,7 +31,7 @@ function buildTripContent(){
                 '                  <div class="part1"></div><div class="part2"></div><div class="part3"></div>' +
                 '                  <h5 class="card-title" onclick="pickTrip(`' + trip['name'] + '`)">'+ trip['label']+ '</h5>' +
                 '                </div>' +
-                '                  <span type="button" tabindex="0" class="more-link" data-trigger="focus" data-placement="top" data-toggle="popover" title="' + trip['label'] + ' details"' +
+                '                  <span type="button" tabindex="0" class="more-link" data-trigger="focus" data-placement="top" data-toggle="popover" title="' + trip['label'] + ' "' +
                 '                      data-content="' + trip['details'] + '" data-container="body">Learn More</span>' +
                 '                </div>' +
                 '              </div>' +

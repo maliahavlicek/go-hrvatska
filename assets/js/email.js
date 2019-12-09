@@ -14,15 +14,18 @@ function sendMail(contactForm){
             let city = day.children[0];
             if (city) {
                 city = city.innerHTML;
-                city = city.replace('<h3>', '<h3 style="font-size: 2.2rem; margin: 0px;">');
-                city = city.replace('class="disclaimer"', 'style="font-size: 0.8rem;"');
-                city =  city.replace('<a href=', '<a style="font-size: 0.8rem; color: #FFF!important; text-decoration: underline;" href=');
-                city = city.replace('width="100%"', 'width="300px"');
+                city = city.replace(/<h3>/g, '<h3 style="font-size: 2.2rem; margin: 0px;">');
+                city = city.replace(/class="disclaimer"/g, 'style="font-size: 0.8rem;"');
+                city = city.replace(/<a href=/g, '<a style="font-size: 0.8rem; color: #FFF!important; text-decoration: underline;" href=');
+                city = city.replace(/width="100%"/g, 'width="300px"');
                 itinerary += '<div style="flex: 50%; max-width: 300px; margin: 10px;">' + city +'</div>';
             }
-            let details = day.children[1];
+            let details = day.children[1].innerHTML;
+            details = details.replace(/<h3>/g,'<h3 style="font-size: 1.8rem; margin: 10px;">');
+            details = details.replace(/<ol /g, '<ul');
+            details = details.replace(/ol>/g, 'ul>');
             if (details) {
-                itinerary += '<div style="flex: 50%; max-width: 300px; margin: 40px 20px 10px 0;">' + details.innerHTML.replace('<h3>','<h3 style="font-size: 1.8rem; margin: 10px;">') + '</div>';
+                itinerary += '<div style="flex: 50%; max-width: 300px; margin: 40px 20px 10px 0;">' + details + '</div>';
             }
             itinerary += '</div>';
         });
@@ -31,7 +34,7 @@ function sendMail(contactForm){
         if (lodging){
             let room = '<div style="margin: 0; padding: 9px 25px 25px; background: rgb(57, 147, 156); color: #EBEDEE;">';
             lodging = lodging[0].innerHTML;
-            lodging = lodging.replace("<a href=", "<a style='color: #FFF!important; text-decoration: underline;' href=");
+            lodging = lodging.replace(/<a href=/g, "<a style='color: #FFF!important; text-decoration: underline;' href=");
             itinerary += room + lodging + '</div>';
         }
         itinerary += '</div>';

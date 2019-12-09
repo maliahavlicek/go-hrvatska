@@ -714,19 +714,19 @@ const ROOMS =
             "name": "hostel",
             "label": "Youth Hostels",
             "details": "Dormitory style living with strict university schedules to boutique private rooms are popping up all over Croatia in order to provide moderate lodging options to traveling university students..",
-            "booking": "Book your youth hostel stay with a registered (government condoned) facility at <a href='https://www.hfhs.hr' target='_blank'>www.hfhs.hr</a>."
+            "booking": "Book your youth hostel stay with a registered (government condoned) facility at <a href='https://www.hicroatia.com/en/' target='_blank'>www.hicroatia.com</a>."
         },
         {
             "name": "hotels",
             "label": "Hotels & Apartments",
             "details": "Hotels and Apartments in Croatia are family run operations, the only difference being that hotels typically include breakfast and apartments include kitchenettes. The government regulates these groups by the 5 star system and require a blue sign with the star rating to be fixed to the outside of the building, with permits on premise.",
-            "booking": "You opted to have a clean private, government accredited roof over you head. Use the Croatian registry to book you spot at <a href='https://www.omh.hr' target='_blank'>www.omh.hr</a>."
+            "booking": "You opted to have a clean private, government accredited roof over you head. Use the Croatian registry to book you spot at <a href='http://www.omh.hr/en/association-omh/' target='_blank'>www.omh.hr</a>."
         },
         {
             "name": "homes",
             "label": "Private Homes",
             "details": "Need an apartment or private house with the ability to cook your own meals. And want places vetted by your peers?",
-            "booking": "Many villas and apartments are listed both on <a href ='https://www.omh.hr' target='_blank'>the Croatia apartment and hotel registry</a> as well as <a href='https://www.airbnb.com' target=_blank'>abnr</a>."
+            "booking": "Many villas and apartments are listed both on <a href ='http://www.omh.hr/en/association-omh/' target='_blank'>the Croatia apartment and hotel registry</a> as well as <a href='https://www.airbnb.com' target=_blank'>abnr</a>."
         },
         {
             "name": "unique",
