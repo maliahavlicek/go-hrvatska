@@ -15,6 +15,7 @@
 }
 .split-img-wrapper:hover{
     opacity: 0.5;
+    cursor: pointer;
 }
 .learn-more{
     display:none;

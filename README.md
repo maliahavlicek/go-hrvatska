@@ -180,3 +180,4 @@ Hero imagery seen in this project was gleaned from the sites listed below. Origi
 - [javascript constants](https://www.linkedin.com/in/syedmhassan/) - Moosa Hassan suggested to move large json constants out of functional javascript files into constants.js
 - [geographic points](https://maps.sygic.com/) - Accurate latitude and longitude points for map pins that don't float in the sea.
 - [styling emails](https://www.campaignmonitor.com/css/) - Making emails look good is incredibly difficult
+- [Tim White](https://www.linkedin.com/in/timlwhite/) - Suggesting preloading images, removing fullscreen on google maps, change the cursor for the image/label buttons.

@@ -26,9 +26,9 @@ function buildRoomContent() {
         $.each(rooms, function (index, room) {
             let new_elm = '<div class="card col-6 col-md-4 box-shadow">' +
                 '              <div class="card-body">' +
-                '                <div class="split-img-wrapper ' + room['name'] + '">' +
+                '                <div class="split-img-wrapper ' + room['name'] + '" onclick="pickRoom(`' + room['name'] + '`)">' +
                 '                  <div class="room-image"></div>' +
-                '                    <h5 class="card-title" onclick="pickRoom(`' + room['name'] + '`)">'+ room['label']+ '</h5>' +
+                '                    <h5 class="card-title">'+ room['label']+ '</h5>' +
                 '                  </div>' +
                 '                  <span type="button" tabindex="0" class="more-link" data-trigger="focus" data-placement="top" data-toggle="popover" title="' + room['label'] + ' details"' +
                 '                      data-content="' + room['details'] + '" data-container="body">Learn More</span>' +

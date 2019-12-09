@@ -71,7 +71,7 @@ function finalizeMap(places){
         streetViewControlOptions: {
             position: google.maps.ControlPosition.LEFT_TOP
         },
-        fullscreenControl: true
+        fullscreenControl: false
 
     });
 
@@ -168,7 +168,7 @@ function findImage(place, day_num) {
             zoom: 7,
             mapTypeControl: false,
             streetViewControl: false,
-            fullscreenControl: true
+            fullscreenControl: false
         });
 
 

@@ -27,9 +27,9 @@ function buildTripContent(){
         $.each(trips, function (index, trip) {
             let new_elm = '<div class="card col-6 col-md-3 box-shadow">' +
                 '              <div class="card-body">' +
-                '                <div class="split-img-wrapper ' + trip['name'] + '">' +
+                '                <div class="split-img-wrapper ' + trip['name'] + '" onclick="pickTrip(`' + trip['name'] + '`)">' +
                 '                  <div class="part1"></div><div class="part2"></div><div class="part3"></div>' +
-                '                  <h5 class="card-title" onclick="pickTrip(`' + trip['name'] + '`)">'+ trip['label']+ '</h5>' +
+                '                  <h5 class="card-title">'+ trip['label']+ '</h5>' +
                 '                </div>' +
                 '                  <span type="button" tabindex="0" class="more-link" data-trigger="focus" data-placement="top" data-toggle="popover" title="' + trip['label'] + ' "' +
                 '                      data-content="' + trip['details'] + '" data-container="body">Learn More</span>' +
