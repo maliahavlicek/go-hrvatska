@@ -1,3 +1,5 @@
+/* tablet/small devices first as app was developed as mobile first */
+
 .hero {
     background: var(--primary);
     color: var(--white);
@@ -6,6 +8,19 @@
     width: 100%;
 }
 
+.learn-more {
+    display: none;
+}
+/* customize bootstrap card */
+.card-body {
+    padding: 1rem 0;
+}
+
+.card {
+    background: var(--primary-light);
+}
+
+/* background image and label/ button for cards acts like a button */
 .split-img-wrapper {
     position: relative;
     width: 100%;
@@ -20,25 +35,12 @@
     cursor: pointer;
 }
 
-.learn-more {
-    display: none;
-}
-
-.card-body {
-    padding: 1rem 0rem;
-}
-
-.card {
-    background: var(--primary-light);
-}
-
 .split-img-wrapper .card-title {
     position: relative;
     z-index: 10;
     top: -235%;
-    margin: 0;
     padding: 10px 0;
-    margin: 0px -25px;
+    margin: 0 -25px;
     background: white;
     background: var(--primary);
     color: var(--white);
@@ -51,6 +53,7 @@
     top: 65%;
 }
 
+/* make popover button look like a link */
 .more-link {
     -webkit-appearance: none;
     float: right;
@@ -64,9 +67,14 @@
 }
 
 /*
+Choose Trip has a fancy 3 part image
+part 1 is top right, supply default image to use in event code is expanded and CSS update is forgotten
+part 2 is a thick white link from bottom left to top right
+part 3 is bottom left image, supplied default image to use in event code is expanded and CSS update is forgotten
 triangle slices were derived from https://tutorialzine.com/2017/03/css-triangles-without-hacks
 clip-paths determined using https://bennettfeely.com/clippy/
 */
+
 .part1 {
     width: 100%;
     height: 100%;
@@ -92,120 +100,106 @@ clip-paths determined using https://bennettfeely.com/clippy/
     position: relative;
     top: -200%;
     right: 0;
-    background: url(../images/hero/krka.jpg);
-    background-position: center;
+    background: url(../images/hero/krka.jpg) center;
     background-size: auto 100%;
     /* The points are:  left top, right top, bottom right */
     clip-path: polygon(0% 100%, 0% 0%, 100% 0%);
 }
 
+/* trip button background imagery */
 .castles .part1 {
-    background: url(../images/trips/veliki-tabor.jpeg);
-    background-position: -3px -18px;
+    background: url(../images/trips/veliki-tabor.jpeg) -3px -18px;
     background-size: auto 123%;
 }
 
 .castles .part3 {
-    background: url(../images/trips/djakovacka-katedrala.jpg);
-    background-position: -130px -6px;
+    background: url(../images/trips/djakovacka-katedrala.jpg) -130px -6px;
     background-size: auto 100%;
 }
 
 .beaches .part3 {
-    background: url(../images/trips/cres.jpeg);
-    background-position: center;
+    background: url(../images/trips/cres.jpeg) center;
     background-size: auto 100%;
 }
 
 .beaches .part1 {
-    background: url(../images/trips/Plaza-pozora.jpg);
-    background-position: -44px 0px;
+    background: url(../images/trips/Plaza-pozora.jpg) -44px 0px;
     background-size: auto 100%;
 }
 
 .wine .part3 {
-    background: url(../images/trips/wineGlass.jpg);
-    background-position: -168px -18px;
+    background: url(../images/trips/wineGlass.jpg) -168px -18px;
     background-size: auto 106%;
 }
 
 .wine .part1 {
-    background: url(../images/trips/fresh-cheese.jpg);
-    background-position: -45px 5px;
+    background: url(../images/trips/fresh-cheese.jpg) -45px 5px;
     background-size: auto 100%;
 }
 
 .nature .part3 {
-    background: url(../images/trips/pazinCave.jpg);
-    background-position: -88px -57px;
+    background: url(../images/trips/pazinCave.jpg) -88px -57px;
     background-size: auto 100%;
 }
 
 .nature .part1 {
-    background: url(../images/trips/krka_01_np.jpg);
-    background-position: 49px 19px;
+    background: url(../images/trips/krka_01_np.jpg) 49px 19px;
     background-size: auto 116%;
 }
 
+/* room specific background imagery */
 .room-image {
-    background: url(../images/rooms/sobe-zimmer.jpg);
-    background-position: 0 0;
+    background: url(../images/rooms/sobe-zimmer.jpg) 0 0;
     background-size: auto 100%;
 }
 
 .bargain {
-    background: url(../images/rooms/sobe-zimmer.jpg);
-    background-position: 0px -63px;
+    background: url(../images/rooms/sobe-zimmer.jpg) 0px -63px;
     background-size: 165%;
 }
 
 .camping {
     /* image from https://www.campparadisodrage.com/english/ */
-    background: url(../images/rooms/autocamp.jpeg);
-    background-position: -53px -31px;
+    background: url(../images/rooms/autocamp.jpeg) -53px -31px;
 }
 
 .hostel {
     /* image from https://www.hihostels.com/hostels/hi-hostel-zagreb */
-    background: url(../images/rooms/hostel.png);
-    background-position: -10px 219px;
+    background: url(../images/rooms/hostel.png) -10px 219px;
     background-size: 112%;
 }
 
 .hotels {
     /* image from https://www.booking.com/hotel/hr/beni.html */
-    background: url(../images/rooms/hotel.jpg);
-    background-position: 0px;
+    background: url(../images/rooms/hotel.jpg) 0px;
     background-size: 100%;
 }
 
 .unique {
     /* image from https://swirled.com/croatia-lighthouse-airbnb/ */
-    background: url(../images/rooms/unique.jpg);
-    background-position: 0px;
+    background: url(../images/rooms/unique.jpg) 0px;
     background-size: 100%;
 }
 
 .homes {
-    background: url(../images/rooms/cave.jpg);
-    background-position: -44px -75px;
+    background: url(../images/rooms/cave.jpg) -44px -75px;
     background-size: 145%;
 }
 
+/* main banner image */
 .carousel-item {
     height: 300px;
     width: 100%;
     background-image: url("../images/hero/istria.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-
-
     -webkit-transition: background-image 0.5s linear;
     -moz-transition: background-image 0.5s linear;
     -ms-transition: background-image 0.5s linear;
     transition: background-image 0.5s linear;
 }
 
+/* jQuery will turn on page view as needed, default to hidden */
 .page-view {
     display: none;
 }
@@ -214,6 +208,7 @@ clip-paths determined using https://bennettfeely.com/clippy/
     display: block;
 }
 
+/* override bootstrap button styles */
 .btn-primary {
     background: var(--secondary-dark);
     border: none;
@@ -224,6 +219,7 @@ clip-paths determined using https://bennettfeely.com/clippy/
     border: none;
 }
 
+/* create space between hero text and cards */
 #room .card.col-6.col-md-4.box-shadow, #trips .card.col-6.col-md-3.box-shadow {
     margin-top: 15px;
 }
@@ -247,6 +243,7 @@ button.pick_room {
     margin-top: 15px;
 }
 
+/* itinerary view styles */
 #itinerary h3 {
     background: rgb(121, 199, 217);
     color: var(--primary-dark);
@@ -349,6 +346,8 @@ button.pick_room {
     margin-left: 20px;
     margin-right: 20px;
 }
+
+/* override bootstrap popover styles */
 .popover-body {
     font-size: 1rem;
 }

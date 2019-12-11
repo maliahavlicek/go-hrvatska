@@ -1,5 +1,7 @@
 /*
   Large data objects are located in this file to keep the core functionality files clean
+  TRIPS --> json object holding data for trips, reassigned to trips in trips.js
+  ROOMS --> json object holding accommodation information, reassigned to rooms in room.js
 */
 
 const TRIPS = [

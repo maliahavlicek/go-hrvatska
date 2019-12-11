@@ -1,9 +1,10 @@
 /*
   Initialize Trips
-  (jQuery loop through build vs huge html file that repeats itself/ easier to maintain & update)
+  (jQuery loop through & build html here vs huge html file that repeats itself/ easier to maintain & update)
 */
 let myTrip = {};
 
+// TRIPS is defined in constants.js
 let trips = TRIPS;
 
 function pickTrip(trip) {
@@ -20,6 +21,12 @@ function pickTrip(trip) {
   changeView('room');
 }
 
+/* Build HTML for Choose Trip View from constants.js TRIPS JSON
+*  Card
+*  background imagery
+*  label
+*  learn more popover
+*  */
 function buildTripContent(){
     let trip_elem = $('#trips');
     //only build trips once (we don't load html to save on asset loading and allow trips to be more dynamic
@@ -39,7 +46,7 @@ function buildTripContent(){
             trip_elem.append(new_elm);
         });
 
-        // add handlers to toggle the visibility of the paragraph when a button is clicked
+        // add handlers to toggle the visibility of the popover when learn more link is clicked
          $('[data-toggle="popover"]').click(function(){
             $(this).popover('toggle');
         });
@@ -50,12 +57,10 @@ function buildTripContent(){
 
     } else{
         //need to unbind and rebind as other content popovers built later may have created conflicts with originals
-        $('[data-toggle="popover"]').unbind();
-        // add handlers to toggle the visibility of the paragraph when a button is clicked
+         $('[data-toggle="popover"]').unbind();
          $('[data-toggle="popover"]').click(function(){
             $(this).popover('toggle');
         });
-        // if user clicks anywhere else, hide the popover
         $('.popover-dismiss').popover({
             trigger: 'focus'
         });

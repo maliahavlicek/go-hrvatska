@@ -29,12 +29,12 @@
       <link rel="preload" href="assets/images/hero/plitvice-lakes-np.jpg" as="image" type="image/jpeg">
       <link rel="preload" href="assets/images/hero/zadar.jpg" as="image" type="image/jpeg">
       <link rel="preload" href="assets/images/hero/istria.jpg" as="image" type="image/jpeg">
+      <!-- emailjs key -->
       <script type="text/javascript">
           (function () {
               emailjs.init("user_QxqbTJ64EJafBGLHni6tU");
           })();
       </script>
-
       <title>Go Hrvatska!</title>
 
   </head>
@@ -62,7 +62,7 @@
                 <h2>the Adriatic awaits</h2>
             </div>
         </div>
-
+        <!-- Choose trip/adventure view -->
         <div data-view="adventure" class="page-view adventure">
             <div class="hero">
                 <h1>Go HRVATSKA!</h1>
@@ -73,7 +73,7 @@
                 </div>
             </div>
         </div>
-
+        <!-- Choose room/accommodation view -->
         <div data-view="room" class="page-view room">
             <div class="hero">
                 <h1>Go HRVATSKA!<a class="start btn btn-lg btn-primary" onclick="changeView('adventure')" role="button">Start
@@ -85,7 +85,7 @@
                 </div>
             </div>
         </div>
-
+        <!-- Itinerary/Summary view -->
         <div data-view="itinerary" class="page-view itinerary">
             <div class="hero">
                 <h1>Go HRVATSKA!<a class="start btn btn-lg btn-primary" onclick="changeView('adventure')" role="button">Start
@@ -116,9 +116,7 @@
 
 
     </main>
-    <!-- >indicator of js to determine if small device or not -->
-    <span id="small_device_indr" class="d-md-none"></span>
-    <!-- Optional JavaScript -->
+    <!-- JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -132,15 +130,15 @@
     <!-- Homegrown JavaScript -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/constants.js"></script>
+    <!-- defer js that is not needed for initial page load -->
     <script src="assets/js/trips.js" async defer></script>
     <script src="assets/js/room.js" async defer></script>
     <script src="assets/js/maps.js" async defer></script>
+    <script src="assets/js/email.js" async defer ></script>
     <!-- Google Maps scripts -->
     <script async defer
             src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCD-9puVD1uHScbV1KsCFisP6EsKg5FbhE&callback=initMap&libraries=places"></script>
-    <!-- Email -->
-    <script async defer src="assets/js/email.js"></script>
   </body>
 </html>

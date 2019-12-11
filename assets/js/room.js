@@ -4,6 +4,7 @@
   Types of accommodations were gleaned from personal knowledge and
   https://www.frommers.com/destinations/croatia/planning-a-trip/tips-on-accommodations
 */
+// ROOMS is defined in constants.js
 const rooms = ROOMS;
 
 function pickRoom(room) {
@@ -18,6 +19,12 @@ function pickRoom(room) {
     changeView('itinerary');
 }
 
+/* Build HTML for Choose Accommodation View from constants.js ROOMS JSON
+*  Card
+*  background imagery
+*  label
+*  learn more popover
+*  */
 function buildRoomContent() {
     let room_elem = $('#room');
     //only build rooms once (we don't load html to save on asset loading and allow rooms to be more dynamic
@@ -50,7 +57,6 @@ function buildRoomContent() {
         $('[data-toggle="popover"]').click(function () {
             $(this).popover('toggle');
         });
-        // if user clicks anywhere else, hide the popover
         $('.popover-dismiss').popover({
             trigger: 'focus'
         });
