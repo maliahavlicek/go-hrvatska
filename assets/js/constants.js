@@ -2,7 +2,8 @@
   Large data objects are located in this file to keep the core functionality files clean
 */
 
-const TRIPS = [{
+const TRIPS = [
+    {
     "name": "wine",
     "label": "Wine & Dine",
     "details": "Enjoy the delights of regional food hot spots, local vineyards and to die for pastries.",

@@ -5,7 +5,8 @@
     padding: 10px;
     width: 100%;
 }
-.split-img-wrapper{
+
+.split-img-wrapper {
     position: relative;
     width: 100%;
     height: 200px;
@@ -13,20 +14,25 @@
     padding: 0;
     border: 3px solid var(--primary);
 }
-.split-img-wrapper:hover{
+
+.split-img-wrapper:hover {
     opacity: 0.5;
     cursor: pointer;
 }
-.learn-more{
-    display:none;
+
+.learn-more {
+    display: none;
 }
-.card-body{
+
+.card-body {
     padding: 1rem 0rem;
 }
-.card{
+
+.card {
     background: var(--primary-light);
 }
-.split-img-wrapper .card-title{
+
+.split-img-wrapper .card-title {
     position: relative;
     z-index: 10;
     top: -235%;
@@ -40,32 +46,37 @@
     border-left: none;
     border-right: none;
 }
-.room .split-img-wrapper .card-title{
+
+.room .split-img-wrapper .card-title {
     top: 65%;
 }
+
 .more-link {
     -webkit-appearance: none;
     float: right;
     color: var(--primary);
     text-decoration: underline;
 }
-.more-link.details{
+
+.more-link.details {
     color: var(--white);
     float: none;
 }
+
 /*
 triangle slices were derived from https://tutorialzine.com/2017/03/css-triangles-without-hacks
 clip-paths determined using https://bennettfeely.com/clippy/
 */
 .part1 {
     width: 100%;
-    height:100%;
+    height: 100%;
     background: url(../images/hero/istria.jpg);
     /* The points are: centered top, left bottom, right bottom */
-    clip-path: polygon( 0 100%, 100% 100%, 100% 0%);
-    background-size:cover;
+    clip-path: polygon(0 100%, 100% 100%, 100% 0%);
+    background-size: cover;
 }
-.part2{
+
+.part2 {
     width: 100%;
     height: 100%;
     position: relative;
@@ -74,7 +85,8 @@ clip-paths determined using https://bennettfeely.com/clippy/
     clip-path: polygon(98% 0%, 100% 0%, 100% 3%, 3% 100%, 0% 100%, 3% 95%);
     background: white;
 }
-.part3{
+
+.part3 {
     width: 100%;
     height: 100%;
     position: relative;
@@ -84,87 +96,102 @@ clip-paths determined using https://bennettfeely.com/clippy/
     background-position: center;
     background-size: auto 100%;
     /* The points are:  left top, right top, bottom right */
-    clip-path: polygon( 0% 100%, 0% 0%,100% 0% );
+    clip-path: polygon(0% 100%, 0% 0%, 100% 0%);
 }
-.castles .part1{
+
+.castles .part1 {
     background: url(../images/trips/veliki-tabor.jpeg);
     background-position: -3px -18px;
     background-size: auto 123%;
 }
-.castles .part3{
+
+.castles .part3 {
     background: url(../images/trips/djakovacka-katedrala.jpg);
     background-position: -130px -6px;
     background-size: auto 100%;
 }
-.beaches .part3{
+
+.beaches .part3 {
     background: url(../images/trips/cres.jpeg);
     background-position: center;
     background-size: auto 100%;
 }
-.beaches .part1{
+
+.beaches .part1 {
     background: url(../images/trips/Plaza-pozora.jpg);
     background-position: -44px 0px;
     background-size: auto 100%;
 }
-.wine .part3{
+
+.wine .part3 {
     background: url(../images/trips/wineGlass.jpg);
     background-position: -168px -18px;
     background-size: auto 106%;
 }
-.wine .part1{
+
+.wine .part1 {
     background: url(../images/trips/fresh-cheese.jpg);
     background-position: -45px 5px;
     background-size: auto 100%;
 }
-.nature .part3{
+
+.nature .part3 {
     background: url(../images/trips/pazinCave.jpg);
     background-position: -88px -57px;
     background-size: auto 100%;
 }
-.nature .part1{
+
+.nature .part1 {
     background: url(../images/trips/krka_01_np.jpg);
     background-position: 49px 19px;
     background-size: auto 116%;
 }
 
-.room-image{
+.room-image {
     background: url(../images/rooms/sobe-zimmer.jpg);
     background-position: 0 0;
     background-size: auto 100%;
 }
-.bargain{
+
+.bargain {
     background: url(../images/rooms/sobe-zimmer.jpg);
     background-position: 0px -63px;
     background-size: 165%;
 }
-.camping{
+
+.camping {
     /* image from https://www.campparadisodrage.com/english/ */
     background: url(../images/rooms/autocamp.jpeg);
     background-position: -53px -31px;
 }
-.hostel{
+
+.hostel {
     /* image from https://www.hihostels.com/hostels/hi-hostel-zagreb */
     background: url(../images/rooms/hostel.png);
     background-position: -10px 219px;
     background-size: 112%;
 }
-.hotels{
+
+.hotels {
     /* image from https://www.booking.com/hotel/hr/beni.html */
     background: url(../images/rooms/hotel.jpg);
-    background-position:  0px;
+    background-position: 0px;
     background-size: 100%;
 }
-.unique{
+
+.unique {
     /* image from https://swirled.com/croatia-lighthouse-airbnb/ */
     background: url(../images/rooms/unique.jpg);
-    background-position:  0px;
+    background-position: 0px;
     background-size: 100%;
 }
-.homes{
+
+.homes {
     background: url(../images/rooms/cave.jpg);
     background-position: -44px -75px;
     background-size: 145%;
 }
+
 .carousel-item {
     height: 300px;
     width: 100%;
@@ -173,46 +200,54 @@ clip-paths determined using https://bennettfeely.com/clippy/
     background-size: cover;
 
 
-  -webkit-transition: background-image 0.5s linear;
-  -moz-transition: background-image 0.5s linear;
-  -ms-transition: background-image 0.5s linear;
-  transition: background-image 0.5s linear;
-}
-.page-view{
-    display:none;
-}
-[data-view = "hero-image"]{
-    display: block;
-}
-.btn-primary {
-    background: var(--secondary-dark);
-    border:none;
-}
-.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
-    background: var(--secondary);
-    border:none;
+    -webkit-transition: background-image 0.5s linear;
+    -moz-transition: background-image 0.5s linear;
+    -ms-transition: background-image 0.5s linear;
+    transition: background-image 0.5s linear;
 }
 
-#room .card.col-6.col-md-4.box-shadow, #trips .card.col-6.col-md-3.box-shadow{
+.page-view {
+    display: none;
+}
+
+[data-view = "hero-image"] {
+    display: block;
+}
+
+.btn-primary {
+    background: var(--secondary-dark);
+    border: none;
+}
+
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+    background: var(--secondary);
+    border: none;
+}
+
+#room .card.col-6.col-md-4.box-shadow, #trips .card.col-6.col-md-3.box-shadow {
     margin-top: 15px;
 }
-#room, #trips{
+
+#room, #trips {
     justify-content: space-between;
     margin: 0;
 }
-#room .row, #trips .row{
+
+#room .row, #trips .row {
     margin: 0;
 }
-#room .col-6 , #trips .col-6{
+
+#room .col-6, #trips .col-6 {
     -ms-flex: 0 0 47%;
     flex: 0 0 47%;
     max-width: 47%;
 }
+
 button.pick_room {
     margin-top: 15px;
 }
 
-#itinerary h3{
+#itinerary h3 {
     background: rgb(121, 199, 217);
     color: var(--primary-dark);
     text-align: left;
@@ -220,7 +255,8 @@ button.pick_room {
     margin-left: 15px;
     font-size: 2rem;
 }
-#itinerary-details{
+
+#itinerary-details {
     -ms-flex: 100%;
     flex: 100%;
     max-width: 100%;
@@ -230,74 +266,90 @@ button.pick_room {
     padding: 25px;
     flex-direction: row;
 }
-#itinerary-details .city, #itinerary-details .details, #itinerary-details .details-map{
+
+#itinerary-details .city, #itinerary-details .details, #itinerary-details .details-map {
     -ms-flex: 100%;
     flex: 100%;
     max-width: 100%;
     margin: 0;
 }
-.details-img-wrap{
+
+.details-img-wrap {
     margin: 10px 10px 10px 0px;
 }
-#itinerary{
-    display:none;
+
+#itinerary {
+    display: none;
 }
+
 #itinerary h3 a {
     color: var(--gray-light);
     display: inline-block;
 }
-#itinerary h3 a:hover{
+
+#itinerary h3 a:hover {
     color: var(--gray-medium);
     text-decoration: underline;
 }
-#itinerary-details ol li{
+
+#itinerary-details ol li {
     margin-left: 15px;
 }
+
 #itinerary-details ol {
     margin-left: 10px;
     list-style: lower-alpha;
 }
+
 #itinerary-details {
     -ms-flex: 100%;
     flex: 100%;
     max-width: 100%;
     margin: 0px;
 }
-#itinerary-details hr{
+
+#itinerary-details hr {
     border-top: 2px solid var(--white);
 }
-#itinerary-details img{
+
+#itinerary-details img {
     max-width: 100%;
 }
+
 .disclaimer a, .disclaimer {
     color: var(--gray-light);
     font-size: .8rem;
     font-weight: normal;
 }
 
-#map{
+#map {
     height: 330px;
     width: 100%;
     padding: 0;
     margin: 0;
 }
+
 #map-1, #map-2, #map-3, #map-4, #map-5, #map-6, #map-7 {
     height: 250px;
     width: 100%;
 }
-.lodging{
+
+.lodging {
     margin: 10px -25px -25px;
     padding: 9px 25px 25px;
     background: rgb(57, 147, 156);
     color: var(--gray-light);
 }
-.lodging a{
+
+.lodging a {
     color: var(--gray-light);
     text-decoration: underline;
 }
-.popover-body{
+
+.popover-body {
     font-size: 1rem;
 }
+
 .popover-header {
     background: var(--primary-dark);
     color: var(--gray-light);
@@ -306,25 +358,27 @@ button.pick_room {
     border: 2px solid var(--gray-light);
     border-bottom: none;
 }
-.popover:after, .popoer-header:after{
-    content:"";
-    display:block;
-    position:absolute;
-    z-index:-1;
-    top:2px;
-    left:2px;
-    right:2px;
-    bottom:2px;
-    border:2px solid var(--primary-dark)
+
+.popover:after, .popoer-header:after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    border: 2px solid var(--primary-dark)
 }
 
-.start{
+.start {
     margin-top: 10px;
     float: right;
     padding: .25rem .5rem;
     font-size: 1rem;
     line-height: 1.5;
 }
+
 h1.firstHeading {
     color: var(--primary);
     font-size: 1rem;
@@ -332,42 +386,52 @@ h1.firstHeading {
     display: block;
     text-align: center;
 }
-.main_info h1.firstHeading{
+
+.main_info h1.firstHeading {
     font-size: 1.2rem;
 }
+
 .main_info {
     font-size: 1rem;
 }
-.underline{
+
+.underline {
     text-decoration: underline;
 }
-.infoContent{
+
+.infoContent {
     color: var(--primary);
     font-size: .8rem;
     font-weight: normal;
     text-align: left;
 }
-.infoDisclaimer{
+
+.infoDisclaimer {
     color: var(--primary);
     font-size: .6rem;
     font-weight: normal;
     text-align: left;
 }
-.sendEmail{
+
+.sendEmail {
     background: var(--primary);
     color: var(--white);
     padding: 20px;
     text-align: left;
 }
+
 .sendEmail .form {
     margin: 20px;
 }
-.sendEmail .form-group{
+
+.sendEmail .form-group {
     display: inline-block;
 }
-.email-submit{
+
+.email-submit {
     display: block;
 }
+
 input#emailaddress {
     max-width: 33%;
     min-width: 300px;
@@ -377,7 +441,7 @@ input#emailaddress {
 /* desktop styles */
 @media screen and (min-width: 992px) {
 
-   #itinerary{
+    #itinerary {
         background: rgb(57, 147, 156);
         color: var(--gray-light);
         display: flex;
@@ -387,57 +451,69 @@ input#emailaddress {
         flex: 25%;
         max-width: 25%;
     }
-    #itinerary-details .city, #itinerary-details .details, #itinerary-details .details-map{
+
+    #itinerary-details .city, #itinerary-details .details, #itinerary-details .details-map {
         -ms-flex: 33%;
         flex: 33%;
         max-width: 33%;
         margin: 10px;
     }
 
-    #map{
+    #map {
         width: 75%;
         height: 575px;
     }
 
-    #map-1,#map-2, #map-3, #map-4, #map-5, #map-6, #map-7{
+    #map-1, #map-2, #map-3, #map-4, #map-5, #map-6, #map-7 {
         height: 300px;
         width: 300px;
     }
+
     .start {
         margin-top: 0px;
     }
+
     .hero {
         padding: 20px;
         width: 100%;
     }
-    .carousel h2{
+
+    .carousel h2 {
         padding-right: 25%;
     }
-    h2{
+
+    h2 {
         text-align: right;
     }
-    h1{
+
+    h1 {
         text-align: left;
     }
-    .carousel-item{
+
+    .carousel-item {
         height: 550px;
     }
-    .split-img-wrapper .card-title{
+
+    .split-img-wrapper .card-title {
         margin: -10px -20px;
     }
-    .adventure .card-body{
+
+    .adventure .card-body {
         padding: 1rem 0rem;
         width: 210px;
     }
-    .adventure .card-deck .card{
+
+    .adventure .card-deck .card {
         margin: 10px;
         max-width: 50%;
     }
+
     #room .col-md-4 {
         -ms-flex: 0 0 32%;
         flex: 0 0 32%;
         max-width: 32%;
     }
+
     #trips .col-md-3 {
         -ms-flex: 0 0 24%;
         flex: 0 0 24%;

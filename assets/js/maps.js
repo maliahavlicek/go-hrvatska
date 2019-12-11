@@ -238,7 +238,7 @@ function findImage(place, day_num) {
     }else{
         //wrap consoles in debug check so we don't deploy with any logging
         if(debug) {
-            console.log(place.name +" status to get place_id not OK: " + status);
+            console.log(place.name + " status to get place_id not OK: " + status);
         }
     }
 

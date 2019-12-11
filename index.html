@@ -1,131 +1,146 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- cache -->
-    <meta name="Description" content="Go Hrvatska! is a website build by Malia Havlicek to fulfill Milestone 2 project for code instintute's full stack developer course.">
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- cache -->
+      <meta name="Description"
+            content="Go Hrvatska! is a website build by Malia Havlicek to fulfill Milestone 2 project for code instintute's full stack developer course.">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- Homegrown CSS -->
-    <link rel="stylesheet" href="assets/css/reset.css"/>
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <!-- Email JS -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
-    <!-- preload images that will be used soon to smooth out transition -->
-    <link rel="preload" href="assets/images/hero/split.jpg" as="image" type="image/jpeg">
-    <link rel="preload" href="assets/images/hero/klis.jpg" as="image" type="image/jpeg">
-    <link rel="preload" href="assets/images/hero/mljet.jpg" as="image" type="image/jpeg">
-    <link rel="preload" href="assets/images/hero/pula.jpg" as="image" type="image/jpeg">
-    <link rel="preload" href="assets/images/hero/krka.jpg" as="image" type="image/jpeg">
-    <link rel="preload" href="assets/images/hero/trakoscan.jpg" as="image" type="image/jpeg">
-    <link rel="preload" href="assets/images/hero/dugi-otok.jpg" as="image" type="image/jpeg">
-    <link rel="preload" href="assets/images/hero/01-split.jpg" as="image" type="image/jpeg">
-    <link rel="preload" href="assets/images/hero/hidden-bay_Dubrovnik.jpg" as="image" type="image/jpeg">
-    <link rel="preload" href="assets/images/hero/plitvice-lakes-np.jpg" as="image" type="image/jpeg">
-    <link rel="preload" href="assets/images/hero/zadar.jpg" as="image" type="image/jpeg">
-    <link rel="preload" href="assets/images/hero/istria.jpg" as="image" type="image/jpeg">
-    <script type="text/javascript">
-       (function(){
-          emailjs.init("user_QxqbTJ64EJafBGLHni6tU");
-       })();
-    </script>
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <!-- Homegrown CSS -->
+      <link rel="stylesheet" href="assets/css/reset.css"/>
+      <link rel="stylesheet" href="assets/css/styles.css"/>
+      <!-- Email JS -->
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+      <!-- preload images that will be used soon to smooth out transition -->
+      <link rel="preload" href="assets/images/hero/split.jpg" as="image" type="image/jpeg">
+      <link rel="preload" href="assets/images/hero/klis.jpg" as="image" type="image/jpeg">
+      <link rel="preload" href="assets/images/hero/mljet.jpg" as="image" type="image/jpeg">
+      <link rel="preload" href="assets/images/hero/pula.jpg" as="image" type="image/jpeg">
+      <link rel="preload" href="assets/images/hero/krka.jpg" as="image" type="image/jpeg">
+      <link rel="preload" href="assets/images/hero/trakoscan.jpg" as="image" type="image/jpeg">
+      <link rel="preload" href="assets/images/hero/dugi-otok.jpg" as="image" type="image/jpeg">
+      <link rel="preload" href="assets/images/hero/01-split.jpg" as="image" type="image/jpeg">
+      <link rel="preload" href="assets/images/hero/hidden-bay_Dubrovnik.jpg" as="image" type="image/jpeg">
+      <link rel="preload" href="assets/images/hero/plitvice-lakes-np.jpg" as="image" type="image/jpeg">
+      <link rel="preload" href="assets/images/hero/zadar.jpg" as="image" type="image/jpeg">
+      <link rel="preload" href="assets/images/hero/istria.jpg" as="image" type="image/jpeg">
+      <script type="text/javascript">
+          (function () {
+              emailjs.init("user_QxqbTJ64EJafBGLHni6tU");
+          })();
+      </script>
 
-    <title>Go Hrvatska!</title>
+      <title>Go Hrvatska!</title>
 
   </head>
   <body>
     <main role="main">
-      <!-- Initial View/Hero Image -->
-      <div data-view="hero-image" class="page-view carousel">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-            <div id ="carasouleImg" class="carousel-item active" aria-label="Stunning sunsets over coastal villages in the Istria region will help rebalance your soul.">
-              <div class="container d-none d-md-block">
-                <div class="carousel-caption text-left hero">
-                  <h1>Come Visit <a class="btn btn-lg btn-primary" onclick="changeView('adventure')" role="button">Go Hrvatska!</a></h1>
-                  <h2>the jewel of the Adriatic awaits</h2>
+        <!-- Initial View/Hero Image -->
+        <div data-view="hero-image" class="page-view carousel">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div id="carasouleImg" class="carousel-item active"
+                         aria-label="Stunning sunsets over coastal villages in the Istria region will help rebalance your soul.">
+                        <div class="container d-none d-md-block">
+                            <div class="carousel-caption text-left hero">
+                                <h1>Come Visit <a class="btn btn-lg btn-primary" onclick="changeView('adventure')"
+                                                  role="button">Go Hrvatska!</a></h1>
+                                <h2>the jewel of the Adriatic awaits</h2>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-        </div>
-        <div class="hero d-md-none">
-          <h1>Come Visit <a class="btn btn-lg btn-primary" onclick="changeView('adventure')" role="button">Go Hrvatska!</a></h1>
-          <h2>the Adriatic awaits</h2>
-        </div>
-      </div>
-
-      <div data-view="adventure" class="page-view adventure">
-        <div class="hero">
-          <h1>Go HRVATSKA!</h1>
-          <h2>Pick your accommodation</h2>
-        </div>
-        <div class="text-center">
-          <div id="trips" class="row">
-          </div>
-        </div>
-      </div>
-
-      <div data-view="room" class="page-view room">
-        <div class="hero">
-          <h1>Go HRVATSKA!<a class="start btn btn-lg btn-primary" onclick="changeView('adventure')" role="button">Start Over</a></h1>
-          <h2>Pick your accommodation</h2>
-        </div>
-        <div class="text-center">
-          <div id="room" class="row">
-          </div>
-        </div>
-      </div>
-
-      <div data-view="itinerary" class="page-view itinerary">
-        <div class="hero">
-          <h1>Go HRVATSKA!<a class="start btn btn-lg btn-primary" onclick="changeView('adventure')" role="button">Start Over</a></h1>
-          <h2>Here's your <span id="selected_trip"></span> itinerary</h2>
-        </div>
-        <div class="d-flex flex-row">
-            <div id="itinerary"></div>
-            <div id="map" ></div>
-        </div>
-        <div>
-            <div id="itinerary-details"></div>
-        </div>
-        <div class="sendEmail">
-          <h3 class="contact-heading uppercase">Like this itinerary?</h3>
-          <form class="form" onsubmit="return sendMail(this);" method="POST">
-            <div class="form-group">
-              <label for="emailaddress"  class="sr-only">Email Address</label><span class="email-error"></span>
-              <input required type="email" id="emailaddress" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
-              <small id="emailHelp" class="form-text disclaimer">We'll never share your email with anyone else.</small>
+            <div class="hero d-md-none">
+                <h1>Come Visit <a class="btn btn-lg btn-primary" onclick="changeView('adventure')" role="button">Go
+                    Hrvatska!</a></h1>
+                <h2>the Adriatic awaits</h2>
             </div>
-            <button type="submit" class="btn btn-primary email-submit">Send Itinerary</button>
-          </form>
         </div>
-      </div>
+
+        <div data-view="adventure" class="page-view adventure">
+            <div class="hero">
+                <h1>Go HRVATSKA!</h1>
+                <h2>Pick your accommodation</h2>
+            </div>
+            <div class="text-center">
+                <div id="trips" class="row">
+                </div>
+            </div>
+        </div>
+
+        <div data-view="room" class="page-view room">
+            <div class="hero">
+                <h1>Go HRVATSKA!<a class="start btn btn-lg btn-primary" onclick="changeView('adventure')" role="button">Start
+                    Over</a></h1>
+                <h2>Pick your accommodation</h2>
+            </div>
+            <div class="text-center">
+                <div id="room" class="row">
+                </div>
+            </div>
+        </div>
+
+        <div data-view="itinerary" class="page-view itinerary">
+            <div class="hero">
+                <h1>Go HRVATSKA!<a class="start btn btn-lg btn-primary" onclick="changeView('adventure')" role="button">Start
+                    Over</a></h1>
+                <h2>Here's your <span id="selected_trip"></span> itinerary</h2>
+            </div>
+            <div class="d-flex flex-row">
+                <div id="itinerary"></div>
+                <div id="map"></div>
+            </div>
+            <div>
+                <div id="itinerary-details"></div>
+            </div>
+            <div class="sendEmail">
+                <h3 class="contact-heading uppercase">Like this itinerary?</h3>
+                <form class="form" onsubmit="return sendMail(this);" method="POST">
+                    <div class="form-group">
+                        <label for="emailaddress" class="sr-only">Email Address</label><span class="email-error"></span>
+                        <input required type="email" id="emailaddress" class="form-control" aria-describedby="emailHelp"
+                               placeholder="Enter email">
+                        <small id="emailHelp" class="form-text disclaimer">We'll never share your email with anyone
+                            else.</small>
+                    </div>
+                    <button type="submit" class="btn btn-primary email-submit">Send Itinerary</button>
+                </form>
+            </div>
+        </div>
 
 
     </main>
     <!-- >indicator of js to determine if small device or not -->
     <span id="small_device_indr" class="d-md-none"></span>
-   <!-- Optional JavaScript -->
+    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
 
 
     <!-- Homegrown JavaScript -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/constants.js"></script>
-    <script src="assets/js/trips.js" async defer ></script>
-    <script src="assets/js/room.js" async defer ></script>
-    <script src="assets/js/maps.js" async defer ></script>
+    <script src="assets/js/trips.js" async defer></script>
+    <script src="assets/js/room.js" async defer></script>
+    <script src="assets/js/maps.js" async defer></script>
     <!-- Google Maps scripts -->
-    <script async defer src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCD-9puVD1uHScbV1KsCFisP6EsKg5FbhE&callback=initMap&libraries=places"></script>
+    <script async defer
+            src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCD-9puVD1uHScbV1KsCFisP6EsKg5FbhE&callback=initMap&libraries=places"></script>
     <!-- Email -->
-    <script src="assets/js/email.js"></script>
+    <script async defer src="assets/js/email.js"></script>
   </body>
 </html>

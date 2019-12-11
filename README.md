@@ -5,27 +5,29 @@ This website allows users to pick one of 4 prescribed tours of Croatia for their
 There is a call to action button to start choosing your trip below the banner.
 
 **Picking Adventure View:** Upon clicking the Go Hrvatska button, the user is presented a screen where they choose from 4 trips.
-Each tour has a lean more link below itwhich when clicked reveals a short description of the tour. The label wrapped over the imagery is the button which takes the user to the next page.
+Each tour has a lean more link below it which when clicked reveals a short description of the tour in a bootstrap popover. The imagery and trip label acts as a button which takes the user to the next page.
 
-**Pick Accommodation View:** following the pick adventure view, the user is shown options regarding 6 different lodging options. Clicking the button label takes the user to the next view.
-There is also a learn more button that reveals a popover that provides greater detail about each lodging choice.
+**Pick Accommodation View:** following the pick adventure view, the user is shown options regarding 6 different lodging options. Clicking the button label or imagery takes the user to the next view.
+There is also a learn more button that reveals a popover which provides greater detail about each lodging choice.
 
 **Itinerary View:** After selecting a tour and accommodations, the user is presented a view that summarizes a 7 day trip for their adventure.
-A google map with the cities that are being visited is presented numbering day 1-7 with a linked list along the left of the map in desktop view. Below the map is a daily agenda
-which has a large image retrived via google's Places API. 3-4 suggested places to visit with a small map for the day is shown. These small maps have infowindows on the map pins to
-provide more details about each suggested place to visit.  Below the agenda is a button to email the itinerary. 
+A google map with the cities that are being visited is presented numbering days 1-7. On a desktop view, there is also a linked list of the days to the left of the map. The map pins/icons are clickable
+ which reveals a default google info window that contains a link that will scroll the user down to the details for that particular day. Below the map is a daily agenda area
+which has a large image retrieved via google's Places API. 3-4 suggested places to visit with a small map for the day is shown. These small maps have infoWindows on the map pins to
+provide more details about each suggested place to visit along with the attribution of where that content came from. The items in the list also have a customized bootstrap popover with the same information.  
+Below the agenda is a blurb about where to find your accommodations. The final section of the itinerary view is an email capture form that will allow the user to  email themselves the itinerary. 
 
-There is a start over button as well for views past the Main view.
+There is a start over button as well for views past the Main view so the user can be taken back to the choose trip view.
 
 ## Author
 Malia Havlicek
 
 ## UX 
 The Go Hrvatska! Project was envisioned as a mobile website and then expanded to desktop. It is a single page application that helps
-users determine an itinerary of places to see and visit while on Holiday in Croatia.
+users figure out what to do and see and where to stay when taking a holiday in Croatia.
 
 ### Mockups
-Note: The wireframes are not entirely accurate, they only give a rough estimate on how the website will look on a mobile device. The implied navigation in the
+Note: The wireframes are not entirely accurate, they provide a rough estimate on how the website will look on a mobile device. The implied navigation in the
 mockups was dropped once a single page application was determined as the solution framework.
 [Figma.com](https://www.figma.com/) was used to create the following mockups:
 - [Home Page](https://www.figma.com/file/741n0nfS9y7b1T2ICOAqDn/Go-Hrvatska?node-id=1%3A2)\
@@ -35,18 +37,26 @@ mockups was dropped once a single page application was determined as the solutio
 - [Itinerary](https://www.figma.com/file/741n0nfS9y7b1T2ICOAqDn/Go-Hrvatska?node-id=17%3A41)\
 ![itinerary mockup](assets/images/mockups/Go-hrvatska-itinerary.png) 
 ### User Stories
-- **Hero Banner**: Eye Catching Landing Page with Enticing Imagery swapping out. Note: Only one image is required for initial banner. The subsequent images are injected via jquery.
-- **Choose Adventure** html is built by looping through TRIPS json object. Fancy clip path CSS to do diagonal image on buttons. Customization of Bootstrap card and buttons.
-- **Choose Accommodation** HTML is build by looping through ROOMS json object. Customization of Bootstap button and popover.
-- **Itinerary** Uses google maps and google places API to highlight a 7 day trip based on User's Adventure Choice. HTML is built by looping through TRIPS json. Email.js is also provided to 
-allow user to email the proposed agenda to themselves or others.
+- As a user I want to see nice images of Croatia to entice me to book a vacation to that country.
+- As a user I want to choose the type of activities I will do when on vacation so I am not bored or in a situation that makes me uncomfortable.
+- As a user I want a variety of accommodation choices so I can spend within my means and fit my budget accordingly.
+- As a user I want to see where I'm going on my holiday in relation to a map and days so that I know where I will be and what I will be doing. 
+- As a user I want to be given places to visit each day that match my choice of activities so I do not have to waste a lot of time researching what to do when on vacation in a country I am not familiar with.
+- As a user I want to be able to email the itinerary to myself so I can reference it later, share with my friends or print from home.
+- As as user I want to start over if I decide I want to do a different activity or to determine which cities the other trip options would take me to.
 
-## Features
+## Current Features
+- **Hero Banner**: Eye Catching Landing Page with Enticing Imagery swapping out. Note: Only one image is required for initial banner. The subsequent images are injected via jquery.
+- **Choose Adventure** HTML is built by looping through TRIPS json object. Fancy clip path CSS to do diagonal image on buttons. Customization of Bootstrap card, popover and buttons.
+- **Choose Accommodation** HTML is build by looping through ROOMS json object. Customization of Bootstap button and popover.
+- **Itinerary** Uses google maps and google places API to highlight a 7 day trip based on User's Adventure choice. HTML is built by looping through TRIPS json. Email.js is also provided to 
+allow user to email the proposed agenda to themselves or others.
 
 ### Features Left to Implement
 - use google places API to suggest matches on lodging choice via [nearby](https://developers.google.com/maps/documentation/javascript/places?utm_source=google&utm_medium=cpc&utm_campaign=FY18-Q2-global-demandgen-paidsearchonnetworkhouseads-cs-maps_contactsal_saf&utm_content=text-ad-none-none-DEV_c-CRE_315916118099-ADGP_Hybrid+%7C+AW+SEM+%7C+SKWS+~+Nearby+Search-KWID_43700039136946351-kwd-582432942915-userloc_9028759&utm_term=KW_%2Bnearby%20%2Bsearch-ST_%2Bnearby+%2Bsearch&gclid=EAIaIQobChMI8IKMxKaW5gIVj8DACh1GrQ6WEAAYASAAEgLKjvD_BwE#place_search_requests)
 - migrate constants into database to reduce duplicate destinations
-- store images in database to reduce flickering first time hero images are rotated through.
+- store images in database to reduce hits to google API and refresh weekly
+- use google api to determine places to see and use database to cache results for a week
 
 ## Technologies Used
 - [CSS3](https://www.w3schools.com/w3css/default.asp) The project uses **CSS** to define DOM appearance. 
@@ -74,8 +84,10 @@ Since I don't have a handful of devices or a proper testing tool suite at my fin
 Below are the scenarios I picked to test my website:
 * Windows 10, Edge
 * Macbook Pro, Chrome
+* Macbook Pro, Safari
 * Chrome Emulator Pixel 2
 * ipad pro 9.7, Chrome
+* moto g6 android Chrome
 
 Note, I did look at my site in IE11 and it doesn't function as the flex grid from bootstrap 4 auto margins that I'm using are noted as [incompatible](https://getbootstrap.com/docs/4.4/utilities/flex/#auto-margins).
 
@@ -91,7 +103,7 @@ Email was evaluated in Microsoft Outlook and gmail.
 
 ### Automated testing
 Jasmine was considered as an automated testing option, but this site is heavy in presentation
-and there are no standalone utility functions that Jasmine could help validate their continual functionality.
+and there are no standalone utility functions that Jasmine could help validate their continual functionality. Thus no automated testing was built for this project.
 
 ### Bugs Encountered
 * **Image Query Limit** 
@@ -100,46 +112,49 @@ the Query Limit. To overcome this issue, the findImage call within maps.js Build
 to prevent the issue.
 
 * **Start over button going to wrong screen**
-When adding the start over functionality, the user was going to the hero-banner view, not the select trip view. I had to change the trip view to have mustFolow false.
+When adding the start over functionality, the user was going to the hero-banner view, not the select trip view. I had to change the trip view to have mustFollow false.
 
 * **Map pins in the sea when zooming in**
 Detailed maps sometimes had pins in the sea versus land despite pulling values from google.com/maps url parameters. I ended up using Sygic Maps to collect accurate values.
 
 * **Bad JSON**
 When building out my trips constant, I would often miss a closing bracket or comma. I used the JSON validator many times to quickly identify the problems when the console would show an
-error with TRIPS not being defined.
+error with TRIPS not being defined. (this caused me to double quotes the keys as the validator I used insisted on that added safety net.)
 
 * **Email too large**
-EmailJS has a limit oj the size of the email sent via the free service. I opted for the challenge of sending a larger email and registered for th $5 tier. 
+EmailJS has a limit to the size of the email sent via the free service. I opted for the challenge of sending a larger email and registered for th $5 tier. 
 
 * **Email rendered horribly**
-By embedding imagery in emails, I had to add a lot of inline styles to provide a coherent email that matches the website version rather than just stealing my itineray-details element.
+By embedding imagery in emails, I had to add a lot of inline styles to provide a coherent email that matches the website version rather than just stealing my itinerary-details element.
 
 * **blank and invalid email input accepted**
-When unit testing, I noticed EmailJS allows you to send bad email addresses, rather than  build validation logic, I used Bootstrap 4.0's  by changing my
-input form to match an example in their documentation.
+When unit testing, I noticed EmailJS allows you to send bad email addresses, rather than build validation logic, I used Bootstrap 4.0's by changing my
+input form to match an example in their documentation. I also added 'required' to the email input field.
 
 * **user doesn't know status of email send**
 I had console logs for errors and success for the send email function and the user had no idea what was going on. I updated the success and failures to output a message to the screen.
 
 * **small devices places to visit map controls**
-When testing small devices it was noted that the map controls were taking up too much space. I read the maps API documenation and figured out how to turn off some of the controls and
+When testing small devices it was noted that the map controls were taking up too much space. I read the maps API documentation and figured out how to turn off some of the controls and
 how to move them to a different location.
 
 * **Small Devices other content required scrolling**
-The desktop has a nice left side summary/legend of the Days, but it had to be hidden for small devices. There was no way for the user to really know  there was content below the main map.
-I updated the main map to have infoWindows so the user can click on a marker, then expose a link to the places to see for that particular day. 
+The desktop has a nice left side summary/legend of the Days, but it had to be hidden for small devices. There was no way for the user to really know there was content below the main map.
+I updated the main map's location pins to have infoWindows so the user can click on a marker, then expose a link to the places to see for that particular day. 
 I also figured out how to change the zoom of the map if on small devices by looking at window.innerWidth. This allowed me to make the map shorter for small devices with the entire country in view. 
-And a shorter map allows  a bit of the section under the map to visible on page load for small devices.
+This shorter map allows a bit of the section under the map to be visible on page load for small devices so the user knows they can scroll down and see more.
 
 * **ipad pro 9.7 portrait view**
-The site looked really bad for this view and I didn't want to waste more time for tablet CSS tweaking so I changed my breakpoint from 768px to 992.
+The site looked really bad for this view and I didn't want to waste more time for tablet CSS tweaking so I changed my breakpoint from 768px to 992px to hide the left links that are seen on a larger device.
 
 * **room vs trips inconsistent button issue**
-Accommodation page button took you to next page, but trip button did a slide down, made things consistent.
+Accommodation page button took you to next page, but trip button did a slide down. It was not an ideal user experience and I felt that the imagery button, made things consistent.
 
 * **email accommodation link is hard to make out**
 Unit testing showed that the inline style for accommodations a tag wasn't working. I forgot to assign the value to the replacement string.
+
+* **broken links** *
+The hotels and youth hostile links were broken. I discovered that the links I had originally found were re-hosted since I first grabbed them and had to update them.
 
 ## Deployment
 Note: The coding for the project was done in PyCharm in a local environment with default configurations as it only requires javascript, CSS and HTML files. This website is 
@@ -162,7 +177,7 @@ To gather rich imagery and interesting places to visit, I made use of the follow
 - [Chasing The Donkey](https://www.chasingthedonkey.com/croatia-travel-blog/) - Is a blog site that has many interesting facts and things to do while visiting Croatia that only insiders know about including quirky museums, great local festivals and everything about The Game of Thrones filming. I used bits of their various lists to customize the itineraries.
 - [Croatia Week](https://www.croatiaweek.com) - This site has articles with lists of places of interest that I used when customizing the prescribed trips and was used to help fact check which sites might be of most interest to tourists.
 - [Sygic Maps](https://maps.sygic.com/?utm_source=content-pages&utm_medium=cta&utm_campaign=list#/?item=poi:5232499&map=9,44.917167,14.004822) - This map has spots flagged by categories and provides accurate lat, lng values for them.
-- Other sites used for specific places to see are attributed in the map pin info windows.
+- Other sites used for specific places to see are attributed in the map pin info windows and the constants.js file.
 ### Media
 Hero imagery seen in this project was gleaned from the sites listed below. Original imagery has been renamed and resized to make it easier to correlate to the alt-text.
 - [Croatia.hr](http://croatia.hr/en-GB) 

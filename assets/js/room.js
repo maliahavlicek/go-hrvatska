@@ -7,16 +7,16 @@
 const rooms = ROOMS;
 
 function pickRoom(room) {
-  //see if the room is one of the expected and different from current
-  let newRoom = findView(room, rooms);
-  //default to private family run hotels if no match is found
-  if (!newRoom) {
-    newRoom = rooms[3];
-  }
-  //switch to the next view
+    //see if the room is one of the expected and different from current
+    let newRoom = findView(room, rooms);
+    //default to private family run hotels if no match is found
+    if (!newRoom) {
+        newRoom = rooms[3];
+    }
+    //switch to the next view
 
-  myTrip.room = newRoom;
-  changeView('itinerary');
+    myTrip.room = newRoom;
+    changeView('itinerary');
 }
 
 function buildRoomContent() {
@@ -28,7 +28,7 @@ function buildRoomContent() {
                 '              <div class="card-body">' +
                 '                <div class="split-img-wrapper ' + room['name'] + '" onclick="pickRoom(`' + room['name'] + '`)">' +
                 '                  <div class="room-image"></div>' +
-                '                    <h5 class="card-title">'+ room['label']+ '</h5>' +
+                '                    <h5 class="card-title">' + room['label'] + '</h5>' +
                 '                  </div>' +
                 '                  <span type="button" tabindex="0" class="more-link" data-trigger="focus" data-placement="top" data-toggle="popover" title="' + room['label'] + ' details"' +
                 '                      data-content="' + room['details'] + '" data-container="body">Learn More</span>' +
@@ -38,7 +38,7 @@ function buildRoomContent() {
         });
 
         // add handlers to toggle the visibility of the paragraph when a button is clicked
-        $('[data-toggle="popover"]').click(function(){
+        $('[data-toggle="popover"]').click(function () {
             $(this).popover('toggle');
         });
         // if user clicks anywhere else, hide the popover
