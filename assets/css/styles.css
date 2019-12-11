@@ -345,7 +345,10 @@ button.pick_room {
     color: var(--gray-light);
     text-decoration: underline;
 }
-
+.bs-popover-top, .bs-popover-auto[x-placement^="top"] {
+    margin-left: 20px;
+    margin-right: 20px;
+}
 .popover-body {
     font-size: 1rem;
 }

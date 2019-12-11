@@ -77,7 +77,7 @@ function finalizeMap(places){
 
     //reduce map controls on small devices and zoom out a bit so entire country is visible
     if(window.innerWidth <=768) {
-        map.zoom=6.5;
+        map.zoom=6.4;
         map.mapTypeControl=false;
         map.streetViewControl=false;
     }
