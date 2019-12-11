@@ -48,6 +48,17 @@ function buildTripContent(){
             trigger: 'focus'
         });
 
+    } else{
+        //need to unbind and rebind as other content popovers built later may have created conflicts with originals
+        $('[data-toggle="popover"]').unbind();
+        // add handlers to toggle the visibility of the paragraph when a button is clicked
+         $('[data-toggle="popover"]').click(function(){
+            $(this).popover('toggle');
+        });
+        // if user clicks anywhere else, hide the popover
+        $('.popover-dismiss').popover({
+            trigger: 'focus'
+        });
     }
 
 

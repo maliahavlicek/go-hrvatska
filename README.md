@@ -156,6 +156,11 @@ Unit testing showed that the inline style for accommodations a tag wasn't workin
 * **broken links** *
 The hotels and youth hostile links were broken. I discovered that the links I had originally found were re-hosted since I first grabbed them and had to update them.
 
+* **hero image flikering when hosted** *
+The hero imagery that is dynamically swapped out was flickering when hosted on github pages. Local environment did not have this issue but discrned it most likely was
+cached by my local browser, 2nd time through images were smooth on github pages. A colleague directed me to https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content
+and I implemented preloading rather than changing out my original solution to something that would use CSS to preload the images.
+
 ## Deployment
 Note: The coding for the project was done in PyCharm in a local environment with default configurations as it only requires javascript, CSS and HTML files. This website is 
 hosted using GitHub pages, deployed directly from the master branch.

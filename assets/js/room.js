@@ -14,7 +14,6 @@ function pickRoom(room) {
         newRoom = rooms[3];
     }
     //switch to the next view
-
     myTrip.room = newRoom;
     changeView('itinerary');
 }
@@ -38,6 +37,16 @@ function buildRoomContent() {
         });
 
         // add handlers to toggle the visibility of the paragraph when a button is clicked
+        $('[data-toggle="popover"]').click(function () {
+            $(this).popover('toggle');
+        });
+        // if user clicks anywhere else, hide the popover
+        $('.popover-dismiss').popover({
+            trigger: 'focus'
+        });
+    } else{
+        //need to unbind and rebind as other content popovers built later may have created conflicts with originals
+        $('[data-toggle="popover"]').unbind();
         $('[data-toggle="popover"]').click(function () {
             $(this).popover('toggle');
         });
