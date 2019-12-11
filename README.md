@@ -51,7 +51,8 @@ mockups was dropped once a single page application was determined as the solutio
 - **Choose Accommodation** HTML is build by looping through ROOMS json object. Customization of Bootstap button and popover.
 - **Itinerary** Uses google maps and google places API to highlight a 7 day trip based on User's Adventure choice. HTML is built by looping through TRIPS json. Email.js is also provided to 
 allow user to email the proposed agenda to themselves or others.
-
+- **Styled Email** Used jQuery to steal the itinerary-details element and performed replacements to inject inline styling so the email looks extremely similar to the
+itinerary the user has seen on the website.
 ### Features Left to Implement
 - use google places API to suggest matches on lodging choice via [nearby](https://developers.google.com/maps/documentation/javascript/places?utm_source=google&utm_medium=cpc&utm_campaign=FY18-Q2-global-demandgen-paidsearchonnetworkhouseads-cs-maps_contactsal_saf&utm_content=text-ad-none-none-DEV_c-CRE_315916118099-ADGP_Hybrid+%7C+AW+SEM+%7C+SKWS+~+Nearby+Search-KWID_43700039136946351-kwd-582432942915-userloc_9028759&utm_term=KW_%2Bnearby%20%2Bsearch-ST_%2Bnearby+%2Bsearch&gclid=EAIaIQobChMI8IKMxKaW5gIVj8DACh1GrQ6WEAAYASAAEgLKjvD_BwE#place_search_requests)
 - migrate constants into database to reduce duplicate destinations
@@ -199,5 +200,5 @@ Hero imagery seen in this project was gleaned from the sites listed below. Origi
 - [google Places Details API](https://developers-dot-devsite-v2-prod.appspot.com/maps/documentation/javascript/examples/place-details)- Provided a good example of how use a place_id to retrieve Places Details response to get imagery for itinerary page.
 - [javascript constants](https://www.linkedin.com/in/syedmhassan/) - Moosa Hassan suggested to move large json constants out of functional javascript files into constants.js
 - [geographic points](https://maps.sygic.com/) - Accurate latitude and longitude points for map pins that don't float in the sea.
-- [styling emails](https://www.campaignmonitor.com/css/) - Making emails look good is incredibly difficult
+- [styling emails](https://www.campaignmonitor.com/css/) - Making emails look good is incredibly difficult, but campaign monitor has some dedent documentation about what styles work for the majority of email browsers.
 - [Tim White](https://www.linkedin.com/in/timlwhite/) - Suggesting preloading images, removing fullscreen on google maps, change the cursor for the image/label buttons.
