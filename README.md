@@ -97,7 +97,7 @@ To ensure the contrast and colors are ok for most users, I used the following pl
 * [AXE](https://www.deque.com/axe/)  
 ![axe audit](assets/images/mockups/go-hrvatska-axe-audit-12.06.2019.png) 
 * [lighthouse](https://developers.google.com/web/tools/lighthouse/)
-![lighthouse audit](assets/images/mockups/go-hrvatska-lighthouse-audit-12.06.2019.png) 
+![lighthouse audit](assets/images/mockups/go-hrvatska-lighthouse-audit-12.11.2019.png) 
 
 ### Email Testing
 Email was evaluated in Microsoft Outlook and gmail.
@@ -154,13 +154,17 @@ Accommodation page button took you to next page, but trip button did a slide dow
 * **email accommodation link is hard to make out**
 Unit testing showed that the inline style for accommodations a tag wasn't working. I forgot to assign the value to the replacement string.
 
-* **broken links** *
+* **broken links** 
 The hotels and youth hostile links were broken. I discovered that the links I had originally found were re-hosted since I first grabbed them and had to update them.
 
-* **hero image flikering when hosted** *
+* **hero image flickering when hosted** 
 The hero imagery that is dynamically swapped out was flickering when hosted on github pages. Local environment did not have this issue but discrned it most likely was
 cached by my local browser, 2nd time through images were smooth on github pages. A colleague directed me to https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content
 and I implemented preloading rather than changing out my original solution to something that would use CSS to preload the images.
+
+* **popovers not hiding if 2nd time to trips view**
+The popovers would show more than 1 at a time on the trips page if you started over. It was ok the first time through. I read up on this and found it it was most likely because
+of adding other handlers for the accommodations and itinerary views so if html was there, I unbound the popover handlers and set it back up again.
 
 ## Deployment
 Note: The coding for the project was done in PyCharm in a local environment with default configurations as it only requires javascript, CSS and HTML files. This website is 
