@@ -1,5 +1,7 @@
 ## Go Hrvatska! - Milestone Project 2
 This website allows users to pick one of 4 prescribed tours of Croatia for their next holiday/vacation.  
+![image](https://user-images.githubusercontent.com/23039742/129481517-0d5c6fed-91a7-4de1-81ec-248481dad01e.png)
+
 
 **Main View:** When the user comes to the site, they see a banner image that rotates through stunning pictures that highlight Croatia's wonders. 
 There is a call to action button to start choosing your trip below the banner.
@@ -11,8 +13,7 @@ Each tour has a lean more link below it which when clicked reveals a short descr
 There is also a learn more button that reveals a popover which provides greater detail about each lodging choice.
 
 **Itinerary View:** After selecting a tour and accommodations, the user is presented a view that summarizes a 7 day trip for their adventure.
-A google map with the cities that are being visited is presented numbering days 1-7. On a desktop view, there is also a linked list of the days to the left of the map. The map pins/icons are clickable
- which reveals a default google info window that contains a link that will scroll the user down to the details for that particular day. Below the map is a daily agenda area
+A google map with the cities that are being visited is presented numbering days 1-7. On a desktop view, there is also a linked list of the days to the left of the map. The map pins/icons are clickable which reveals a default google info window that contains a link that will scroll the user down to the details for that particular day. Below the map is a daily agenda area
 which has a large image retrieved via google's Places API. 3-4 suggested places to visit with a small map for the day is shown. These small maps have infoWindows on the map pins to
 provide more details about each suggested place to visit along with the attribution of where that content came from. The items in the list also have a customized bootstrap popover with the same information.  
 Below the agenda is a blurb about where to find your accommodations. The final section of the itinerary view is an email capture form that will allow the user to  email themselves the itinerary. 
