@@ -8,6 +8,8 @@ There is a call to action button to start choosing your trip below the banner.
 
 **Picking Adventure View:** Upon clicking the Go Hrvatska button, the user is presented a screen where they choose from 4 trips.
 Each tour has a lean more link below it which when clicked reveals a short description of the tour in a bootstrap popover. The imagery and trip label acts as a button which takes the user to the next page.
+![image](https://user-images.githubusercontent.com/23039742/129806844-6f469dc8-5fdc-425b-96fa-a93b7c7ae7a8.png)
+
 
 **Pick Accommodation View:** following the pick adventure view, the user is shown options regarding 6 different lodging options. Clicking the button label or imagery takes the user to the next view.
 There is also a learn more button that reveals a popover which provides greater detail about each lodging choice.
