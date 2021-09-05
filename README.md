@@ -55,6 +55,9 @@ mockups was dropped once a single page application was determined as the solutio
 ![image](https://user-images.githubusercontent.com/23039742/132128452-8a139f26-b312-46d0-b7e8-0bcabbab26da.png)
 
 - **Choose Accommodation** HTML is build by looping through ROOMS json object. Customization of Bootstap button and popover.
+
+![image](https://user-images.githubusercontent.com/23039742/132128601-473fcd4c-95f5-4009-b5ef-e0e0bcfb7b5d.png)
+
 - **Itinerary** Uses google maps and google places API to highlight a 7 day trip based on User's Adventure choice. HTML is built by looping through TRIPS json. Email.js is also provided to 
 allow user to email the proposed agenda to themselves or others.
 - **Styled Email** Used jQuery to steal the itinerary-details element and performed replacements to inject inline styling so the email looks extremely similar to the
