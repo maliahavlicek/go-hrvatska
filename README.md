@@ -51,6 +51,9 @@ mockups was dropped once a single page application was determined as the solutio
 ## Current Features
 - **Hero Banner**: Eye Catching Landing Page with Enticing Imagery swapping out. Note: Only one image is required for initial banner. The subsequent images are injected via jquery.
 - **Choose Adventure** HTML is built by looping through TRIPS json object. Fancy clip path CSS to do diagonal image on buttons. Customization of Bootstrap card, popover and buttons.
+
+![image](https://user-images.githubusercontent.com/23039742/132128452-8a139f26-b312-46d0-b7e8-0bcabbab26da.png)
+
 - **Choose Accommodation** HTML is build by looping through ROOMS json object. Customization of Bootstap button and popover.
 - **Itinerary** Uses google maps and google places API to highlight a 7 day trip based on User's Adventure choice. HTML is built by looping through TRIPS json. Email.js is also provided to 
 allow user to email the proposed agenda to themselves or others.
