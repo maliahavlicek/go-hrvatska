@@ -1,4 +1,4 @@
-function sendMail(contactForm){
+function sendMail(contactForm) {
 
     try {
         //clear out error message
@@ -10,7 +10,7 @@ function sendMail(contactForm){
         itinerary += '<div id="itinerary-details">';
 
         // grab the itinerary details and modify html for inline styles, and removal of day map
-        $('#itinerary-details .day').each( function (index, day) {
+        $('#itinerary-details .day').each(function (index, day) {
             itinerary += '<div style="flex-direction: row!important; display: flex!important; margin:10px; padding: 0; border-top: 1px solid #fff;">';
             // first child is city
             let city = day.children[0];
@@ -20,11 +20,11 @@ function sendMail(contactForm){
                 city = city.replace(/class="disclaimer"/g, 'style="font-size: 0.8rem;"');
                 city = city.replace(/<a href=/g, '<a style="font-size: 0.8rem; color: #FFF!important; text-decoration: underline;" href=');
                 city = city.replace(/width="100%"/g, 'width="300px"');
-                itinerary += '<div style="flex: 50%; max-width: 300px; margin: 10px;">' + city +'</div>';
+                itinerary += '<div style="flex: 50%; max-width: 300px; margin: 10px;">' + city + '</div>';
             }
             // second child is places to see list
             let details = day.children[1].innerHTML;
-            details = details.replace(/<h3>/g,'<h3 style="font-size: 1.8rem; margin: 10px;">');
+            details = details.replace(/<h3>/g, '<h3 style="font-size: 1.8rem; margin: 10px;">');
             details = details.replace(/<ol /g, '<ul');
             details = details.replace(/ol>/g, 'ul>');
             if (details) {
@@ -35,7 +35,7 @@ function sendMail(contactForm){
         itinerary += '</div>';
         // build accommodations block for email to match styles of itinerary page
         let lodging = $('.lodging');
-        if (lodging){
+        if (lodging) {
             let room = '<div style="margin: 0; padding: 9px 25px 25px; background: rgb(57, 147, 156); color: #EBEDEE;">';
             lodging = lodging[0].innerHTML;
             lodging = lodging.replace(/<a href=/g, "<a style='color: #FFF!important; text-decoration: underline;' href=");
@@ -44,7 +44,7 @@ function sendMail(contactForm){
         itinerary += '</div>';
 
         //wrap consoles in debug check so we don't deploy with any logging
-        if(debug) {
+        if (debug) {
             console.log("in send email");
             console.log("user_email: " + contactForm.emailaddress.value);
             console.log("trip_type: " + myTrip.label);
@@ -52,25 +52,30 @@ function sendMail(contactForm){
         }
 
         // emailJS API call sending in fields as built in template
-        emailjs.send("malia_havlicek_gmail_com", "codeinstitue", {
-            "user_name": contactForm.name.value,
-            "user_email": contactForm.emailaddress.value,
-            "trip_type": myTrip.label,
-            "itinerary_details": itinerary
-        })
-            // update with success message
-            .then(function (response) {
-                error.append("You should be receiving an email at "+ contactForm.emailaddress.value +" shortly.");
-            }, function (error) {
-                // update with error message
-                error.append("Sorry, there was an issue sending you an email. Please try again.");
-            });
+        var data = {
+            'service_id': 'malia_havlicek_gmail_com',
+            'template_id': 'codeinstitue',
+            'user_id': 'user_QxqbTJ64EJafBGLHni6tU',
+            'template_params': {
+                'user_name': contactForm.name.value,
+                'user_email': contactForm.emailaddress.value,
+                'trip_type': myTrip.label,
+                'itinerary_details': itinerary
+            }
+        };
+        $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+            type: 'POST',
+            data: JSON.stringify(data),
+            contentType: 'application/json'
+        }).done(function () {
+            $('.email-error').html("You should be receiving an email at " + contactForm.emailaddress.value + " shortly.");
+        }).fail(function (error) {
+            $('.email-error').html("Sorry, there was an issue sending you an email. Please try again." + JSON.stringify(error));
+        });
         return false;
-    }
-    catch(emailError){
+    } catch (emailError) {
         // overall error message/catch in event emailJS changes API without me knowing it
-        let error = $('.email-error');
-        error.append("Sorry, there was an issue sending you an email. Please try again.");
+        $('.email-error').html("Sorry, there was an issue sending you an email. Please try again.");
         return false;
     }
 }
