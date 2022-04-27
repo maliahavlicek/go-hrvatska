@@ -4,8 +4,9 @@ about: Create a report to help us improve
 title: 'DEFECT: <TITLE>'
 labels: ''
 assignees: ''
-'DEFECT: <TITLE>'
+
 ---
+
 
 **Description**
 A clear and concise description of what the bug is.
