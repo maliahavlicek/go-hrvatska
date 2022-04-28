@@ -1,11 +1,18 @@
 ---
 name: Test Case template
 about: Write a testcase
-title: 'TEST CASE: <Fearure> <Title>'
+title: 'TEST CASE: <Title>'
+feature: 'FEATURE: <Feature>  
 labels: 'TEST_CASE'
 assignees: ''
 
 ---
+  
+**Starting URL**
+  
+**Steps to take**
+
+**What To Validate**
 
 - [ ] leading spaces and <valid input> --> Does X
 - [ ] trailing spaces and <valid input> --> Does X
