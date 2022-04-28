@@ -2,7 +2,7 @@
 name: Test Case template
 about: Write a testcase
 title: 'TEST CASE: <Title>'
-labels: ''
+labels: 'TEST_CASE'
 assignees: ''
 
 ---
