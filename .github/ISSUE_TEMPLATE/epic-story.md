@@ -2,7 +2,7 @@
 name: Epic Story
 about: Epic Story Template
 title: 'EPIC: <TITLE>'
-labels: ''
+labels: 'EPIC'
 assignees: ''
 
 ---
