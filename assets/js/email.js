@@ -53,7 +53,7 @@ function sendMail(contactForm) {
 
         // emailJS API call sending in fields as built in template
         var data = {
-            'service_id': 'malia_havlicek_gmail_com',
+            'service_id': 'service_rzi1zxf',
             'template_id': 'codeinstitue',
             'user_id': 'user_QxqbTJ64EJafBGLHni6tU',
             'template_params': {
